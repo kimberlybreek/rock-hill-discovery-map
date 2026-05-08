@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ballantyne — Discovery Map</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Patrick+Hand&family=Cabin+Sketch:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Patrick Hand', cursive;
+    background: #1A2838
+      repeating-linear-gradient(45deg, transparent 0 8px, rgba(255,255,255,0.02) 8px 9px);
+    color: #1A2838;
+    min-height: 100vh;
+    padding: 24px;
+  }
+
+  .sheet {
+    max-width: 1500px;
+    margin: 0 auto;
+    background: #EEF4F8;
+    background-image:
+      radial-gradient(ellipse at top left, rgba(30,60,100,0.08), transparent 60%),
+      radial-gradient(ellipse at bottom right, rgba(30,60,100,0.08), transparent 60%);
+    border: 6px solid #1E3C64;
+    box-shadow:
+      inset 0 0 0 8px #EEF4F8,
+      inset 0 0 0 11px #9AB8D8,
+      inset 0 0 0 13px #1E3C64,
+      0 24px 80px rgba(0,0,0,.6);
+    padding: 18px;
+    position: relative;
+  }
+
+  .cartouche {
+    text-align: center;
+    padding: 18px 0 14px;
+    border-bottom: 1.5px solid #4A7098;
+    margin-bottom: 14px;
+    position: relative;
+    background: radial-gradient(ellipse at center, rgba(154,184,216,0.25), transparent 70%);
+  }
+  .cartouche::before, .cartouche::after {
+    content: '✦';
+    color: #C04830;
+    font-size: 22px;
+    margin: 0 18px;
+    vertical-align: middle;
+  }
+  .cartouche h1 {
+    display: inline-block;
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: 700;
+    font-size: 48px;
+    color: #1A2838;
+    letter-spacing: 4px;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  .cartouche .sub {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 14px;
+    color: #2A4868;
+    letter-spacing: 6px;
+    margin-top: 8px;
+  }
+  .cartouche .free-badge {
+    position: absolute; top: 18px; left: 18px;
+    background: #C04830; color: #EEF4F8;
+    border: 2px solid #EEF4F8; border-radius: 50%;
+    width: 64px; height: 64px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    box-shadow: 0 3px 10px rgba(0,0,0,.4);
+    transform: rotate(-8deg);
+  }
+  .cartouche .free-badge .free { font-size: 18px; line-height: 1; }
+  .cartouche .free-badge .take { font-size: 8px; letter-spacing: 1px; margin-top: 3px; opacity: 0.85; }
+
+  .back-link {
+    position: absolute; top: 18px; right: 18px;
+    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-size: 13px; letter-spacing: 2px;
+    background: #1E3C64; color: #EEF4F8;
+    border: 2px solid #9AB8D8;
+    padding: 6px 14px; border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+  }
+  .back-link:hover { background: #2A5A8A; }
+
+  .map-frame {
+    border: 3px solid #1E3C64;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background: #C8DCF0;
+    box-shadow: inset 0 0 30px rgba(20,40,80,0.2);
+  }
+  #map {
+    height: 720px;
+    width: 100%;
+    background: #C8DCF0;
+  }
+
+  .leaflet-tile-pane {
+    filter: hue-rotate(195deg) saturate(0.7) brightness(1.08) contrast(0.93);
+    mix-blend-mode: multiply;
+    opacity: 0.85;
+  }
+  .map-frame::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at center, transparent 50%, rgba(20,40,80,0.15) 100%),
+      repeating-radial-gradient(circle at 25% 30%, rgba(30,60,100,0.03) 0, rgba(30,60,100,0.03) 1px, transparent 2px, transparent 5px);
+    pointer-events: none;
+    z-index: 401;
+  }
+
+  .bottom-bar {
+    margin-top: 14px;
+    background: linear-gradient(to bottom, #EEF4F8, #C8DCF0);
+    border: 2px solid #1E3C64;
+    border-radius: 5px;
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; }
+  .legend-item {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'Caveat', cursive;
+    font-size: 18px; font-weight: 700;
+    color: #1A2838;
+  }
+  .legend-dot {
+    width: 16px; height: 16px;
+    border-radius: 4px; border: 1.5px solid #1A2838;
+  }
+  .credit {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 12px; color: #2A4868; letter-spacing: 1px;
+  }
+
+  .biz-marker {
+    background: #EEF4F8;
+    border: 2px solid #1E3C64;
+    border-radius: 50%;
+    width: 38px; height: 38px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+  .biz-marker:hover { transform: scale(1.18); z-index: 1000; }
+  .biz-marker img {
+    width: 30px; height: 30px;
+    object-fit: cover; border-radius: 50%;
+  }
+  .biz-marker .num {
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: 700; font-size: 16px;
+    color: #fff;
+    background: var(--cat-color, #1E3C64);
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .leaflet-popup-content-wrapper {
+    background: linear-gradient(to bottom, #EEF4F8, #C8DCF0);
+    border: 2px solid #1E3C64;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.4);
+    padding: 0;
+  }
+  .leaflet-popup-tip { background: #C8DCF0; border: 2px solid #1E3C64; }
+  .popup {
+    padding: 12px 14px; min-width: 220px;
+    font-family: 'Patrick Hand', cursive; color: #1A2838;
+  }
+  .popup img {
+    width: 100%; border-radius: 4px;
+    border: 1.5px solid #1E3C64; margin-bottom: 8px;
+  }
+  .popup h3 {
+    font-family: 'Caveat', cursive; font-size: 22px;
+    margin-bottom: 4px; color: var(--cat-color, #1A2838);
+  }
+  .popup .cat {
+    display: inline-block;
+    background: var(--cat-color, #1E3C64); color: #EEF4F8;
+    font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 10px; margin-bottom: 6px;
+    font-family: 'Patrick Hand', cursive;
+  }
+  .popup .desc { font-size: 14px; line-height: 1.4; }
+  .popup .meta {
+    margin-top: 6px; font-size: 12px; color: #2A4868;
+    border-top: 1px dashed #4A7098; padding-top: 6px;
+  }
+  .popup .dirs {
+    margin-top: 10px; padding-top: 8px;
+    border-top: 1px dashed #4A7098;
+    display: flex; gap: 6px;
+  }
+  .popup .dirs a {
+    flex: 1; display: inline-block;
+    background: var(--cat-color, #1E3C64); color: #EEF4F8;
+    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-size: 11px; letter-spacing: 1px;
+    text-align: center; text-decoration: none;
+    padding: 6px 4px; border-radius: 3px;
+    border: 1.5px solid #1E3C64; transition: filter 0.15s;
+  }
+  .popup .dirs a:hover { filter: brightness(1.15); }
+  .popup .dirs a.apple { background: #2A2A2A; }
+  .popup .dirs a.google { background: #4285F4; color: #fff; }
+
+  .compass-corner {
+    position: absolute; bottom: 20px; right: 24px;
+    z-index: 500; width: 90px; height: 90px;
+    pointer-events: none; opacity: 0.92;
+  }
+
+  .leaflet-control-attribution { font-size: 10px; opacity: 0.6; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="cartouche">
+    <div class="free-badge">
+      <div class="free">FREE</div>
+      <div class="take">TAKE ONE</div>
+    </div>
+    <a class="back-link" href="index.html">← All Maps</a>
+    <h1>Ballantyne</h1>
+    <div class="sub">· DISCOVERY MAP · MECKLENBURG COUNTY · NORTH CAROLINA · 2026 EDITION ·</div>
+  </header>
+
+  <div class="map-frame">
+    <div id="map"></div>
+    <img class="compass-corner" src="assets/compass.png" alt="compass" onerror="this.style.display='none'">
+  </div>
+
+  <div class="bottom-bar">
+    <div class="legend">
+      <div class="legend-item"><span class="legend-dot" style="background:#2A6848"></span>Outdoors</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#C04830"></span>Eat &amp; Drink</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#4A2A60"></span>Coffee</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#1E3C64"></span>Arts &amp; Wellness</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#0A5848"></span>Family Fun</div>
+    </div>
+    <div class="credit">Click any marker · Pan &amp; zoom to explore · ballantyneDiscovery.com</div>
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+const CATS = {
+  outdoor: '#2A6848',
+  food:    '#C04830',
+  coffee:  '#4A2A60',
+  arts:    '#1E3C64',
+  family:  '#0A5848',
+};
+
+const PLACES = [
+  /* Ballantyne Village core */
+  { lat:35.0528, lon:-80.8453, n:1, cat:'food',
+    name:'Ballantyne Village',
+    desc:'Heart of Ballantyne — open-air shops, restaurants, boutiques, and a cinema all in one walkable block.',
+    meta:'15253 Ballantyne Village Way · Daily 10–9' },
+  { lat:35.0540, lon:-80.8438, n:2, cat:'family',
+    name:'Regal Ballantyne',
+    desc:'Five-screen neighborhood cinema with stadium seating. Great for date nights and rainy afternoons.',
+    meta:'Ballantyne Village · regalcinemas.com' },
+  { lat:35.0532, lon:-80.8442, n:3, cat:'coffee',
+    name:'Summit Coffee',
+    desc:'Davidson-rooted specialty coffee — locally sourced beans, excellent pour-overs, and a welcoming crowd.',
+    meta:'· Ballantyne Village · Mon–Sat 7–6' },
+  { lat:35.0524, lon:-80.8462, n:4, cat:'food',
+    name:'Brixx Wood Fired Pizza',
+    desc:'Thin-crust wood-fired pies, fresh salads, and a solid craft beer selection.',
+    meta:'· Ballantyne Village · brixxpizza.com' },
+  { lat:35.0521, lon:-80.8456, n:5, cat:'food',
+    name:'Baku',
+    desc:'Pan-Asian fusion: sushi, ramen, Thai curries. A beloved Ballantyne dinner spot.',
+    meta:'· Ballantyne Village' },
+  { lat:35.0530, lon:-80.8468, n:6, cat:'coffee',
+    name:'Not Just Coffee',
+    desc:'Charlotte-grown café with expert espresso, cozy seating, and grab-and-go pastries.',
+    meta:'· Ballantyne Commons Pkwy' },
+
+  /* Ballantyne Hotel campus */
+  { lat:35.0578, lon:-80.8622, n:7, cat:'arts',
+    name:'Kimpton Ballantyne Hotel',
+    desc:'Forbes Four-Star luxury hotel with a championship golf course, full-service spa, and exceptional dining.',
+    meta:'10000 Ballantyne Commons Pkwy · ballantynehotel.com' },
+  { lat:35.0581, lon:-80.8618, n:8, cat:'food',
+    name:"Connors Restaurant",
+    desc:"Upscale steakhouse inside the Kimpton. Dry-aged cuts, Southern sides, expertly crafted cocktails.",
+    meta:'10000 Ballantyne Commons Pkwy · Dinner nightly' },
+  { lat:35.0576, lon:-80.8626, n:9, cat:'arts',
+    name:'The Spa at Ballantyne',
+    desc:'Forbes-rated full-service spa — massage, facials, sauna, steam, and a heated outdoor pool.',
+    meta:'Kimpton Ballantyne Hotel · theballantynespa.com' },
+
+  /* Parks & outdoors */
+  { lat:35.0648, lon:-80.8618, n:10, cat:'outdoor',
+    name:'Ballantyne Community Park',
+    desc:'Paved trails, sports fields, picnic shelters, a playground, and a beloved off-leash dog park.',
+    meta:'14904 Ballantyne Meadows Cir · Dawn–dusk' },
+  { lat:35.0660, lon:-80.8718, n:11, cat:'outdoor',
+    name:'Piper Glen Golf Club',
+    desc:'Semi-private Tom Fazio 18-hole design carved through wooded hills. Walking-friendly year-round.',
+    meta:'12300 Piper Glen Dr · piperglen.com' },
+  { lat:35.0558, lon:-80.8493, n:12, cat:'outdoor',
+    name:'Ballantyne Greenway',
+    desc:'Paved multi-use path connecting neighborhoods and parks — ideal for bikes, runs, and strollers.',
+    meta:'Access off Ballantyne Commons Pkwy · Dawn–dusk' },
+
+  /* Arts & community */
+  { lat:35.0538, lon:-80.8473, n:13, cat:'arts',
+    name:'Ballantyne Branch Library',
+    desc:'Bright PLCMC branch with a kids section, maker space, study rooms, and frequent author events.',
+    meta:'19102 W. Catawba Ave · Mon–Sat 9–8' },
+
+  /* More food & shopping */
+  { lat:35.0488, lon:-80.8318, n:14, cat:'food',
+    name:'Stonecrest at Piper Glen',
+    desc:'Walkable open-air center anchored by Harris Teeter — great restaurants, coffee, and quick bites.',
+    meta:'7804 Rea Rd · stonecrestshopping.com' },
+  { lat:35.0496, lon:-80.8383, n:15, cat:'coffee',
+    name:'Starbucks Reserve — Ballantyne',
+    desc:'Spacious Reserve bar — Nitro Cold Brew, rare single-origins, and Oleato drinks at the south Charlotte anchor.',
+    meta:'Rea Rd & Ardrey Kell · Daily 5am–9pm' },
+];
+
+const map = L.map('map', {
+  zoomControl: true,
+  attributionControl: true,
+  minZoom: 13,
+  maxZoom: 18,
+}).setView([35.054, -80.849], 14);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '© OpenStreetMap contributors · Discovery Map style ✦ ballantyneDiscovery.com',
+}).addTo(map);
+
+PLACES.forEach(pl => {
+  const col = CATS[pl.cat];
+  const html = pl.img
+    ? `<div class="biz-marker" style="--cat-color:${col};border-color:${col}"><img src="${pl.img}" alt=""></div>`
+    : `<div class="biz-marker" style="--cat-color:${col};border-color:${col}"><div class="num" style="--cat-color:${col}">${pl.n}</div></div>`;
+
+  const icon = L.divIcon({
+    html, className: '', iconSize: [38, 38], iconAnchor: [19, 19],
+  });
+
+  const appleUrl  = `https://maps.apple.com/?daddr=${pl.lat},${pl.lon}&dirflg=w&q=${encodeURIComponent(pl.name)}`;
+  const googleUrl = `https://www.google.com/maps/dir/?api=1&destination=${pl.lat},${pl.lon}&travelmode=walking`;
+  const popupHtml = `
+    <div class="popup" style="--cat-color:${col}">
+      ${pl.img ? `<img src="${pl.img}" alt="${pl.name}">` : ''}
+      <div class="cat" style="background:${col}">${pl.cat}</div>
+      <h3>${pl.name}</h3>
+      <div class="desc">${pl.desc}</div>
+      <div class="meta">${pl.meta}</div>
+      <div class="dirs">
+        <a class="apple"  href="${appleUrl}"  target="_blank" rel="noopener">🍎 Apple Maps</a>
+        <a class="google" href="${googleUrl}" target="_blank" rel="noopener">🗺 Google Maps</a>
+      </div>
+    </div>`;
+
+  L.marker([pl.lat, pl.lon], { icon })
+    .addTo(map)
+    .bindPopup(popupHtml, { maxWidth: 280, closeButton: true });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ballantyne Discovery Map — Print Edition</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Patrick+Hand&family=Cabin+Sketch:wght@400;700&family=Playfair+Display:wght@700;900&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<style>
+  :root {
+    --ink: #1A2838;
+    --frame: #1E3C64;
+    --parch: #EEF4F8;
+    --parch-dark: #C8DCF0;
+    --accent: #C04830;
+    --navy: #1E3C64;
+    --green: #2A6848;
+    --cat-coffee: #4A2A60;
+    --cat-arts: #1E3C64;
+    --cat-fam: #0A5848;
+    --tile-filter: hue-rotate(195deg) saturate(0.7) brightness(1.08) contrast(0.93);
+    --tile-blend: multiply;
+    --tile-opa: 0.85;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #1A2838; }
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--ink);
+    background:
+      repeating-linear-gradient(45deg, transparent 0 8px, rgba(255,255,255,0.02) 8px 9px),
+      #1A2838;
+    min-height: 100vh;
+    padding: 24px;
+    display: flex; justify-content: center;
+  }
+
+  .sheet {
+    width: 1500px;
+    flex-shrink: 0;
+    background: var(--parch);
+    border: 6px solid var(--frame);
+    box-shadow:
+      inset 0 0 0 8px var(--parch),
+      inset 0 0 0 11px #9AB8D8,
+      inset 0 0 0 13px var(--frame),
+      0 24px 80px rgba(0,0,0,.6);
+    padding: 14px;
+    position: relative;
+  }
+
+  .cartouche {
+    text-align: center;
+    padding: 16px 0 12px;
+    border-bottom: 1.5px solid #4A7098;
+    margin-bottom: 12px;
+    position: relative;
+    background: radial-gradient(ellipse at center, rgba(154,184,216,0.20), transparent 70%);
+  }
+  .cartouche::before, .cartouche::after {
+    content: '✦';
+    color: var(--accent); font-size: 22px;
+    margin: 0 16px; vertical-align: middle;
+  }
+  .cartouche h1 {
+    display: inline-block;
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: 700; font-size: 46px;
+    color: var(--ink);
+    letter-spacing: 4px; line-height: 1;
+    vertical-align: middle;
+  }
+  .cartouche .sub {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 13px; color: var(--frame);
+    letter-spacing: 5px; margin-top: 6px;
+  }
+  .cartouche .free-badge {
+    position: absolute; top: 12px; left: 12px;
+    background: var(--accent); color: var(--parch);
+    border: 2px solid var(--parch); border-radius: 50%;
+    width: 60px; height: 60px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    box-shadow: 0 3px 8px rgba(0,0,0,.4);
+    transform: rotate(-8deg);
+  }
+  .cartouche .free-badge .free { font-size: 16px; line-height: 1; }
+  .cartouche .free-badge .take { font-size: 7px; letter-spacing: 1px; margin-top: 2px; opacity: 0.85; }
+  .cartouche .edition {
+    position: absolute; top: 18px; right: 18px;
+    border: 1.5px solid var(--navy); color: var(--navy);
+    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-size: 10px; letter-spacing: 2px;
+    padding: 3px 10px; border-radius: 14px;
+    background: var(--parch);
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: 230px 1fr 230px;
+    gap: 10px;
+    align-items: start;
+  }
+
+  .rail { display: flex; flex-direction: column; gap: 8px; }
+  .rail-head {
+    background: var(--navy); color: var(--parch);
+    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-size: 13px; letter-spacing: 2px;
+    text-align: center; padding: 6px 8px; border-radius: 3px;
+  }
+  .rail-head.eat    { background: var(--accent); }
+  .rail-head.do     { background: var(--green); }
+  .rail-head.coffee { background: var(--cat-coffee); }
+  .rail-head.fam    { background: var(--cat-fam); }
+
+  .ad {
+    background: #F4F8FC;
+    border: 1.5px solid #7A9AB8;
+    border-radius: 3px; padding: 8px 10px; position: relative;
+  }
+  .ad-num {
+    position: absolute; top: -6px; left: -6px;
+    width: 22px; height: 22px;
+    background: var(--cat-color, var(--frame));
+    color: var(--parch);
+    border: 1.5px solid var(--parch); border-radius: 50%;
+    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-size: 12px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  }
+  .ad h3 {
+    font-family: 'Caveat', cursive; font-weight: 700;
+    font-size: 18px; color: var(--ink);
+    line-height: 1.05; margin-bottom: 2px; margin-left: 18px;
+  }
+  .ad .sub {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 12px; color: #2A4868; line-height: 1.3; margin-bottom: 3px;
+  }
+  .ad .meta {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 10px; color: #4A6888; line-height: 1.2;
+    border-top: 1px dashed #9AB8D8; padding-top: 3px;
+  }
+
+  .map-area {
+    border: 3px solid var(--frame); border-radius: 3px;
+    overflow: hidden; background: #C8DCF0; position: relative;
+    box-shadow: inset 0 0 30px rgba(20,40,80,0.18);
+  }
+  #map { height: 760px; width: 100%; background: #C8DCF0; }
+  .leaflet-control-container, .leaflet-control-zoom { display: none !important; }
+  .leaflet-control-attribution { font-size: 8px; opacity: 0.4; }
+  .leaflet-tile-pane {
+    filter: var(--tile-filter);
+    mix-blend-mode: var(--tile-blend);
+    opacity: var(--tile-opa);
+  }
+  .map-area::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at center, transparent 50%, rgba(20,40,80,0.18) 100%),
+      repeating-radial-gradient(circle at 30% 35%, rgba(30,60,100,0.03) 0, rgba(30,60,100,0.03) 1px, transparent 2px, transparent 5px);
+    pointer-events: none; z-index: 401;
+  }
+
+  .compass-corner {
+    position: absolute; bottom: 14px; right: 16px;
+    z-index: 500; width: 84px; height: 84px;
+    pointer-events: none; opacity: 0.92;
+  }
+
+  .biz-marker {
+    background: var(--parch);
+    border: 2.5px solid var(--frame); border-radius: 50%;
+    width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,.4);
+  }
+  .biz-marker img { width: 30px; height: 30px; object-fit: cover; border-radius: 50%; }
+  .biz-marker .num {
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: 700; font-size: 17px; color: #fff;
+    background: var(--cat-color, var(--frame));
+    width: 100%; height: 100%; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.35);
+  }
+
+  .leaflet-tooltip.biz-tip {
+    background: rgba(238,244,248,0.96);
+    border: 1.5px solid var(--frame); border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.25);
+    padding: 3px 7px;
+    font-family: 'Caveat', cursive; font-weight: 700;
+    font-size: 16px; color: var(--ink); white-space: nowrap;
+  }
+  .leaflet-tooltip.biz-tip::before { border-right-color: var(--frame); }
+
+  .bottom-strip {
+    margin-top: 10px;
+    background: linear-gradient(to bottom, var(--parch), var(--parch-dark));
+    border: 2px solid var(--frame); border-radius: 4px;
+    padding: 10px 16px;
+    display: flex; gap: 14px; align-items: center; justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .legend-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .legend-row .item {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-family: 'Caveat', cursive; font-weight: 700;
+    font-size: 16px; color: var(--ink);
+  }
+  .legend-row .dot { width: 14px; height: 14px; border-radius: 3px; border: 1.5px solid var(--ink); }
+  .credit {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 12px; color: var(--frame); letter-spacing: 1px;
+  }
+  .walk-key {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 13px; color: var(--frame);
+    border-left: 1px dashed #4A7098; padding-left: 14px;
+  }
+  .walk-key b { font-family: 'Cabin Sketch', cursive; color: var(--accent); }
+
+  .qr-section {
+    display: flex; align-items: center; gap: 12px;
+    border-left: 1px dashed #4A7098; border-right: 1px dashed #4A7098;
+    padding: 0 16px;
+  }
+  .qr {
+    width: 64px; height: 64px;
+    background: var(--parch); padding: 3px;
+    border: 1.5px solid var(--frame); border-radius: 4px;
+  }
+  .qr-text { max-width: 180px; font-family: 'Patrick Hand', cursive; line-height: 1.25; }
+  .qr-title {
+    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-size: 16px; color: var(--accent); letter-spacing: 1px;
+  }
+  .qr-sub { font-size: 11px; color: var(--frame); }
+
+  .print-bar {
+    position: fixed; top: 12px; right: 12px;
+    z-index: 9999; display: flex; gap: 8px;
+  }
+  .print-bar button, .print-bar a {
+    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-size: 13px; letter-spacing: 2px;
+    background: var(--accent); color: var(--parch);
+    border: 2px solid var(--parch);
+    padding: 8px 14px; border-radius: 4px;
+    cursor: pointer; text-decoration: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,.4);
+  }
+  .print-bar a { background: var(--frame); }
+  .print-bar button:hover { background: #A03020; }
+
+  @page { size: 17in 11in; margin: 0.4in; }
+
+  @media print {
+    html, body { background: #fff; padding: 0; margin: 0; }
+    .sheet { box-shadow: none; border-width: 4px; width: 100%; max-width: none; page-break-inside: avoid; }
+    .print-bar { display: none !important; }
+    #map { height: 600px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="print-bar">
+  <a href="index.html">← Gallery</a>
+  <button onclick="window.print()">🖨 Print</button>
+</div>
+
+<div class="sheet">
+
+  <header class="cartouche">
+    <div class="free-badge">
+      <div class="free">FREE</div>
+      <div class="take">TAKE ONE</div>
+    </div>
+    <span class="edition">2026 EDITION</span>
+    <h1>Ballantyne</h1>
+    <div class="sub">· DISCOVERY MAP · MECKLENBURG COUNTY · NORTH CAROLINA ·</div>
+  </header>
+
+  <div class="body">
+
+    <!-- LEFT RAIL: Coffee + Outdoors -->
+    <aside class="rail">
+      <div class="rail-head coffee">☕ Coffee &amp; Cafés</div>
+      <div class="ad" style="--cat-color:#4A2A60">
+        <span class="ad-num">3</span>
+        <h3>Summit Coffee</h3>
+        <div class="sub">Davidson-rooted specialty roasts</div>
+        <div class="meta">Ballantyne Village · Mon–Sat 7am–6pm</div>
+      </div>
+      <div class="ad" style="--cat-color:#4A2A60">
+        <span class="ad-num">6</span>
+        <h3>Not Just Coffee</h3>
+        <div class="sub">Expert espresso · cozy seating</div>
+        <div class="meta">Ballantyne Commons Pkwy</div>
+      </div>
+      <div class="ad" style="--cat-color:#4A2A60">
+        <span class="ad-num">15</span>
+        <h3>Starbucks Reserve</h3>
+        <div class="sub">Nitro Cold Brew · Oleato · Reserve bar</div>
+        <div class="meta">Rea Rd &amp; Ardrey Kell · Daily 5am–9pm</div>
+      </div>
+
+      <div class="rail-head do">🥾 Get Outside!</div>
+      <div class="ad" style="--cat-color:#2A6848">
+        <span class="ad-num">10</span>
+        <h3>Ballantyne Community Park</h3>
+        <div class="sub">Trails · sports fields · dog park</div>
+        <div class="meta">14904 Ballantyne Meadows Cir · Dawn–dusk</div>
+      </div>
+      <div class="ad" style="--cat-color:#2A6848">
+        <span class="ad-num">11</span>
+        <h3>Piper Glen Golf Club</h3>
+        <div class="sub">Tom Fazio 18-hole design</div>
+        <div class="meta">12300 Piper Glen Dr · piperglen.com</div>
+      </div>
+      <div class="ad" style="--cat-color:#2A6848">
+        <span class="ad-num">12</span>
+        <h3>Ballantyne Greenway</h3>
+        <div class="sub">Paved multi-use trail · bikes &amp; strollers</div>
+        <div class="meta">Access off Ballantyne Commons Pkwy</div>
+      </div>
+    </aside>
+
+    <!-- CENTER: MAP -->
+    <main class="map-area">
+      <div id="map"></div>
+      <img class="compass-corner" src="assets/compass.png" alt="" onerror="this.style.display='none'">
+    </main>
+
+    <!-- RIGHT RAIL: Eat & Drink + Arts & Family -->
+    <aside class="rail">
+      <div class="rail-head eat">🍽 Eat &amp; Drink</div>
+      <div class="ad" style="--cat-color:#C04830">
+        <span class="ad-num">8</span>
+        <h3>Connors Restaurant</h3>
+        <div class="sub">Dry-aged steaks · Southern sides</div>
+        <div class="meta">Kimpton Ballantyne · Dinner nightly</div>
+      </div>
+      <div class="ad" style="--cat-color:#C04830">
+        <span class="ad-num">4</span>
+        <h3>Brixx Wood Fired Pizza</h3>
+        <div class="sub">Thin-crust pies · craft beer</div>
+        <div class="meta">Ballantyne Village · brixxpizza.com</div>
+      </div>
+      <div class="ad" style="--cat-color:#C04830">
+        <span class="ad-num">5</span>
+        <h3>Baku</h3>
+        <div class="sub">Pan-Asian fusion · sushi · ramen</div>
+        <div class="meta">Ballantyne Village</div>
+      </div>
+
+      <div class="rail-head fam">⭐ Arts &amp; Wellness</div>
+      <div class="ad" style="--cat-color:#1E3C64">
+        <span class="ad-num">7</span>
+        <h3>Kimpton Ballantyne Hotel</h3>
+        <div class="sub">Forbes Four-Star · golf · spa</div>
+        <div class="meta">10000 Ballantyne Commons Pkwy · ballantynehotel.com</div>
+      </div>
+      <div class="ad" style="--cat-color:#1E3C64">
+        <span class="ad-num">9</span>
+        <h3>The Spa at Ballantyne</h3>
+        <div class="sub">Forbes-rated · massage · pool</div>
+        <div class="meta">Kimpton Hotel · theballantynespa.com</div>
+      </div>
+      <div class="ad" style="--cat-color:#0A5848">
+        <span class="ad-num">2</span>
+        <h3>Regal Ballantyne</h3>
+        <div class="sub">5-screen cinema · stadium seating</div>
+        <div class="meta">Ballantyne Village · regalcinemas.com</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- BOTTOM STRIP -->
+  <div class="bottom-strip">
+    <div class="legend-row">
+      <div class="item"><span class="dot" style="background:#2A6848"></span>Outdoors</div>
+      <div class="item"><span class="dot" style="background:#C04830"></span>Eat &amp; Drink</div>
+      <div class="item"><span class="dot" style="background:#4A2A60"></span>Coffee</div>
+      <div class="item"><span class="dot" style="background:#1E3C64"></span>Arts &amp; Wellness</div>
+      <div class="item"><span class="dot" style="background:#0A5848"></span>Family Fun</div>
+    </div>
+    <div class="walk-key">
+      <span><b>↔ 5 min walk</b> ≈ 1 city block</span>
+    </div>
+    <div class="qr-section">
+      <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fkimberlybreek.github.io%2Frock-hill-discovery-map%2Fballantyne-interactive.html&color=1E3C64&bgcolor=EEF4F8&qzone=1&format=svg" alt="Scan for directions">
+      <div class="qr-text">
+        <div class="qr-title">Need directions?</div>
+        <div class="qr-sub">Scan for turn-by-turn navigation in Apple Maps or Google Maps.</div>
+      </div>
+    </div>
+    <div class="credit">© Ballantyne Discovery Map · 2026 · ballantyneDiscovery.com</div>
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+const CATS = {
+  outdoor: '#2A6848', food: '#C04830', coffee: '#4A2A60',
+  arts: '#1E3C64', family: '#0A5848',
+};
+const PLACES = [
+  { lat:35.0528, lon:-80.8453, n:1,  cat:'food',    name:'Ballantyne Village' },
+  { lat:35.0540, lon:-80.8438, n:2,  cat:'family',  name:'Regal Ballantyne' },
+  { lat:35.0532, lon:-80.8442, n:3,  cat:'coffee',  name:'Summit Coffee' },
+  { lat:35.0524, lon:-80.8462, n:4,  cat:'food',    name:'Brixx Wood Fired Pizza' },
+  { lat:35.0521, lon:-80.8456, n:5,  cat:'food',    name:'Baku' },
+  { lat:35.0530, lon:-80.8468, n:6,  cat:'coffee',  name:'Not Just Coffee' },
+  { lat:35.0578, lon:-80.8622, n:7,  cat:'arts',    name:'Kimpton Ballantyne Hotel' },
+  { lat:35.0581, lon:-80.8618, n:8,  cat:'food',    name:'Connors Restaurant' },
+  { lat:35.0576, lon:-80.8626, n:9,  cat:'arts',    name:'The Spa at Ballantyne' },
+  { lat:35.0648, lon:-80.8618, n:10, cat:'outdoor', name:'Ballantyne Community Park' },
+  { lat:35.0660, lon:-80.8718, n:11, cat:'outdoor', name:'Piper Glen Golf Club' },
+  { lat:35.0558, lon:-80.8493, n:12, cat:'outdoor', name:'Ballantyne Greenway' },
+  { lat:35.0538, lon:-80.8473, n:13, cat:'arts',    name:'Ballantyne Branch Library' },
+  { lat:35.0488, lon:-80.8318, n:14, cat:'food',    name:'Stonecrest at Piper Glen' },
+  { lat:35.0496, lon:-80.8383, n:15, cat:'coffee',  name:'Starbucks Reserve' },
+];
+
+const map = L.map('map', {
+  zoomControl: false, dragging: false, touchZoom: false,
+  doubleClickZoom: false, scrollWheelZoom: false,
+  boxZoom: false, keyboard: false, tap: false,
+  zoomSnap: 0,
+}).setView([35.054, -80.849], 13);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19, attribution: '© OpenStreetMap',
+}).addTo(map);
+
+PLACES.forEach(pl => {
+  const col = CATS[pl.cat];
+  const html = pl.img
+    ? `<div class="biz-marker" style="--cat-color:${col};border-color:${col}"><img src="${pl.img}" alt=""></div>`
+    : `<div class="biz-marker" style="--cat-color:${col};border-color:${col}"><div class="num" style="--cat-color:${col}">${pl.n}</div></div>`;
+  const icon = L.divIcon({ html, className: '', iconSize: [32, 32], iconAnchor: [16, 16] });
+  L.marker([pl.lat, pl.lon], { icon })
+    .addTo(map)
+    .bindTooltip(`<b>${pl.n}.</b> ${pl.name}`, { className: 'biz-tip' });
+});
+</script>
+</body>
+</html>
