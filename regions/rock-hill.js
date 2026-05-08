@@ -1,9 +1,9 @@
 window.REGION = {
   id: 'rock-hill',
   name: 'Downtown Rock Hill',
-  sub: '· DISCOVERY MAP · YORK COUNTY · SOUTH CAROLINA · 2026 EDITION ·',
-  credit: '© Rock Hill Discovery Map · 2026 · rockHillDiscovery.com',
-  interactiveCredit: 'Click any marker · Pan &amp; zoom to explore · rockHillDiscovery.com',
+  sub: '· YORK COUNTY · SOUTH CAROLINA · 2026 EDITION ·',
+  credit: '© Rock Hill Map · 2026 · rockHillMap.com',
+  interactiveCredit: 'Click any marker · Pan &amp; zoom to explore · rockHillMap.com',
   center: [34.9325, -81.0220],
   zoom: 15,
   printZoom: 15,

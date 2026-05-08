@@ -1,9 +1,9 @@
 window.REGION = {
   id: 'ballantyne',
   name: 'Ballantyne',
-  sub: '· DISCOVERY MAP · MECKLENBURG COUNTY · NORTH CAROLINA · 2026 EDITION ·',
-  credit: '© Ballantyne Discovery Map · 2026 · ballantyneDiscovery.com',
-  interactiveCredit: 'Click any marker · Pan &amp; zoom to explore · ballantyneDiscovery.com',
+  sub: '· MECKLENBURG COUNTY · NORTH CAROLINA · 2026 EDITION ·',
+  credit: '© Ballantyne Map · 2026 · ballantyneMap.com',
+  interactiveCredit: 'Click any marker · Pan &amp; zoom to explore · ballantyneMap.com',
   center: [35.054, -80.849],
   zoom: 14,
   printZoom: 13,
