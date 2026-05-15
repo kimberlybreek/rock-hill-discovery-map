@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Rock Hill Discovery Map — Versions Gallery</title>
+<title>Maps — Versions Gallery</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Patrick+Hand&family=Cabin+Sketch:wght@400;700&family=Playfair+Display:wght@700;900&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
@@ -17,179 +17,64 @@
     padding: 32px 24px 64px;
   }
 
-  .container {
-    max-width: 1500px;
-    margin: 0 auto;
-  }
+  .container { max-width: 1500px; margin: 0 auto; }
 
-  /* Header */
   header {
     background: linear-gradient(to bottom, #F0E2B8, #D6BD8A);
-    border: 4px solid #5A3818;
-    border-radius: 6px;
-    padding: 32px 40px;
-    margin-bottom: 28px;
-    text-align: center;
+    border: 4px solid #5A3818; border-radius: 6px;
+    padding: 32px 40px; margin-bottom: 28px; text-align: center;
     box-shadow: inset 0 0 0 6px #F0E2B8, inset 0 0 0 8px #C8A878, 0 12px 40px rgba(0,0,0,.5);
     position: relative;
   }
-  header::before, header::after {
-    content: '✦';
-    color: #A02018;
-    font-size: 26px;
-    margin: 0 14px;
-    vertical-align: middle;
-  }
+  header::before, header::after { content: '✦'; color: #A02018; font-size: 26px; margin: 0 14px; vertical-align: middle; }
   header h1 {
-    display: inline-block;
-    font-family: 'Cabin Sketch', cursive;
-    font-weight: 700;
-    font-size: 48px;
-    color: #3A2208;
-    letter-spacing: 4px;
-    line-height: 1;
-    vertical-align: middle;
+    display: inline-block; font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-size: 48px; color: #3A2208; letter-spacing: 4px; line-height: 1; vertical-align: middle;
   }
-  header .sub {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 16px;
-    color: #5A3818;
-    letter-spacing: 5px;
-    margin-top: 12px;
-  }
-  header p.intro {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 18px;
-    color: #5A3818;
-    margin-top: 18px;
-    max-width: 720px;
-    margin-left: auto; margin-right: auto;
-    line-height: 1.5;
+  header .sub { font-family: 'Patrick Hand', cursive; font-size: 16px; color: #5A3818; letter-spacing: 5px; margin-top: 12px; }
+  header p.intro { font-family: 'Patrick Hand', cursive; font-size: 18px; color: #5A3818; margin-top: 18px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+
+  /* Section headers */
+  .section-label {
+    font-family: 'Cabin Sketch', cursive; font-weight: 700; font-size: 22px;
+    color: #F0E2B8; letter-spacing: 3px; text-transform: uppercase;
+    margin: 36px 0 16px; padding-left: 4px;
+    border-left: 4px solid #A02018; padding-left: 14px;
   }
 
-  /* Gallery grid */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
-    gap: 28px;
-  }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(440px, 1fr)); gap: 28px; }
 
   .card {
-    background: #F0E2B8;
-    border: 3px solid #5A3818;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0,0,0,.5);
-    display: flex;
-    flex-direction: column;
+    background: #F0E2B8; border: 3px solid #5A3818; border-radius: 6px;
+    overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,.5);
+    display: flex; flex-direction: column;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(0,0,0,.6);
-  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,.6); }
 
-  .card .thumb {
-    position: relative;
-    width: 100%;
-    height: 320px;
-    background: #DDC890;
-    overflow: hidden;
-    border-bottom: 2px solid #5A3818;
-  }
-  .card .thumb iframe {
-    border: 0;
-    width: 1500px;
-    height: 1000px;
-    transform: scale(0.32);
-    transform-origin: top left;
-    pointer-events: none;
-    background: #DDC890;
-  }
-  .card .thumb-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg, transparent 60%, rgba(40,20,5,0.5));
-    display: flex; align-items: flex-end; padding: 18px;
-  }
-  .card .badge {
-    position: absolute; top: 12px; left: 12px;
-    background: #A02018; color: #F0E2B8;
-    border: 2px solid #F0E2B8;
-    border-radius: 16px;
-    padding: 4px 12px;
-    font-family: 'Cabin Sketch', cursive;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 2px;
-    box-shadow: 0 2px 6px rgba(0,0,0,.3);
-  }
+  .card .thumb { position: relative; width: 100%; height: 320px; background: #DDC890; overflow: hidden; border-bottom: 2px solid #5A3818; }
+  .card .thumb iframe { border: 0; width: 1500px; height: 1000px; transform: scale(0.32); transform-origin: top left; pointer-events: none; background: #DDC890; }
+  .card .thumb-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(40,20,5,0.5)); display: flex; align-items: flex-end; padding: 18px; }
+  .card .badge { position: absolute; top: 12px; left: 12px; background: #A02018; color: #F0E2B8; border: 2px solid #F0E2B8; border-radius: 16px; padding: 4px 12px; font-family: 'Cabin Sketch', cursive; font-weight: 700; font-size: 14px; letter-spacing: 2px; box-shadow: 0 2px 6px rgba(0,0,0,.3); }
   .card .badge.featured { background: #4A8228; }
+  .card .badge.new      { background: #1E3C64; }
 
-  .card .body {
-    padding: 18px 20px 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .card h2 {
-    font-family: 'Caveat', cursive;
-    font-weight: 700;
-    font-size: 28px;
-    color: #3A2208;
-    line-height: 1.1;
-    margin-bottom: 4px;
-  }
-  .card .approach {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 12px;
-    color: #5A3818;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .card .desc {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 16px;
-    color: #3A2208;
-    line-height: 1.45;
-    flex: 1;
-    margin-bottom: 14px;
-  }
-  .card .pros, .card .cons {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 14px;
-    color: #5A3818;
-    line-height: 1.4;
-    margin-top: 6px;
-  }
+  .card .body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; }
+  .card h2 { font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #3A2208; line-height: 1.1; margin-bottom: 4px; }
+  .card .approach { font-family: 'Patrick Hand', cursive; font-size: 12px; color: #5A3818; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+  .card .desc { font-family: 'Patrick Hand', cursive; font-size: 16px; color: #3A2208; line-height: 1.45; flex: 1; margin-bottom: 14px; }
+  .card .pros, .card .cons { font-family: 'Patrick Hand', cursive; font-size: 14px; color: #5A3818; line-height: 1.4; margin-top: 6px; }
   .card .pros::before { content: '✓ '; color: #4A8228; font-weight: 800; }
   .card .cons::before { content: '✗ '; color: #A02018; font-weight: 800; }
-
-  .card a.open {
-    display: inline-block;
-    align-self: flex-start;
-    margin-top: 14px;
-    background: #5A3818;
-    color: #F0E2B8;
-    font-family: 'Cabin Sketch', cursive;
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    padding: 10px 22px;
-    border-radius: 4px;
-    transition: background 0.15s;
-  }
+  .card a.open { display: inline-block; align-self: flex-start; margin-top: 14px; background: #5A3818; color: #F0E2B8; font-family: 'Cabin Sketch', cursive; font-weight: 700; font-size: 16px; letter-spacing: 2px; text-decoration: none; padding: 10px 22px; border-radius: 4px; transition: background 0.15s; }
   .card a.open:hover { background: #A02018; }
 
-  footer {
-    margin-top: 36px;
-    text-align: center;
-    color: #C8A878;
-    font-family: 'Patrick Hand', cursive;
-    font-size: 14px;
-    letter-spacing: 1.5px;
-  }
+  /* Theme variant links inside a card */
+  .theme-links { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .theme-links a { font-family: 'Patrick Hand', cursive; font-size: 13px; background: #D6BD8A; color: #3A2208; border: 1.5px solid #8A6840; border-radius: 12px; padding: 3px 12px; text-decoration: none; transition: background 0.15s; }
+  .theme-links a:hover { background: #C8A878; }
+
+  footer { margin-top: 36px; text-align: center; color: #C8A878; font-family: 'Patrick Hand', cursive; font-size: 14px; letter-spacing: 1.5px; }
   footer a { color: #F0E2B8; text-decoration: none; border-bottom: 1px dashed #C8A878; }
 </style>
 </head>
@@ -197,121 +82,101 @@
 <div class="container">
 
   <header>
-    <h1>Rock Hill Discovery Map</h1>
-    <div class="sub">· DESIGN EXPLORATIONS · YORK COUNTY · SOUTH CAROLINA ·</div>
-    <p class="intro">Nine takes at the same idea — a Discovery-Map-style guide to downtown Rock Hill. Compare the directions and pick what feels right. More versions to come.</p>
+    <h1>Maps</h1>
+    <div class="sub">· DESIGN EXPLORATIONS · CAROLINAS ·</div>
+    <p class="intro">A growing collection of map-style guides. Each region gets an interactive map and a print-ready edition. Adding a new city is just one data file.</p>
   </header>
 
+  <!-- ══════════════════════════════════════════════
+       REGIONS
+  ══════════════════════════════════════════════ -->
+  <div class="section-label">Regions</div>
   <div class="grid">
 
-    <!-- v3: Interactive Leaflet (current best) -->
+    <!-- Rock Hill: Interactive -->
     <div class="card">
       <div class="thumb">
         <span class="badge featured">★ KEEP</span>
-        <iframe src="interactive.html" loading="lazy"></iframe>
+        <iframe src="map.html?region=rock-hill" loading="lazy"></iframe>
         <div class="thumb-overlay"></div>
       </div>
       <div class="body">
-        <h2>Interactive Watercolor Map</h2>
-        <div class="approach">Leaflet + OSM + watercolor CSS + AI markers</div>
-        <div class="desc">Real Rock Hill geography from OpenStreetMap, painted-over with a watercolor CSS filter, with AI-generated watercolor building paintings as marker icons. Click any pin for hours, address, description.</div>
-        <div class="pros">Pan, zoom, click. Real streets. Painted feel. 21 businesses tagged.</div>
+        <h2>Rock Hill — Interactive</h2>
+        <div class="approach">Leaflet + OSM · watercolor CSS · 21 locations</div>
+        <div class="desc">Real Rock Hill geography painted over with a watercolor CSS filter. Click any pin for hours, address, and directions.</div>
+        <div class="pros">Pan, zoom, click. Real streets. Painted feel.</div>
         <div class="cons">Web-only. Watercolor wash partially obscures street labels.</div>
-        <a class="open" href="interactive.html">Open →</a>
+        <a class="open" href="map.html?region=rock-hill">Open →</a>
       </div>
     </div>
 
-    <!-- print theme: parchment -->
+    <!-- Rock Hill: Print -->
     <div class="card">
       <div class="thumb">
         <span class="badge featured">★ PRINT</span>
-        <iframe src="print.html?theme=parchment" loading="lazy"></iframe>
+        <iframe src="print.html?region=rock-hill" loading="lazy"></iframe>
         <div class="thumb-overlay"></div>
       </div>
       <div class="body">
-        <h2>Warm Parchment (Original)</h2>
-        <div class="approach">Print map · QR code · Apple/Google Maps</div>
-        <div class="desc">Cream + sepia + Carolina red. Classic vintage cartouche feel — the reference Discovery Maps look. The print-ready Discovery Map with QR code linking to the interactive version. Same layout, same data, different palette.</div>
-        <a class="open" href="print.html?theme=parchment">Open →</a>
+        <h2>Rock Hill — Print Edition</h2>
+        <div class="approach">Print map · trifold layout · QR code · 6 themes</div>
+        <div class="desc">Print-ready trifold with featured business listings, locked map, and QR code linking to the interactive version.</div>
+        <div class="pros">Print-ready. Multiple palettes. Self-contained.</div>
+        <div class="cons">Fixed zoom — use interactive for exploring.</div>
+        <a class="open" href="print.html?region=rock-hill">Open →</a>
+        <div class="theme-links">
+          <a href="print.html?region=rock-hill&theme=parchment">Parchment</a>
+          <a href="print.html?region=rock-hill&theme=park">Park</a>
+          <a href="print.html?region=rock-hill&theme=navy">Navy</a>
+          <a href="print.html?region=rock-hill&theme=forest">Forest</a>
+          <a href="print.html?region=rock-hill&theme=coastal">Coastal</a>
+          <a href="print.html?region=rock-hill&theme=sunset">Sunset</a>
+        </div>
       </div>
     </div>
 
-    <!-- print theme: park -->
+    <!-- Ballantyne: Interactive -->
     <div class="card">
       <div class="thumb">
-        <span class="badge featured">★ PARK</span>
-        <iframe src="print.html?theme=park" loading="lazy"></iframe>
+        <span class="badge new">★ NEW</span>
+        <iframe src="map.html?region=ballantyne" loading="lazy"></iframe>
         <div class="thumb-overlay"></div>
       </div>
       <div class="body">
-        <h2>Theme Park Edition</h2>
-        <div class="approach">Print map · Vibrant Disney/park-style palette</div>
-        <div class="desc">Bright saturated theme-park aesthetic — vibrant teal frame, sunshine cream paper, candy-apple red title with a 3D drop shadow. Saturated map tiles, bigger glossy markers, leaf-green outdoors, sunshine-orange eats, sky-blue family-fun. Cheerful and family-friendly.</div>
-        <a class="open" href="print.html?theme=park">Open →</a>
+        <h2>Ballantyne — Interactive</h2>
+        <div class="approach">Leaflet + OSM · navy/blue palette · 15 locations</div>
+        <div class="desc">Ballantyne, Charlotte NC — dining, coffee, parks, the Kimpton Hotel campus, and more. Click any pin for hours, address, and directions.</div>
+        <div class="pros">Pan, zoom, click. Real streets. Blue-toned feel.</div>
+        <div class="cons">Location data is curated — not exhaustive.</div>
+        <a class="open" href="map.html?region=ballantyne">Open →</a>
       </div>
     </div>
 
-    <!-- print theme: navy -->
+    <!-- Ballantyne: Print -->
     <div class="card">
       <div class="thumb">
-        <span class="badge">NAVY</span>
-        <iframe src="print.html?theme=navy" loading="lazy"></iframe>
+        <span class="badge new">★ NEW</span>
+        <iframe src="print.html?region=ballantyne" loading="lazy"></iframe>
         <div class="thumb-overlay"></div>
       </div>
       <div class="body">
-        <h2>Vintage Navy & Red</h2>
-        <div class="approach">Print map · QR code · Apple/Google Maps</div>
-        <div class="desc">Patriotic Americana — deep navy frame, ivory paper, faded red accent. Looks like a 1940s travel poster. The print-ready Discovery Map with QR code linking to the interactive version. Same layout, same data, different palette.</div>
-        <a class="open" href="print.html?theme=navy">Open →</a>
+        <h2>Ballantyne — Print Edition</h2>
+        <div class="approach">Print map · navy/blue palette · QR code</div>
+        <div class="desc">Print-ready Ballantyne trifold with featured listings, locked map center, and QR code linking to the interactive version.</div>
+        <div class="pros">Print-ready. Clean navy palette.</div>
+        <div class="cons">Fixed zoom — use interactive for exploring.</div>
+        <a class="open" href="print.html?region=ballantyne">Open →</a>
       </div>
     </div>
 
-    <!-- print theme: forest -->
-    <div class="card">
-      <div class="thumb">
-        <span class="badge">FOREST</span>
-        <iframe src="print.html?theme=forest" loading="lazy"></iframe>
-        <div class="thumb-overlay"></div>
-      </div>
-      <div class="body">
-        <h2>Forest & Earth Tones</h2>
-        <div class="approach">Print map · QR code · Apple/Google Maps</div>
-        <div class="desc">National-park style — dark forest-green frame, sand-colored paper, rust-orange accent. Outdoorsy. The print-ready Discovery Map with QR code linking to the interactive version. Same layout, same data, different palette.</div>
-        <a class="open" href="print.html?theme=forest">Open →</a>
-      </div>
-    </div>
+  </div>
 
-    <!-- print theme: coastal -->
-    <div class="card">
-      <div class="thumb">
-        <span class="badge">COASTAL</span>
-        <iframe src="print.html?theme=coastal" loading="lazy"></iframe>
-        <div class="thumb-overlay"></div>
-      </div>
-      <div class="body">
-        <h2>Coastal Blue</h2>
-        <div class="approach">Print map · QR code · Apple/Google Maps</div>
-        <div class="desc">Beach-town vibe — deep blue frame, sandy paper, coral accent. Feels like a Charleston tourist map. The print-ready Discovery Map with QR code linking to the interactive version. Same layout, same data, different palette.</div>
-        <a class="open" href="print.html?theme=coastal">Open →</a>
-      </div>
-    </div>
+  <!-- ══════════════════════════════════════════════
+       EARLIER EXPLORATIONS (Rock Hill v1 / v2)
+  ══════════════════════════════════════════════ -->
+  <div class="section-label">Earlier Explorations</div>
+  <div class="grid">
 
-    <!-- print theme: sunset -->
-    <div class="card">
-      <div class="thumb">
-        <span class="badge">SUNSET</span>
-        <iframe src="print.html?theme=sunset" loading="lazy"></iframe>
-        <div class="thumb-overlay"></div>
-      </div>
-      <div class="body">
-        <h2>Warm Sunset</h2>
-        <div class="approach">Print map · QR code · Apple/Google Maps</div>
-        <div class="desc">Golden hour — peachy paper, warm reds and oranges, deep brown frame. Glows like a folded summer map. The print-ready Discovery Map with QR code linking to the interactive version. Same layout, same data, different palette.</div>
-        <a class="open" href="print.html?theme=sunset">Open →</a>
-      </div>
-    </div>
-
-    <!-- v2: SVG hybrid with AI overlays -->
     <div class="card">
       <div class="thumb">
         <span class="badge">v2</span>
@@ -321,14 +186,13 @@
       <div class="body">
         <h2>Hand-Painted Static Map</h2>
         <div class="approach">SVG basemap + AI watercolor overlays</div>
-        <div class="desc">A single illustrated print-style map. Hand-drawn streets and labels in SVG, with AI-generated watercolor paintings of Winthrop, Old Town, the brewery, museum, fountain, and amphitheater placed at correct geography.</div>
-        <div class="pros">Print-ready. Beautiful as a single static image. Self-contained.</div>
+        <div class="desc">A single illustrated print-style map. Hand-drawn streets and labels in SVG, with AI-generated watercolor paintings placed at correct geography.</div>
+        <div class="pros">Print-ready. Beautiful as a single static image.</div>
         <div class="cons">Not interactive. Procedural elements still feel digital.</div>
         <a class="open" href="svg-painted.html">Open →</a>
       </div>
     </div>
 
-    <!-- v1: Pure AI generation -->
     <div class="card">
       <div class="thumb">
         <span class="badge">v1</span>
@@ -338,8 +202,8 @@
       <div class="body">
         <h2>Pure AI Watercolor</h2>
         <div class="approach">Generated end-to-end by image AI</div>
-        <div class="desc">A fully AI-generated watercolor pictorial map. Stunning artwork — but the AI doesn't know our actual streets, real businesses, or geographic accuracy. Looks beautiful, isn't navigable.</div>
-        <div class="pros">Genuinely painted. Looks like a real Discovery Map.</div>
+        <div class="desc">A fully AI-generated watercolor pictorial map. Stunning artwork — but the AI doesn't know our actual streets, real businesses, or geographic accuracy.</div>
+        <div class="pros">Genuinely painted. Looks like a real Map.</div>
         <div class="cons">Generic fantasy village, not Rock Hill. No real streets or businesses.</div>
         <a class="open" href="pure-ai.html">Open →</a>
       </div>
@@ -348,7 +212,7 @@
   </div>
 
   <footer>
-    Repository: <a href="https://github.com/joshuaLoren/rock-hill-discovery-map" target="_blank">github.com/joshuaLoren/rock-hill-discovery-map</a> · Hosted on GitHub Pages
+    Repository: <a href="https://github.com/kimberlybreek/rock-hill-discovery-map" target="_blank">github.com/kimberlybreek/rock-hill-discovery-map</a>
   </footer>
 
 </div>

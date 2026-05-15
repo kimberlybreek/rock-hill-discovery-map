@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Map</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Patrick+Hand&family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Patrick Hand', cursive;
+    background: #1c1008
+      repeating-linear-gradient(45deg, transparent 0 8px, rgba(255,255,255,0.02) 8px 9px);
+    color: var(--ink, #222);
+    min-height: 100vh;
+    padding: 24px;
+  }
+
+  .sheet {
+    max-width: 1500px;
+    margin: 0 auto;
+    background: var(--parch, #f5f0e8);
+    background-image:
+      radial-gradient(ellipse at top left, rgba(0,0,0,0.06), transparent 60%),
+      radial-gradient(ellipse at bottom right, rgba(0,0,0,0.06), transparent 60%);
+    border: 6px solid var(--frame, #444);
+    box-shadow:
+      inset 0 0 0 8px var(--parch, #f5f0e8),
+      inset 0 0 0 11px var(--inner-border, #bbb),
+      inset 0 0 0 13px var(--frame, #444),
+      0 24px 80px rgba(0,0,0,.6);
+    padding: 18px;
+    position: relative;
+  }
+
+  .cartouche {
+    text-align: center;
+    padding: 18px 0 14px;
+    border-bottom: 1.5px solid var(--inner-border, #bbb);
+    margin-bottom: 14px;
+    position: relative;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.04), transparent 70%);
+  }
+  .cartouche::before, .cartouche::after {
+    content: '✦';
+    color: var(--accent, #800);
+    font-size: 22px;
+    margin: 0 18px;
+    vertical-align: middle;
+  }
+  .cartouche h1 {
+    display: inline-block;
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--ink, #222);
+    letter-spacing: 4px;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  .cartouche .sub {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 14px;
+    color: var(--frame, #444);
+    letter-spacing: 6px;
+    margin-top: 8px;
+  }
+  .cartouche .free-badge {
+    position: absolute; top: 18px; left: 18px;
+    background: var(--accent, #800); color: var(--parch, #f5f0e8);
+    border: 2px solid var(--parch, #f5f0e8); border-radius: 50%;
+    width: 64px; height: 64px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    box-shadow: 0 3px 10px rgba(0,0,0,.4);
+    transform: rotate(-8deg);
+  }
+  .cartouche .free-badge .free { font-size: 18px; line-height: 1; }
+  .cartouche .free-badge .take { font-size: 8px; letter-spacing: 1px; margin-top: 3px; opacity: 0.85; }
+  .back-link {
+    position: absolute; top: 18px; right: 18px;
+    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-size: 13px; letter-spacing: 2px;
+    background: var(--frame, #444); color: var(--parch, #f5f0e8);
+    border: 2px solid var(--inner-border, #bbb);
+    padding: 6px 14px; border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+  }
+  .back-link:hover { opacity: 0.85; }
+
+  .map-frame {
+    border: 3px solid var(--frame, #444);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    background: #ccc;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.15);
+  }
+  #map { height: 720px; width: 100%; }
+
+  .leaflet-tile-pane {
+    filter: var(--tile-filter, none);
+    mix-blend-mode: var(--tile-blend, normal);
+    opacity: var(--tile-opa, 1);
+  }
+  .map-frame::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.12) 100%),
+      repeating-radial-gradient(circle at 25% 30%, rgba(0,0,0,0.02) 0, rgba(0,0,0,0.02) 1px, transparent 2px, transparent 5px);
+    pointer-events: none;
+    z-index: 401;
+  }
+
+  .bottom-bar {
+    margin-top: 14px;
+    background: linear-gradient(to bottom, var(--parch, #f5f0e8), var(--parch-dark, #ddd));
+    border: 2px solid var(--frame, #444);
+    border-radius: 5px;
+    padding: 14px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; }
+  .legend-item {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'Caveat', cursive; font-size: 18px; font-weight: 700;
+    color: var(--ink, #222);
+  }
+  .legend-dot { width: 16px; height: 16px; border-radius: 4px; border: 1.5px solid var(--ink, #222); }
+  .credit { font-family: 'Patrick Hand', cursive; font-size: 12px; color: var(--frame, #444); letter-spacing: 1px; }
+
+  .biz-marker {
+    background: var(--parch, #f5f0e8);
+    border: 2px solid var(--frame, #444);
+    border-radius: 50%;
+    width: 38px; height: 38px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+  .biz-marker:hover { transform: scale(1.18); z-index: 1000; }
+  .biz-marker img { width: 30px; height: 30px; object-fit: cover; border-radius: 50%; }
+  .biz-marker .num {
+    font-family: 'Cabin Sketch', cursive; font-weight: 700; font-size: 16px; color: #fff;
+    background: var(--cat-color, #444);
+    width: 100%; height: 100%; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .leaflet-popup-content-wrapper {
+    background: linear-gradient(to bottom, var(--parch, #f5f0e8), var(--parch-dark, #ddd));
+    border: 2px solid var(--frame, #444);
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.4);
+    padding: 0;
+  }
+  .leaflet-popup-tip { background: var(--parch-dark, #ddd); }
+  .popup {
+    padding: 12px 14px; min-width: 220px;
+    font-family: 'Patrick Hand', cursive; color: var(--ink, #222);
+  }
+  .popup img { width: 100%; border-radius: 4px; border: 1.5px solid var(--frame, #444); margin-bottom: 8px; }
+  .popup h3 { font-family: 'Caveat', cursive; font-size: 22px; margin-bottom: 4px; color: var(--cat-color, var(--ink, #222)); }
+  .popup .cat {
+    display: inline-block;
+    background: var(--cat-color, #444); color: var(--parch, #f5f0e8);
+    font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 10px; margin-bottom: 6px;
+    font-family: 'Patrick Hand', cursive;
+  }
+  .popup .desc { font-size: 14px; line-height: 1.4; }
+  .popup .meta {
+    margin-top: 6px; font-size: 12px; color: var(--frame, #444);
+    border-top: 1px dashed var(--inner-border, #bbb); padding-top: 6px;
+  }
+  .popup .dirs {
+    margin-top: 10px; padding-top: 8px;
+    border-top: 1px dashed var(--inner-border, #bbb);
+    display: flex; gap: 6px;
+  }
+  .popup .dirs a {
+    flex: 1; display: inline-block;
+    background: var(--cat-color, #444); color: #fff;
+    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-size: 11px; letter-spacing: 1px;
+    text-align: center; text-decoration: none;
+    padding: 6px 4px; border-radius: 3px; border: 1.5px solid var(--frame, #444);
+    transition: filter 0.15s;
+  }
+  .popup .dirs a:hover { filter: brightness(1.15); }
+  .popup .dirs a.apple  { background: #2A2A2A; }
+  .popup .dirs a.google { background: #4285F4; }
+
+  .compass-corner {
+    position: absolute; bottom: 20px; right: 24px;
+    z-index: 500; width: 90px; height: 90px;
+    pointer-events: none; opacity: 0.92;
+  }
+
+  .leaflet-control-attribution { font-size: 10px; opacity: 0.6; }
+</style>
+</head>
+<body>
+<script>
+/* Validate and resolve region from URL, then load its data file synchronously */
+const regionId = (() => {
+  const p = new URLSearchParams(location.search).get('region') || 'rock-hill';
+  return /^[a-z0-9-]+$/.test(p) ? p : 'rock-hill';
+})();
+document.write('<script src="regions/' + regionId + '.js"><\/script>');
+</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function () {
+  const R = window.REGION;
+  if (!R) { document.body.innerHTML = '<p style="color:red;padding:2rem">Region data failed to load.</p>'; return; }
+
+  /* Apply palette as CSS custom properties */
+  const root = document.documentElement;
+  Object.entries(R.palette).forEach(([k, v]) => root.style.setProperty(k, v));
+
+  /* Update page title */
+  document.title = R.name + ' — Map';
+
+  /* Build HTML shell */
+  document.body.innerHTML = `
+    <div class="sheet">
+      <header class="cartouche">
+        <div class="free-badge"><div class="free">FREE</div><div class="take">TAKE ONE</div></div>
+        <a class="back-link" href="index.html">← All Maps</a>
+        <h1>${R.name}</h1>
+        <div class="sub">${R.sub}</div>
+      </header>
+      <div class="map-frame">
+        <div id="map"></div>
+        <img class="compass-corner" src="assets/compass.png" alt="compass" onerror="this.style.display='none'">
+      </div>
+      <div class="bottom-bar">
+        <div class="legend" id="legend"></div>
+        <div class="credit">${R.interactiveCredit}</div>
+      </div>
+    </div>`;
+
+  /* Legend */
+  const legendEl = document.getElementById('legend');
+  R.legend.forEach(({ color, label }) => {
+    legendEl.insertAdjacentHTML('beforeend',
+      `<div class="legend-item"><span class="legend-dot" style="background:${color}"></span>${label}</div>`);
+  });
+
+  /* Map */
+  const map = L.map('map', {
+    zoomControl: true, attributionControl: true,
+    minZoom: 12, maxZoom: 18,
+  }).setView(R.center, R.zoom);
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors · Map ✦ ' + R.credit,
+  }).addTo(map);
+
+  /* Markers */
+  R.places.forEach(pl => {
+    const col = R.cats[pl.cat] || '#444';
+    const html = pl.img
+      ? `<div class="biz-marker" style="--cat-color:${col};border-color:${col}"><img src="${pl.img}" alt=""></div>`
+      : `<div class="biz-marker" style="--cat-color:${col};border-color:${col}"><div class="num" style="--cat-color:${col}">${pl.n}</div></div>`;
+
+    const icon = L.divIcon({ html, className: '', iconSize: [38, 38], iconAnchor: [19, 19] });
+
+    const appleUrl  = `https://maps.apple.com/?daddr=${pl.lat},${pl.lon}&dirflg=w&q=${encodeURIComponent(pl.name)}`;
+    const googleUrl = `https://www.google.com/maps/dir/?api=1&destination=${pl.lat},${pl.lon}&travelmode=walking`;
+
+    const popupHtml = `
+      <div class="popup" style="--cat-color:${col}">
+        ${pl.img ? `<img src="${pl.img}" alt="${pl.name}">` : ''}
+        <div class="cat" style="background:${col}">${pl.cat}</div>
+        <h3>${pl.name}</h3>
+        <div class="desc">${pl.desc}</div>
+        <div class="meta">${pl.meta}</div>
+        <div class="dirs">
+          <a class="apple"  href="${appleUrl}"  target="_blank" rel="noopener">🍎 Apple Maps</a>
+          <a class="google" href="${googleUrl}" target="_blank" rel="noopener">🗺 Google Maps</a>
+        </div>
+      </div>`;
+
+    L.marker([pl.lat, pl.lon], { icon })
+      .addTo(map)
+      .bindPopup(popupHtml, { maxWidth: 280, closeButton: true });
+  });
+})();
+</script>
+</body>
+</html>

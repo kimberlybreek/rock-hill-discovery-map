@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Downtown Rock Hill — Discovery Map</title>
+<title>Downtown Rock Hill — Map</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Patrick+Hand&family=Cabin+Sketch:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
@@ -282,7 +282,7 @@
       <div class="take">TAKE ONE</div>
     </div>
     <h1>Downtown Rock Hill</h1>
-    <div class="sub">· DISCOVERY MAP · YORK COUNTY · SOUTH CAROLINA · 2026 EDITION ·</div>
+    <div class="sub">· YORK COUNTY · SOUTH CAROLINA · 2026 EDITION ·</div>
   </header>
 
   <div class="map-frame">
@@ -299,7 +299,7 @@
       <div class="legend-item"><span class="legend-dot" style="background:#380A38"></span>Arts &amp; Music</div>
       <div class="legend-item"><span class="legend-dot" style="background:#0A2848"></span>Family Fun</div>
     </div>
-    <div class="credit">Click any marker · Pan &amp; zoom to explore · rockHillDiscovery.com</div>
+    <div class="credit">Click any marker · Pan &amp; zoom to explore · rockHillMap.com</div>
   </div>
 
 </div>
@@ -368,6 +368,10 @@ const PLACES = [
     img:null, desc:'Playground, picnic shelter, splash pad.', meta:'· South of Old Town' },
   { lat:34.9245, lon:-81.0050, n:21, cat:'family', name:'Sky Zone Rock Hill',
     img:null, desc:'Trampolines, dodgeball, foam pit.', meta:'· Cherry Rd' },
+
+  /* Ballantyne */
+  { lat:35.0528, lon:-80.8453, n:22, cat:'food',   name:'Ballantyne Village',
+    img:null, desc:'Upscale open-air shopping & dining hub just across the NC border. Restaurants, boutiques, and a movie theater.', meta:'15253 Ballantyne Village Way · Charlotte, NC' },
 ];
 
 const map = L.map('map', {
@@ -380,7 +384,7 @@ const map = L.map('map', {
 /* OpenStreetMap tiles — base. CSS filter above gives them the watercolor wash. */
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
-  attribution: '© OpenStreetMap contributors · Discovery Map style ✦ rockHillDiscovery.com',
+  attribution: '© OpenStreetMap contributors · Map style ✦ rockHillMap.com',
 }).addTo(map);
 
 /* Place all markers */
