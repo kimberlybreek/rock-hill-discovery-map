@@ -303,7 +303,8 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
         const pl = byNum[n];
         if (!pl) return '';
         const col = R.cats[pl.cat] || 'var(--frame)';
-        return `<div class="ad" style="--cat-color:${col}">
+        const imgStyle = pl.img ? `background-image:url('${pl.img}');` : '';
+        return `<div class="ad${pl.img ? ' has-img' : ''}" style="--cat-color:${col};${imgStyle}">
           <span class="ad-num">${pl.n}</span>
           <h3>${pl.name}</h3>
           <div class="sub">${pl.short || ''}</div>
