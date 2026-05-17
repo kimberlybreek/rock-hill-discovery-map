@@ -190,6 +190,12 @@ window.REGION = {
       desc:'Ballantyne\'s coolest barber shop — sharp cuts, straight-razor shaves, and a complimentary cold beer.',
       meta:'· The Bowl at Ballantyne',
       img:'https://northwoodoffice-assets.imgix.net/northwood/images/news/IMG_7973-2.jpeg' },
+    { lat:35.0502, lon:-80.8350, n:26, cat:'coffee',
+      name:'Tous Les Jours',
+      short:'Korean-French bakery · pastries · coffee',
+      desc:'Korean-French bakery café serving beautifully crafted pastries, soft cakes, and quality coffee drinks.',
+      meta:'· Ballantyne area · tljus.com',
+      img:'https://images.squarespace-cdn.com/content/v1/5b9b5c8596e76f6a7afdcb97/1631567342943-ZQZQZQZQZQZQ/tous-les-jours.jpg' },
     { lat:35.0531, lon:-80.8457, n:24, cat:'coffee',
       name:'Salty Donut',
       short:'Artisan donuts · small-batch coffee',
@@ -209,11 +215,13 @@ window.REGION = {
       { head: '⭐ Arts &amp; Wellness', cls: 'fam', nums: [7, 9, 13, 16, 17, 18] },
     ],
     left: [
-      { head: '☕ Coffee &amp; Cafés', cls: 'coffee', nums: [3, 6, 15, 24] },
-      { head: '🥾 Get Outside!',       cls: 'do',     nums: [10, 11, 12] },
+      { head: '☕ Coffee &amp; Cafés', cls: 'coffee', nums: [3, 6, 15, 24, 26] },
     ],
     right: [
       { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [8, 4, 5, 23, 25] },
+    ],
+    mapBelow: [
+      { head: '🥾 Get Outside!', cls: 'do', nums: [10, 11, 12] },
     ],
     bottom: [
       { head: '🎳 Family &amp; Fun', cls: 'fam', nums: [2, 19, 20, 21, 22] },
