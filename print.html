@@ -41,7 +41,7 @@
   .cartouche {
     text-align: center; padding: 6px 0 5px;
     border-bottom: 1.5px solid var(--inner-border, #bbb);
-    margin-bottom: 6px; position: relative;
+    margin-bottom: 16px; position: relative;
     background: radial-gradient(ellipse at center, rgba(0,0,0,0.04), transparent 70%);
   }
   .title-row { display: flex; align-items: center; justify-content: center; }
@@ -79,12 +79,12 @@
   .body { display: grid; grid-template-columns: 220px 1fr 220px; gap: 10px; align-items: start; }
 
   /* ── HORIZONTAL RAILS (top / bottom of map) ── */
-  .h-rail { display: flex; flex-wrap: nowrap; gap: 4px; margin: 4px 0; align-items: stretch; }
+  .h-rail { display: flex; flex-wrap: nowrap; gap: 4px; margin: 4px 0; align-items: stretch; height: 130px; }
   .h-rail .h-rail-head {
     writing-mode: vertical-lr; transform: rotate(180deg);
     background: var(--navy, #444); color: var(--parch, #f5f0e8);
     font-family: 'Cinzel', serif; font-weight: 700;
-    font-size: 11px; letter-spacing: 2px;
+    font-size: 9px; letter-spacing: 1px;
     text-align: center; padding: 6px 4px; border-radius: 3px;
     white-space: nowrap; flex-shrink: 0; align-self: stretch;
   }
@@ -92,7 +92,7 @@
   .h-rail .h-rail-head.do     { background: var(--green, #484); }
   .h-rail .h-rail-head.coffee { background: var(--cat-coffee, #4a2a08); }
   .h-rail .h-rail-head.fam    { background: var(--cat-fam, #380a38); }
-  .h-rail .ad { flex: 1; min-width: 0; min-height: 80px; }
+  .h-rail .ad { flex: 1; min-width: 0; height: auto; align-self: stretch; }
 
   /* ── SIDE RAILS ── */
   .rail { display: flex; flex-direction: column; gap: 8px; }
@@ -147,8 +147,8 @@
 
   /* ── MAP COLUMN ── */
   .map-col { display: flex; flex-direction: column; gap: 8px; }
-  .map-below .h-rail { margin: 0; }
-  .map-below .h-rail .ad { height: 120px; }
+  .map-below .h-rail { margin: 0; height: 135px; }
+  .map-below .h-rail .ad { height: auto; align-self: stretch; }
 
   /* ── MAP AREA ── */
   .map-area {
