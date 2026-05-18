@@ -69,12 +69,12 @@ window.REGION = {
       desc:'Pan-Asian fusion: sushi, ramen, Thai curries. A beloved Ballantyne dinner spot.',
       meta:'Ballantyne Village · Mon–Thu 11am–10pm, Fri–Sat 11am–11pm',
       img:'https://media-cdn.tripadvisor.com/media/photo-s/19/41/57/3f/baku.jpg' },
-    { lat:35.0530, lon:-80.8468, n:6,  cat:'coffee',
-      name:'Not Just Coffee',
-      short:'Expert espresso · cozy seating',
-      desc:'Charlotte-grown café with expert espresso, cozy seating, and grab-and-go pastries.',
-      meta:'Ballantyne Commons Pkwy · Mon–Fri 6:30am–5pm, Sat–Sun 7am–4pm',
-      img:'https://images.squarespace-cdn.com/content/v1/54592b9ae4b0d95c60e0fac6/b95352a4-a8c7-46ce-be17-f002d3ea868c/image_6483441+%281%29.jpg' },
+    { lat:35.0518, lon:-80.8452, n:6,  cat:'coffee',
+      name:'Copain Bakery & Provisions',
+      short:'French bakery · pastries · full bar',
+      desc:'Ballantyne\'s beloved French boulangerie-pâtisserie — handcrafted croissants, fresh-baked breads, pastries, and a full brasserie bar.',
+      meta:'14020 Stream Way · The Bowl at Ballantyne · Daily 7am–10pm',
+      img:'https://static.wixstatic.com/media/af94b9_4d294ba97af34a9dbd1f7061ce8b3029~mv2.jpg' },
 
     /* Ballantyne Hotel campus */
     { lat:35.0578, lon:-80.8622, n:7,  cat:'arts',
