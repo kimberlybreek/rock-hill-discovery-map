@@ -74,7 +74,7 @@ window.REGION = {
       short:'French bakery · pastries · full bar',
       desc:'Ballantyne\'s beloved French boulangerie-pâtisserie — handcrafted croissants, fresh-baked breads, pastries, and a full brasserie bar.',
       meta:'14020 Stream Way · The Bowl at Ballantyne · Daily 7am–10pm',
-      img:'https://static.wixstatic.com/media/af94b9_4d294ba97af34a9dbd1f7061ce8b3029~mv2.jpg' },
+      img:'assets/copain-logo.svg', logoOnly:true },
 
     /* Ballantyne Hotel campus */
     { lat:35.0578, lon:-80.8622, n:7,  cat:'arts',

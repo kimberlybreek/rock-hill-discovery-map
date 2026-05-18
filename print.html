@@ -119,6 +119,11 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+  .ad.logo-only {
+    background-size: contain;
+    background-position: center;
+    background-color: white;
+  }
   .ad.has-img::before {
     content: '';
     position: absolute; inset: 0;
@@ -347,11 +352,11 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
       if (!pl) return '';
       const col = R.cats[pl.cat] || 'var(--frame)';
       const imgStyle = pl.img ? `background-image:url('${pl.img}');` : '';
-      return `<div class="ad${pl.img ? ' has-img' : ''}" style="--cat-color:${col};${imgStyle}">
+      return `<div class="ad${pl.img ? ' has-img' : ''}${pl.logoOnly ? ' logo-only' : ''}" style="--cat-color:${col};${imgStyle}">
         <span class="ad-num">${pl.n}</span>
-        <h3>${pl.name}</h3>
+        ${pl.logoOnly ? '' : `<h3>${pl.name}</h3>
         <div class="sub">${pl.short || ''}</div>
-        <div class="meta">${pl.meta || ''}</div>
+        <div class="meta">${pl.meta || ''}</div>`}
       </div>`;
     }).join('');
     return `<div class="rail-head ${cls}">${head}</div>${ads}`;
@@ -366,11 +371,11 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
         if (!pl) return '';
         const col = R.cats[pl.cat] || 'var(--frame)';
         const imgStyle = pl.img ? `background-image:url('${pl.img}');` : '';
-        return `<div class="ad${pl.img ? ' has-img' : ''}" style="--cat-color:${col};${imgStyle}">
+        return `<div class="ad${pl.img ? ' has-img' : ''}${pl.logoOnly ? ' logo-only' : ''}" style="--cat-color:${col};${imgStyle}">
           <span class="ad-num">${pl.n}</span>
-          <h3>${pl.name}</h3>
+          ${pl.logoOnly ? '' : `<h3>${pl.name}</h3>
           <div class="sub">${pl.short || ''}</div>
-          <div class="meta">${pl.meta || ''}</div>
+          <div class="meta">${pl.meta || ''}</div>`}
         </div>`;
       }).join('');
       return `<div class="h-rail-head ${cls}">${head}</div>${ads}`;
