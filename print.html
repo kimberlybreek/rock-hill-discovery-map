@@ -76,7 +76,7 @@
   }
 
   /* ── BODY GRID ── */
-  .body { display: grid; grid-template-columns: 220px 1fr 220px; gap: 10px; align-items: start; }
+  .body { display: grid; grid-template-columns: 220px 1fr 220px; gap: 10px; align-items: stretch; }
 
   /* ── HORIZONTAL RAILS (top / bottom of map) ── */
   .h-rail { display: flex; flex-wrap: nowrap; gap: 4px; margin: 4px 0; align-items: stretch; height: 130px; }
@@ -147,7 +147,8 @@
 
   /* ── MAP COLUMN ── */
   .map-col { display: flex; flex-direction: column; gap: 8px; }
-  .map-below .h-rail { margin: 0; height: 135px; }
+  .map-below { flex: 1; display: flex; flex-direction: column; }
+  .map-below .h-rail { margin: 0; flex: 1; min-height: 100px; }
   .map-below .h-rail .ad { height: auto; align-self: stretch; }
 
   /* ── MAP AREA ── */
@@ -159,6 +160,7 @@
   #map { height: 520px; width: 100%; }
   .leaflet-control-container, .leaflet-control-zoom { display: none !important; }
   .leaflet-control-attribution { font-size: 8px; opacity: 0.4; }
+  .leaflet-div-icon { background: none !important; border: none !important; }
   .leaflet-tile-pane {
     filter: var(--tile-filter, none);
     mix-blend-mode: var(--tile-blend, normal);
@@ -231,10 +233,10 @@
 
   /* ── MARKERS ── */
   .biz-marker {
-    background: var(--parch, #f5f0e8); border: 1.5px solid var(--frame, #444);
+    background: transparent; border: none;
     border-radius: 50%; width: 22px; height: 22px;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 1px 4px rgba(0,0,0,.4);
+    box-shadow: none;
   }
   .biz-marker .num {
     font-family: 'Cabin Sketch', cursive; font-weight: 700; font-size: 10px; color: #fff;
@@ -298,6 +300,10 @@
     .h-rail { flex-wrap: nowrap !important; align-items: stretch !important; margin: 2px 0 !important; }
     .h-rail .ad { min-height: 70px !important; }
     #map { height: 480px !important; }
+    .body { align-items: stretch !important; }
+    .map-col { display: flex !important; flex-direction: column !important; }
+    .map-below { flex: 1 !important; display: flex !important; flex-direction: column !important; }
+    .map-below .h-rail { flex: 1 !important; height: auto !important; }
   }
 </style>
 </head>
