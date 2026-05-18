@@ -57,7 +57,7 @@ window.REGION = {
       short:'Davidson-rooted specialty roasts',
       desc:'Davidson-rooted specialty coffee — locally sourced beans, excellent pour-overs, and a welcoming crowd.',
       meta:'Ballantyne Village · Mon–Fri 7am–6pm, Sat 8am–5pm',
-      img:'assets/summit-coffee.png' },
+      img:'assets/summit-coffee.png', logoOnly:true },
     { lat:35.0524, lon:-80.8462, n:4,  cat:'food',
       name:'Brixx Wood Fired Pizza',
       short:'Thin-crust pies · craft beer',
