@@ -132,11 +132,11 @@ window.REGION = {
       meta:'7804 Rea Rd · Mon–Sat 9am–9pm, Sun 10am–7pm',
       img:'https://mpvre.com/wp-content/uploads/2022/07/StoneCrest-fountains-dawn-1920px.jpg' },
     { lat:35.0496, lon:-80.8383, n:15, cat:'coffee',
-      name:'Starbucks Reserve — Ballantyne',
-      short:'Nitro Cold Brew · Oleato · Reserve bar',
-      desc:'Spacious Reserve bar — Nitro Cold Brew, rare single-origins, and Oleato drinks.',
-      meta:'Rea Rd &amp; Ardrey Kell · Daily 5am–9pm',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/2c/1d/d9/inside.jpg' },
+      name:'Haraz Coffee House',
+      short:'Yemeni coffee · tea · cozy vibes',
+      desc:'Authentic Yemeni coffee house serving specialty brews, loose-leaf teas, and Middle Eastern pastries in a warm, welcoming space.',
+      meta:'15205 John J Delaney Dr, Ste B · Daily 8am–10pm',
+      img:'assets/haraz-logo.png', logoOnly:true },
 
     /* Arts & Wellness */
     { lat:35.0535, lon:-80.8444, n:16, cat:'arts',
