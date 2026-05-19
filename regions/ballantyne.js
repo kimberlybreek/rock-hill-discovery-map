@@ -216,7 +216,7 @@ window.REGION = {
       { head: '⭐ Arts &amp; Wellness', cls: 'fam', nums: [7, 9, 13, 16, 17, 18] },
     ],
     left: [
-      { head: '☕ Coffee &amp; Cafés', cls: 'coffee', nums: [3, 6, 15, 24, 26] },
+      { head: '☕ Coffee &amp; Cafés', cls: 'coffee', nums: [3, 6, 15, 22, 26] },
     ],
     right: [
       { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [8, 4, 5, 23, 25] },
@@ -225,7 +225,7 @@ window.REGION = {
       { head: '🥾 Get Outside!', cls: 'do', nums: [10, 11, 12] },
     ],
     bottom: [
-      { head: '🎳 Family &amp; Fun', cls: 'fam', nums: [2, 19, 20, 21, 22] },
+      { head: '🎳 Family &amp; Fun', cls: 'fam', nums: [2, 19, 20, 21] },
     ],
   },
 };
