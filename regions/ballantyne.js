@@ -182,7 +182,7 @@ window.REGION = {
       short:'Kids indoor play · climbing · fun',
       desc:'Indoor adventure play space for kids — climbing, jumping, and imaginative play in a safe environment.',
       meta:'Ballantyne · Mon–Fri 9am–6pm, Sat–Sun 9am–7pm',
-      img:'https://cdn.prod.website-files.com/67f03b0f48a5186df3a00afe/685d8daff75155fa8d8949bf_FlyKid_240601.jpg' },
+      img:'assets/fly-kid-fly-logo.svg', logoOnly:true },
 
     /* More food */
     { lat:35.0518, lon:-80.8452, n:23, cat:'food',
