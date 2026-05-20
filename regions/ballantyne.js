@@ -57,7 +57,7 @@ window.REGION = {
       short:'Davidson-rooted specialty roasts',
       desc:'Davidson-rooted specialty coffee — locally sourced beans, excellent pour-overs, and a welcoming crowd.',
       meta:'Ballantyne Village · Mon–Fri 7am–6pm, Sat 8am–5pm',
-      img:'assets/summit-coffee.png' },
+      img:'assets/summit-coffee.png', fitContain:true },
     { lat:35.0524, lon:-80.8462, n:4,  cat:'food',
       name:'Brixx Wood Fired Pizza',
       short:'Thin-crust pies · craft beer',
@@ -136,7 +136,7 @@ window.REGION = {
       short:'Yemeni coffee · tea · cozy vibes',
       desc:'Authentic Yemeni coffee house serving specialty brews, loose-leaf teas, and Middle Eastern pastries in a warm, welcoming space.',
       meta:'15205 John J Delaney Dr, Ste B · Daily 8am–10pm',
-      img:'assets/haraz-logo.png' },
+      img:'assets/haraz-logo.png', fitContain:true },
 
     /* Arts & Wellness */
     { lat:35.0535, lon:-80.8444, n:16, cat:'arts',
@@ -182,7 +182,7 @@ window.REGION = {
       short:'Kids indoor play · climbing · fun',
       desc:'Indoor adventure play space for kids — climbing, jumping, and imaginative play in a safe environment.',
       meta:'Ballantyne · Mon–Fri 9am–6pm, Sat–Sun 9am–7pm',
-      img:'assets/fly-kid-fly-logo.svg' },
+      img:'assets/fly-kid-fly-logo.svg', fitContain:true },
 
     /* More food */
     { lat:35.0518, lon:-80.8452, n:23, cat:'food',
@@ -196,7 +196,7 @@ window.REGION = {
       short:'Organic coffee · French bakery · pastries',
       desc:'Charming organic coffee and bakery café — handcrafted madeleines, seasonal pastries, and specialty coffee in a cozy Ballantyne spot.',
       meta:'11318 N Community House Rd #202 · Mon–Sat 8am–5pm',
-      img:'assets/littl-madeleine.svg' },
+      img:'assets/littl-madeleine.svg', fitContain:true },
     { lat:35.0531, lon:-80.8457, n:24, cat:'coffee',
       name:'Salty Donut',
       short:'Artisan donuts · small-batch coffee',
