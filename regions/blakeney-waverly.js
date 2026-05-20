@@ -88,7 +88,7 @@ window.REGION = {
       short:'Southern BBQ · Diners Drive-Ins &amp; Dives',
       desc:"Southern BBQ and comfort food made famous by Diners, Drive-Ins and Dives — weekend brunch, craft cocktails, and pulled pork that locals swear by.",
       meta:'9855 Sandy Rock Pl · Rea Farms · Mon–Thu 11am–9pm, Fri 11am–10pm, Sat–Sun 9am–9pm',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/62/d6/70/caption.jpg' },
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1f/3a/ff/a1/hickory-wood-fire-grill.jpg?w=900&h=500&s=1' },
 
     { lat:35.0496, lon:-80.8362, n:8,  cat:'family',
       name:"Duckworth's Taphouse",
