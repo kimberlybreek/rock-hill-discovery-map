@@ -59,7 +59,7 @@ window.REGION = {
       short:'Peruvian rotisserie chicken · Colombian flair',
       desc:'Family-owned Colombian-Peruvian gem famous for its Peruvian-marinated rotisserie chicken, vibrant murals, and a Latin soundtrack.',
       meta:'9816-A Rea Rd · Blakeney · Mon–Sat 11am–9pm, Sun 12–9pm',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/c3/8a/0c/pio-pio.jpg' },
+      img:'assets/pio-pio.jpg' },
 
     { lat:35.0489, lon:-80.8390, n:4,  cat:'food',
       name:'Open Rice Kitchen',
@@ -103,7 +103,7 @@ window.REGION = {
       short:'Modern chophouse · exceptional wine list',
       desc:'Sophisticated modern chophouse and Waverly anchor — exquisite steaks, fresh seafood, and an exceptional wine list in an elegant New South atmosphere.',
       meta:'7417 Waverly Walk Ave · Waverly · Mon–Thu &amp; Sun 5–9pm, Fri–Sat 5–10pm',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/e1/4a/3b/the-porter-s-house.jpg' },
+      img:'assets/porters-house.jpg' },
 
     { lat:35.0533, lon:-80.8143, n:10, cat:'food',
       name:'Via Roma',
@@ -124,7 +124,7 @@ window.REGION = {
       short:'Certified Neapolitan · wood-fired oven',
       desc:'Authentic Neapolitan pizza from a certified wood-fired oven — chewy, charred crusts with simple, high-quality Italian toppings.',
       meta:'7615 Waverly Walk Ave · Waverly · Daily 11:30am–9pm',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/26/c1/bf/desano-pizza-bakery.jpg' },
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/e4/d4/80/desano-napoletana.jpg' },
 
     { lat:35.0534, lon:-80.8144, n:13, cat:'coffee',
       name:'Breezeway Coffee',
@@ -145,7 +145,7 @@ window.REGION = {
       short:'Cryotherapy · infrared sauna · salt room',
       desc:"Charlotte's premier health optimization studio — whole-body cryotherapy, infrared sauna, salt rooms, compression therapy, and ice facials under one roof.",
       meta:'7314 Waverly Walk Ave · Waverly · Mon–Fri 10am–8pm, Sat–Sun 9am–6pm · theinvigory.com',
-      img:'https://theinvigory.com/wp-content/uploads/2023/10/the-invigory-waverly-100523-30-1024x683.jpg' },
+      img:'assets/invigory.jpg' },
 
     { lat:35.0531, lon:-80.8149, n:16, cat:'arts',
       name:'CycleBar Waverly',
