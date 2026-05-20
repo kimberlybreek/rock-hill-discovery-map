@@ -365,7 +365,7 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
   function renderHRail(sections) {
     if (!sections || !sections.length) return '';
     const inner = sections.map(({ head, cls, nums, lightText }) => {
-      const textStyle = lightText ? 'color:#fff;' : '';
+      const textStyle = lightText ? 'color:#fff;text-shadow:0 1px 4px rgba(0,0,0,0.8),0 0px 8px rgba(0,0,0,0.6);' : '';
       const ads = nums.map(n => {
         const pl = byNum[n];
         if (!pl) return '';
