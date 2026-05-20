@@ -370,6 +370,7 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
       if (!pl) return '';
       const col = R.cats[pl.cat] || 'var(--frame)';
       const imgStyle = pl.img ? `background-image:url('${pl.img}');` : '';
+      const bgColorStyle = pl.bgColor ? `background-color:${pl.bgColor};` : '';
       const useStrip = pl.img && !pl.logoOnly;
       return `<div class="ad${pl.img ? (useStrip ? ' text-strip' : ' logo-only') : ''}${pl.logoOnly ? ' logo-only' : ''}${pl.fitContain ? ' fit-contain' : ''}" style="--cat-color:${col};${bgColorStyle}${imgStyle}">
         <span class="ad-num">${pl.n}</span>
