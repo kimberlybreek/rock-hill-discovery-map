@@ -51,7 +51,8 @@ window.REGION = {
       name:"Burtons Grill &amp; Bar",
       short:'Scratch kitchen · allergy-friendly · brunch',
       desc:'Scratch-made New American menu with allergy-friendly options, seasonal outdoor dining, Wine Wednesday, and a popular weekend brunch.',
-      meta:'9816 Rea Rd · Blakeney · Mon–Thu 11:30am–10pm, Fri 11:30am–11pm, Sat–Sun 10:30am–9pm' },
+      meta:'9816 Rea Rd · Blakeney · Mon–Thu 11:30am–10pm, Fri 11:30am–11pm, Sat–Sun 10:30am–9pm',
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/c7/d8/c4/maxx-burger.jpg?w=900&h=500&s=1' },
 
     { lat:35.0492, lon:-80.8404, n:3,  cat:'food',
       name:'Pio Pio',
@@ -64,19 +65,22 @@ window.REGION = {
       name:'Open Rice Kitchen',
       short:'Modern Asian · cast-iron fried rice',
       desc:'Modern Asian kitchen reimagining classics — signature cast-iron chicken fried rice, Hong Kong-style soft shell crab, and bubble waffles in an upbeat space.',
-      meta:'9882 Rea Rd, Ste F · Blakeney · Tue–Sun 11:30am–9pm, Mon closed' },
+      meta:'9882 Rea Rd, Ste F · Blakeney · Tue–Sun 11:30am–9pm, Mon closed',
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/a7/fe/d2/caption.jpg?w=900&h=500&s=1' },
 
     { lat:35.0483, lon:-80.8380, n:5,  cat:'food',
       name:'Rai Lay',
       short:'Elevated Thai-Asian fusion · sushi bar',
       desc:'Elevated Thai-Asian fusion and sushi bar bringing Bangkok-inspired flavors and a polished dining room to Blakeney Town Center.',
-      meta:'9935 Rea Rd · Blakeney · Mon–Thu 11am–9pm, Fri 11am–9:30pm, Sat–Sun 12–9pm' },
+      meta:'9935 Rea Rd · Blakeney · Mon–Thu 11am–9pm, Fri 11am–9:30pm, Sat–Sun 12–9pm',
+      img:'https://railayblakeney.com/wp-content/uploads/sites/77/2023/01/w3_gallery01.jpg' },
 
     { lat:35.0491, lon:-80.8393, n:6,  cat:'arts',
       name:'Atha Yoga',
       short:'Infrared hot yoga · sculpt · barre',
       desc:"Charlotte's only infrared hot yoga studio — Bikram, Power Flow, Yin, and Sculpt classes in a state-of-the-art heated studio.",
-      meta:'9852 Rea Rd, Ste D2 · Blakeney · Mon–Fri from 5:30am, Sat–Sun from 7am · athayogaclt.com' },
+      meta:'9852 Rea Rd, Ste D2 · Blakeney · Mon–Fri from 5:30am, Sat–Sun from 7am · athayogaclt.com',
+      img:'https://images.squarespace-cdn.com/content/v1/64ff4db243f4891854dfb0a3/444675f9-6fd2-475b-9c70-c136895ba09c/sweatnet-00229.jpg' },
 
     /* ── REA FARMS ── */
     { lat:35.0498, lon:-80.8365, n:7,  cat:'family',
@@ -90,7 +94,8 @@ window.REGION = {
       name:"Duckworth's Taphouse",
       short:'40+ craft taps · burgers · sports bar',
       desc:'Craft-beer-forward gastropub with 40+ taps, towering burgers, and a lively patio — the go-to game-day hangout for south Charlotte.',
-      meta:'9805 Sandy Rock Pl · Rea Farms · Mon–Wed 11am–11pm, Thu–Sat 11am–midnight, Sun 11am–11pm' },
+      meta:'9805 Sandy Rock Pl · Rea Farms · Mon–Wed 11am–11pm, Thu–Sat 11am–midnight, Sun 11am–11pm',
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/5e/13/fa/lots-of-tables-tvs.jpg?w=900&h=500&s=1' },
 
     /* ── WAVERLY ── */
     { lat:35.0535, lon:-80.8145, n:9,  cat:'food',
@@ -104,13 +109,15 @@ window.REGION = {
       name:'Via Roma',
       short:'Handmade pasta · Italian wine cellar',
       desc:'Neighborhood Italian favorite — handmade pasta, lasagna, braised veal, and an extensive Italian wine cellar in a warm, casually upscale Waverly setting.',
-      meta:'7416 Waverly Walk Ave, H-2 · Waverly · Mon–Thu 5–10pm, Fri–Sat 5–11pm' },
+      meta:'7416 Waverly Walk Ave, H-2 · Waverly · Mon–Thu 5–10pm, Fri–Sat 5–11pm',
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/e8/7f/c8/housemade-gnocchi.jpg?w=900&h=500&s=1' },
 
     { lat:35.0525, lon:-80.8125, n:11, cat:'food',
       name:'Yama — Waverly',
       short:'Premier sushi · nigiri · Japanese plates',
       desc:'A premier sushi destination with immaculate nigiri, sashimi, and Japanese small plates — the go-to for fresh, high-quality fish in south Charlotte.',
-      meta:'11641 Waverly Center Dr · Waverly · Tue–Sun 11:30am–9pm, Mon closed' },
+      meta:'11641 Waverly Center Dr · Waverly · Tue–Sun 11:30am–9pm, Mon closed',
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/98/90/bc/a5-wagyu-nigiri.jpg?w=1100&h=1100&s=1' },
 
     { lat:35.0542, lon:-80.8150, n:12, cat:'food',
       name:'DeSano Pizzeria',
@@ -123,31 +130,36 @@ window.REGION = {
       name:'Breezeway Coffee',
       short:'Local roasts · slow pour-overs · cozy vibes',
       desc:'Locally roasted specialty coffee house with a cozy vintage-Americana vibe — every cup hand-brewed as a slow pour-over, with outstanding single-origin options.',
-      meta:'7416 Waverly Walk Ave, H-3 · Waverly · Mon–Fri 7am–8pm, Sat 8am–8pm' },
+      meta:'7416 Waverly Walk Ave, H-3 · Waverly · Mon–Fri 7am–8pm, Sat 8am–8pm',
+      img:'https://cdn.shopify.com/s/files/1/0571/3169/6195/files/650AD152-52FB-42B9-9E02-8B1A0D690CB2_1_105_c.jpg?v=1734383628' },
 
     { lat:35.0532, lon:-80.8144, n:14, cat:'coffee',
       name:'Foxcroft Food &amp; Wine',
       short:'Wine bar · seasonal menu · date nights',
       desc:'Beloved Charlotte wine bar and restaurant pairing rotating seasonal menus with globally curated bottles — ideal for leisurely afternoons and date nights.',
-      meta:'7416 Waverly Walk Ave, H-1A · Waverly · Mon–Thu 12–9pm, Fri–Sat 12–10pm' },
+      meta:'7416 Waverly Walk Ave, H-1A · Waverly · Mon–Thu 12–9pm, Fri–Sat 12–10pm',
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/58/dc/0a/foxcroft-wine-co-is-the.jpg?w=900&h=500&s=1' },
 
     { lat:35.0530, lon:-80.8148, n:15, cat:'arts',
       name:'The Invigory',
       short:'Cryotherapy · infrared sauna · salt room',
       desc:"Charlotte's premier health optimization studio — whole-body cryotherapy, infrared sauna, salt rooms, compression therapy, and ice facials under one roof.",
-      meta:'7314 Waverly Walk Ave · Waverly · Mon–Fri 10am–8pm, Sat–Sun 9am–6pm · theinvigory.com' },
+      meta:'7314 Waverly Walk Ave · Waverly · Mon–Fri 10am–8pm, Sat–Sun 9am–6pm · theinvigory.com',
+      img:'https://theinvigory.com/wp-content/uploads/2023/10/the-invigory-waverly-100523-30-1024x683.jpg' },
 
     { lat:35.0531, lon:-80.8149, n:16, cat:'arts',
       name:'CycleBar Waverly',
       short:'Premium indoor cycling · performance tracking',
       desc:'Premium indoor cycling studio with performance-tracking tech, immersive darkened ride rooms, and high-energy instructors.',
-      meta:'7315 Waverly Walk Ave · Waverly · Class-based schedule · cyclebar.com' },
+      meta:'7315 Waverly Walk Ave · Waverly · Class-based schedule · cyclebar.com',
+      img:'https://sweatnet.com/wp-content/uploads/elementor/thumbs/9994_CB-17-onlmqdi6gwwtnqbsx99gj6m26wj2idsr0yp8rxcw2g.jpg' },
 
     { lat:35.0529, lon:-80.8152, n:17, cat:'family',
       name:'Waverly Commons',
       short:'Open-air plaza · dining · events',
       desc:"Waverly's vibrant open-air district with walkable dining, boutique shops, a central green, and frequent community events and pop-ups.",
-      meta:'Waverly Walk Ave · Charlotte · Daily · waverlyclt.com' },
+      meta:'Waverly Walk Ave · Charlotte · Daily · waverlyclt.com',
+      img:'https://www.childressklein.com/sites/default/files/styles/hero_xs/public/2024-07/Waverly_Summer2024_3.jpg?itok=Y9FqFkg9' },
 
     /* ── OUTDOORS ── */
     { lat:35.0505, lon:-80.8185, n:18, cat:'outdoor',
@@ -165,10 +177,11 @@ window.REGION = {
       img:'https://northwoodoffice-assets.imgix.net/goBallantyne/images/common/ballantynes-backyard-community-park-4.jpg' },
 
     { lat:35.0540, lon:-80.8138, n:20, cat:'family',
-      name:'Aloft Charlotte Waverly',
-      short:'Rooftop bar · WXYZ lounge · pool',
-      desc:'Boutique hotel at the heart of Waverly with a lively rooftop WXYZ bar, outdoor pool, and the best elevated views of south Charlotte.',
-      meta:'7400 Waverly Walk Ave · Waverly · alofthotels.com' },
+      name:'Hilton Garden Inn Waverly',
+      short:'Full-service hotel · bar · Waverly Walk',
+      desc:'Full-service hotel right on Waverly Walk with a lobby bar, outdoor pool, and easy walkable access to all the best dining and shops.',
+      meta:'7415 Waverly Walk Ave · Waverly · hilton.com',
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/a1/55/f6/hilton-garden-inn-charlotte.jpg?w=900&h=500&s=1' },
   ],
 
   printRails: {
