@@ -208,6 +208,87 @@
 
   .leaflet-control-attribution { font-size: 10px; opacity: 0.6; }
   .leaflet-div-icon { background: none !important; border: none !important; }
+
+  /* ── SPIN & EXPLORE ── */
+  .spin-bar {
+    margin-top: 12px;
+    background: linear-gradient(to bottom, var(--parch, #f5f0e8), var(--parch-dark, #ddd));
+    border: 2px solid var(--frame, #444);
+    border-radius: 8px;
+    padding: 14px 20px;
+  }
+  .spin-title {
+    font-family: 'Yeseva One', serif;
+    font-size: 18px; color: var(--accent, #800);
+    text-align: center; margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  .spin-cats {
+    display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 12px;
+  }
+  .spin-cat-btn {
+    font-family: 'Lato', sans-serif; font-weight: 700; font-size: 13px;
+    color: #fff; border: none; border-radius: 20px;
+    padding: 7px 16px; cursor: pointer;
+    transition: transform 0.15s, filter 0.15s;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  }
+  .spin-cat-btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+  .spin-cat-btn.active { outline: 3px solid var(--ink, #222); outline-offset: 2px; }
+
+  .spin-result {
+    display: none;
+    background: var(--parch, #f5f0e8);
+    border: 2px solid var(--inner-border, #bbb);
+    border-radius: 8px;
+    padding: 14px 18px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: spin-reveal 0.4s ease;
+  }
+  @keyframes spin-reveal {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .spin-result.spinning .spin-place-name {
+    animation: spin-names 0.08s steps(1) infinite;
+  }
+  @keyframes spin-names {
+    0%   { opacity: 0.4; }
+    50%  { opacity: 1; }
+    100% { opacity: 0.4; }
+  }
+  .spin-result-label {
+    font-family: 'Lato', sans-serif; font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--frame, #444); margin-bottom: 4px;
+  }
+  .spin-place-name {
+    font-family: 'Yeseva One', serif; font-size: 24px;
+    color: var(--spin-color, var(--accent, #800));
+    margin-bottom: 4px; line-height: 1.2;
+  }
+  .spin-place-short {
+    font-family: 'Lato', sans-serif; font-size: 13px;
+    color: var(--frame, #444); margin-bottom: 10px;
+  }
+  .spin-again-btn {
+    font-family: 'Cabin Sketch', cursive; font-weight: 700; font-size: 13px;
+    letter-spacing: 1px; background: var(--spin-color, var(--accent, #800));
+    color: #fff; border: none; border-radius: 20px;
+    padding: 7px 20px; cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    transition: filter 0.15s;
+  }
+  .spin-again-btn:hover { filter: brightness(1.15); }
+
+  @keyframes pin-pulse {
+    0%   { transform: rotate(-45deg) scale(1); }
+    30%  { transform: rotate(-45deg) scale(1.5); }
+    60%  { transform: rotate(-45deg) scale(1.1); }
+    100% { transform: rotate(-45deg) scale(1); }
+  }
+  .biz-marker.pulsing { animation: pin-pulse 0.6s ease 3; }
 </style>
 </head>
 <body>
@@ -250,6 +331,16 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
         <div class="legend" id="legend"></div>
         <div class="credit">${R.interactiveCredit}</div>
       </div>
+      <div class="spin-bar">
+        <div class="spin-title">✦ Spin &amp; Explore ✦</div>
+        <div class="spin-cats" id="spin-cats"></div>
+        <div class="spin-result" id="spin-result">
+          <div class="spin-result-label">Your next adventure</div>
+          <div class="spin-place-name" id="spin-name"></div>
+          <div class="spin-place-short" id="spin-short"></div>
+          <button class="spin-again-btn" id="spin-again">🎲 Spin Again</button>
+        </div>
+      </div>
     </div>`;
 
   /* Legend */
@@ -271,10 +362,10 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
   }).addTo(map);
 
   /* Markers */
+  const markerMap = {}; // keyed by place n
   R.places.forEach(pl => {
     const col = R.cats[pl.cat] || '#444';
     const html = `<div class="biz-marker" style="--cat-color:${col};border-color:${col}"><div class="num" style="--cat-color:${col}">${pl.n}</div></div>`;
-
     const icon = L.divIcon({ html, className: '', iconSize: [28, 36], iconAnchor: [14, 36] });
 
     const appleUrl  = `https://maps.apple.com/?daddr=${pl.lat},${pl.lon}&dirflg=w&q=${encodeURIComponent(pl.name)}`;
@@ -293,10 +384,95 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
         </div>
       </div>`;
 
-    L.marker([pl.lat, pl.lon], { icon })
+    const marker = L.marker([pl.lat, pl.lon], { icon })
       .addTo(map)
       .bindPopup(popupHtml, { maxWidth: 280, closeButton: true });
+
+    markerMap[pl.n] = { marker, pl, col };
   });
+
+  /* ── SPIN & EXPLORE ── */
+  const spinCatsEl   = document.getElementById('spin-cats');
+  const spinResult   = document.getElementById('spin-result');
+  const spinNameEl   = document.getElementById('spin-name');
+  const spinShortEl  = document.getElementById('spin-short');
+  const spinAgainBtn = document.getElementById('spin-again');
+
+  // Build category emoji map from legend labels
+  const catEmoji = { outdoor:'🥾', food:'🍽', coffee:'☕', arts:'🎨', family:'🎳' };
+
+  let activeCat = null;
+
+  // Build category buttons
+  Object.entries(R.cats).forEach(([cat, color]) => {
+    const places = R.places.filter(p => p.cat === cat);
+    if (!places.length) return;
+    const emoji = catEmoji[cat] || '📍';
+    const label = R.legend.find(l => l.color === color)?.label || cat;
+    const btn = document.createElement('button');
+    btn.className = 'spin-cat-btn';
+    btn.style.background = color;
+    btn.innerHTML = emoji + ' ' + label.replace('&amp;', '&');
+    btn.dataset.cat = cat;
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.spin-cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCat = cat;
+      doSpin(cat);
+    });
+    spinCatsEl.appendChild(btn);
+  });
+
+  function doSpin(cat) {
+    const places = R.places.filter(p => p.cat === cat);
+    if (!places.length) return;
+
+    spinResult.style.display = 'block';
+    spinResult.classList.add('spinning');
+
+    // Cycle through names quickly
+    let count = 0;
+    const total = 18;
+    const interval = setInterval(() => {
+      const random = places[Math.floor(Math.random() * places.length)];
+      spinNameEl.textContent = random.name;
+      count++;
+      if (count >= total) {
+        clearInterval(interval);
+        // Pick final winner
+        const winner = places[Math.floor(Math.random() * places.length)];
+        spinResult.classList.remove('spinning');
+        spinResult.style.setProperty('--spin-color', R.cats[cat]);
+        spinNameEl.textContent = winner.name;
+        spinShortEl.textContent = winner.short || winner.desc.slice(0, 60) + '…';
+
+        // Fly map to winner
+        map.flyTo([winner.lat, winner.lon], 16, { duration: 1.2 });
+
+        // Pulse the marker
+        const m = markerMap[winner.n];
+        if (m) {
+          setTimeout(() => {
+            const el = m.marker.getElement();
+            if (el) {
+              const pin = el.querySelector('.biz-marker');
+              if (pin) {
+                pin.classList.remove('pulsing');
+                void pin.offsetWidth; // reflow
+                pin.classList.add('pulsing');
+              }
+            }
+            m.marker.openPopup();
+          }, 1300);
+        }
+      }
+    }, 80);
+  }
+
+  spinAgainBtn.addEventListener('click', () => {
+    if (activeCat) doSpin(activeCat);
+  });
+
 })();
 </script>
 </body>
