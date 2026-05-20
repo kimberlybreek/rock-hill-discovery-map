@@ -57,7 +57,7 @@ window.REGION = {
       short:'Davidson-rooted specialty roasts',
       desc:'Davidson-rooted specialty coffee — locally sourced beans, excellent pour-overs, and a welcoming crowd.',
       meta:'Ballantyne Village · Mon–Fri 7am–6pm, Sat 8am–5pm',
-      img:'assets/summit-coffee.png', logoOnly:true },
+      img:'assets/summit-coffee.png' },
     { lat:35.0524, lon:-80.8462, n:4,  cat:'food',
       name:'Brixx Wood Fired Pizza',
       short:'Thin-crust pies · craft beer',
@@ -74,7 +74,7 @@ window.REGION = {
       short:'French bakery · pastries · full bar',
       desc:'Ballantyne\'s beloved French boulangerie-pâtisserie — handcrafted croissants, fresh-baked breads, pastries, and a full brasserie bar.',
       meta:'14020 Stream Way · The Bowl at Ballantyne · Daily 7am–10pm',
-      img:'assets/copain-logo.svg', logoOnly:true },
+      img:'assets/copain-logo.svg' },
 
     /* Ballantyne Hotel campus */
     { lat:35.0578, lon:-80.8622, n:7,  cat:'arts',
@@ -136,7 +136,7 @@ window.REGION = {
       short:'Yemeni coffee · tea · cozy vibes',
       desc:'Authentic Yemeni coffee house serving specialty brews, loose-leaf teas, and Middle Eastern pastries in a warm, welcoming space.',
       meta:'15205 John J Delaney Dr, Ste B · Daily 8am–10pm',
-      img:'assets/haraz-logo.png', logoOnly:true },
+      img:'assets/haraz-logo.png' },
 
     /* Arts & Wellness */
     { lat:35.0535, lon:-80.8444, n:16, cat:'arts',
@@ -182,7 +182,7 @@ window.REGION = {
       short:'Kids indoor play · climbing · fun',
       desc:'Indoor adventure play space for kids — climbing, jumping, and imaginative play in a safe environment.',
       meta:'Ballantyne · Mon–Fri 9am–6pm, Sat–Sun 9am–7pm',
-      img:'assets/fly-kid-fly-logo.svg', logoOnly:true },
+      img:'assets/fly-kid-fly-logo.svg' },
 
     /* More food */
     { lat:35.0518, lon:-80.8452, n:23, cat:'food',
