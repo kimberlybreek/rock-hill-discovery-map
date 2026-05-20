@@ -191,6 +191,12 @@ window.REGION = {
       desc:'Ballantyne\'s coolest barber shop — sharp cuts, straight-razor shaves, and a complimentary cold beer.',
       meta:'The Bowl at Ballantyne · Tue–Sat 9am–7pm, Sun 10am–4pm',
       img:'https://northwoodoffice-assets.imgix.net/northwood/images/news/IMG_7973-2.jpeg' },
+    { lat:35.0517, lon:-80.8454, n:27, cat:'food',
+      name:"Bossy Beulah's",
+      short:'Hot chicken · crispy tenders · The Bowl',
+      desc:'Carolina-born hot chicken joint serving legendary crispy tenders, sandwiches, and sauces with serious heat.',
+      meta:'15110 Bowl St, Ste 103 · The Bowl at Ballantyne · Daily 11am–9pm',
+      img:'assets/bossy-beulahs.jpg' },
     { lat:35.0496, lon:-80.8399, n:26, cat:'coffee',
       name:'Littl Madeleine',
       short:'Organic coffee · French bakery · pastries',
@@ -213,13 +219,13 @@ window.REGION = {
 
   printRails: {
     top: [
-      { head: '⭐ Arts &amp; Wellness', cls: 'fam', nums: [7, 9, 13, 16, 17, 18], lightText: true },
+      { head: '⭐ Arts &amp; Wellness', cls: 'fam', nums: [7, 9, 23, 16, 17, 18], lightText: true },
     ],
     left: [
       { head: '☕ Coffee &amp; Cafés', cls: 'coffee', nums: [3, 15, 22, 6, 26] },
     ],
     right: [
-      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [8, 4, 5, 23, 25] },
+      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [8, 4, 5, 27, 25] },
     ],
     mapBelow: [
       { head: '🥾 Get Outside!', cls: 'do', nums: [10, 11, 12] },
