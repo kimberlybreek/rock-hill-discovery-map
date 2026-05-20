@@ -365,11 +365,14 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
       if (!pl) return '';
       const col = R.cats[pl.cat] || 'var(--frame)';
       const imgStyle = pl.img ? `background-image:url('${pl.img}');` : '';
-      return `<div class="ad${pl.img ? ' has-img' : ''}${pl.logoOnly ? ' logo-only' : ''}" style="--cat-color:${col};${imgStyle}">
+      const useStrip = pl.img && !pl.logoOnly;
+      return `<div class="ad${pl.img ? (useStrip ? ' text-strip' : ' logo-only') : ''}${pl.logoOnly ? ' logo-only' : ''}" style="--cat-color:${col};${imgStyle}">
         <span class="ad-num">${pl.n}</span>
-        ${pl.logoOnly ? `<div class="meta" style="position:absolute;bottom:6px;left:8px;right:8px;">${pl.meta || ''}</div>` : `<h3>${pl.name}</h3>
-        <div class="sub">${pl.short || ''}</div>
-        <div class="meta">${pl.meta || ''}</div>`}
+        ${pl.logoOnly
+          ? `<div class="meta" style="position:absolute;bottom:6px;left:8px;right:8px;">${pl.meta || ''}</div>`
+          : useStrip
+            ? `<div class="text-area"><h3>${pl.name}</h3><div class="sub">${pl.short || ''}</div><div class="meta">${pl.meta || ''}</div></div>`
+            : `<h3>${pl.name}</h3><div class="sub">${pl.short || ''}</div><div class="meta">${pl.meta || ''}</div>`}
       </div>`;
     }).join('');
     return `<div class="rail-head ${cls}">${head}</div>${ads}`;
@@ -384,8 +387,8 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
         if (!pl) return '';
         const col = R.cats[pl.cat] || 'var(--frame)';
         const imgStyle = pl.img ? `background-image:url('${pl.img}');` : '';
-        const useStrip = lightText && pl.img && !pl.logoOnly;
-        return `<div class="ad${pl.img ? (useStrip ? ' text-strip' : ' has-img') : ''}${pl.logoOnly ? ' logo-only' : ''}" style="--cat-color:${col};${imgStyle}">
+        const useStrip = pl.img && !pl.logoOnly;
+        return `<div class="ad${pl.img ? (useStrip ? ' text-strip' : ' logo-only') : ''}${pl.logoOnly ? ' logo-only' : ''}" style="--cat-color:${col};${imgStyle}">
           <span class="ad-num">${pl.n}</span>
           ${pl.logoOnly
             ? `<div class="meta" style="position:absolute;bottom:6px;left:8px;right:8px;">${pl.meta || ''}</div>`
