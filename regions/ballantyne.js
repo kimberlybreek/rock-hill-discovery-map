@@ -213,7 +213,7 @@ window.REGION = {
 
   printRails: {
     top: [
-      { head: '⭐ Arts &amp; Wellness', cls: 'fam', nums: [7, 9, 13, 16, 17, 18] },
+      { head: '⭐ Arts &amp; Wellness', cls: 'fam', nums: [7, 9, 13, 16, 17, 18], lightText: true },
     ],
     left: [
       { head: '☕ Coffee &amp; Cafés', cls: 'coffee', nums: [3, 15, 22, 6, 26] },

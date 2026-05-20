@@ -364,13 +364,14 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
   /* Render a horizontal strip of sections */
   function renderHRail(sections) {
     if (!sections || !sections.length) return '';
-    const inner = sections.map(({ head, cls, nums }) => {
+    const inner = sections.map(({ head, cls, nums, lightText }) => {
+      const textStyle = lightText ? 'color:#fff;' : '';
       const ads = nums.map(n => {
         const pl = byNum[n];
         if (!pl) return '';
         const col = R.cats[pl.cat] || 'var(--frame)';
         const imgStyle = pl.img ? `background-image:url('${pl.img}');` : '';
-        return `<div class="ad${pl.img ? ' has-img' : ''}${pl.logoOnly ? ' logo-only' : ''}" style="--cat-color:${col};${imgStyle}">
+        return `<div class="ad${pl.img ? ' has-img' : ''}${pl.logoOnly ? ' logo-only' : ''}" style="--cat-color:${col};${imgStyle}${textStyle}">
           <span class="ad-num">${pl.n}</span>
           ${pl.logoOnly ? `<div class="meta" style="position:absolute;bottom:6px;left:8px;right:8px;">${pl.meta || ''}</div>` : `<h3>${pl.name}</h3>
           <div class="sub">${pl.short || ''}</div>
