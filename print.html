@@ -420,7 +420,7 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
   ).join('');
 
   /* QR code pointing to the interactive version */
-  const qrTarget = encodeURIComponent(`https://kimberlybreek.github.io/rock-hill-discovery-map/map.html?region=${R.id}`);
+  const qrTarget = encodeURIComponent(`https://leisurelymaps.com/map.html?region=${R.id}`);
   const inkHex = (palette['--ink'] || '#222').replace('#', '');
   const parchHex = (palette['--parch'] || '#f5f0e8').replace('#', '');
   const qrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${qrTarget}&color=${inkHex}&bgcolor=${parchHex}&qzone=1&format=svg`;
