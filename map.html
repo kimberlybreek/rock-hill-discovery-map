@@ -289,6 +289,39 @@
     100% { transform: rotate(-45deg) scale(1); }
   }
   .biz-marker.pulsing { animation: pin-pulse 0.6s ease 3; }
+
+  /* ── NEAR ME ── */
+  #near-me-btn {
+    font-family: 'Cabin Sketch', cursive; font-weight: 700; font-size: 13px;
+    letter-spacing: 1px;
+    background: var(--frame, #444); color: var(--parch, #f5f0e8);
+    border: none; border-radius: 20px; padding: 7px 16px; cursor: pointer;
+    transition: background 0.15s, transform 0.15s;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    white-space: nowrap;
+  }
+  #near-me-btn:hover { background: var(--accent, #800); transform: scale(1.04); }
+  #near-me-btn.active { background: #2A6848; }
+  #near-me-btn:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+  .you-are-here {
+    width: 18px; height: 18px;
+    background: #4285F4;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(66,133,244,0.5);
+    animation: you-pulse 2s ease-out infinite;
+  }
+  @keyframes you-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(66,133,244,0.5); }
+    70%  { box-shadow: 0 0 0 14px rgba(66,133,244,0); }
+    100% { box-shadow: 0 0 0 0 rgba(66,133,244,0); }
+  }
+  .popup-dist {
+    font-family: 'Lato', sans-serif; font-size: 12px;
+    color: #2A6848; font-weight: 700;
+    margin-bottom: 5px; letter-spacing: 0.3px;
+  }
 </style>
 </head>
 <body>
@@ -328,6 +361,7 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
       </div>
       <div class="bottom-bar">
         <div class="legend" id="legend"></div>
+        <button id="near-me-btn">📍 Near Me</button>
         <div class="credit">${R.interactiveCredit}</div>
       </div>
       <div class="spin-bar">
@@ -375,6 +409,7 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
         ${pl.img ? `<img src="${pl.img}" alt="${pl.name}">` : ''}
         <div class="cat" style="background:${col}">${pl.cat}</div>
         <h3>${pl.name}</h3>
+        <div class="popup-dist" id="dist-${pl.n}"></div>
         <div class="desc">${pl.desc}</div>
         <div class="meta">${pl.meta}</div>
         <div class="dirs">
@@ -388,6 +423,81 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
       .bindPopup(popupHtml, { maxWidth: 280, closeButton: true });
 
     markerMap[pl.n] = { marker, pl, col };
+  });
+
+  /* ── NEAR ME ── */
+  let userLatLng = null;
+  let userMarker = null;
+
+  function haversineKm(lat1, lon1, lat2, lon2) {
+    const R = 6371;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat/2)**2 +
+              Math.cos(lat1 * Math.PI/180) * Math.cos(lat2 * Math.PI/180) *
+              Math.sin(dLon/2)**2;
+    return R * 2 * Math.asin(Math.sqrt(a));
+  }
+
+  function formatDist(km) {
+    const mi = km * 0.621371;
+    return mi < 0.1
+      ? Math.round(mi * 5280) + ' ft away'
+      : mi.toFixed(1) + ' mi away';
+  }
+
+  document.getElementById('near-me-btn').addEventListener('click', () => {
+    if (!navigator.geolocation) { alert('Geolocation not supported on this device.'); return; }
+    const btn = document.getElementById('near-me-btn');
+    btn.textContent = '📍 Locating…';
+    btn.disabled = true;
+
+    navigator.geolocation.getCurrentPosition(pos => {
+      userLatLng = [pos.coords.latitude, pos.coords.longitude];
+
+      // Remove old marker
+      if (userMarker) map.removeLayer(userMarker);
+
+      // Add pulsing "you are here" dot
+      const youIcon = L.divIcon({
+        html: '<div class="you-are-here"></div>',
+        className: '', iconSize: [18, 18], iconAnchor: [9, 9]
+      });
+      userMarker = L.marker(userLatLng, { icon: youIcon, zIndexOffset: 2000 })
+        .addTo(map)
+        .bindTooltip('You are here', { permanent: false, className: 'biz-tip' });
+
+      // Fly to user location
+      map.flyTo(userLatLng, 15, { duration: 1.5 });
+
+      // Update button state
+      btn.textContent = '📍 Near Me ✓';
+      btn.classList.add('active');
+      btn.disabled = false;
+
+      // Sort places by distance and populate dist elements on popup open
+      const sorted = Object.values(markerMap)
+        .map(({ marker, pl, col }) => ({
+          marker, pl, col,
+          km: haversineKm(userLatLng[0], userLatLng[1], pl.lat, pl.lon)
+        }))
+        .sort((a, b) => a.km - b.km);
+
+      sorted.forEach(({ marker, pl, km }) => {
+        marker.on('popupopen', () => {
+          const el = document.getElementById('dist-' + pl.n);
+          if (el) el.textContent = '📍 ' + formatDist(km);
+        });
+      });
+
+      // Open nearest place after flying
+      setTimeout(() => sorted[0].marker.openPopup(), 1700);
+
+    }, () => {
+      btn.textContent = '📍 Near Me';
+      btn.disabled = false;
+      alert('Could not get your location. Please allow location access and try again.');
+    }, { timeout: 10000 });
   });
 
   /* ── SPIN & EXPLORE ── */
