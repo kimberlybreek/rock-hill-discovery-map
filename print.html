@@ -25,7 +25,6 @@
   /* ── SHEET ── */
   .sheet {
     width: 2000px; flex-shrink: 0;
-    padding: 10px;
     background: var(--parch, #f5f0e8);
     border: 6px solid var(--frame, #444);
     box-shadow:
@@ -36,6 +35,7 @@
     padding: 14px;
     position: relative;
   }
+
 
   /* ── CARTOUCHE ── */
   .cartouche {
@@ -290,18 +290,18 @@
   /* footer info items */
   .footer-qr { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
   .footer-qr img { width: 64px; height: 64px; border: 1.5px solid var(--frame,#444); border-radius: 4px; background: white; padding: 2px; }
-  .footer-qr-text { font-family: 'Patrick Hand', cursive; line-height: 1.4; }
-  .footer-qr-title { font-family: 'Cabin Sketch', cursive; font-weight: 700; font-size: 14px; color: var(--accent, #800); }
+  .footer-qr-text { font-family: 'DM Sans', sans-serif; line-height: 1.4; }
+  .footer-qr-title { font-family: 'Yeseva One', serif; font-weight: 400; font-size: 14px; color: var(--accent, #800); }
   .footer-qr-sub { font-size: 11px; color: var(--frame, #444); max-width: 160px; }
 
   .footer-legend { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
   .footer-legend .item { display: inline-flex; align-items: center; gap: 5px; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 11px; color: var(--ink, #222); }
   .footer-legend .dot { width: 13px; height: 13px; border-radius: 3px; border: 1.5px solid rgba(0,0,0,0.2); flex-shrink: 0; }
 
-  .footer-tip { font-family: 'Patrick Hand', cursive; font-size: 12px; color: var(--frame, #444); line-height: 1.5; border-left: 1.5px dashed var(--inner-border,#bbb); padding-left: 14px; }
-  .footer-tip strong { font-family: 'Cabin Sketch', cursive; color: var(--accent, #800); font-size: 13px; }
+  .footer-tip { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--frame, #444); line-height: 1.5; border-left: 1.5px dashed var(--inner-border,#bbb); padding-left: 14px; }
+  .footer-tip strong { font-family: 'Yeseva One', serif; color: var(--accent, #800); font-size: 13px; }
 
-  .footer-credit { font-family: 'Patrick Hand', cursive; font-size: 11px; color: var(--frame, #444); letter-spacing: 1px; text-align: right; border-left: 1.5px dashed var(--inner-border,#bbb); padding-left: 14px; flex-shrink: 0; }
+  .footer-credit { font-family: 'Yeseva One', serif; font-size: 11px; color: var(--frame, #444); letter-spacing: 1px; text-align: right; border-left: 1.5px dashed var(--inner-border,#bbb); padding-left: 14px; flex-shrink: 0; }
 
   /* ── PRINT BAR ── */
   .print-bar { position: fixed; top: 12px; right: 12px; z-index: 9999; display: flex; gap: 8px; }
@@ -369,7 +369,8 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
       const pl = byNum[n];
       if (!pl) return '';
       const col = R.cats[pl.cat] || 'var(--frame)';
-      const imgStyle = pl.img ? `background-image:url('${pl.img}');` : '';
+      const logoSize = pl.logoScale || (pl.fitContain ? '90%' : 'contain');
+      const imgStyle = pl.img ? `background-image:url('${pl.img}');${pl.logoOnly ? `background-size:${logoSize};background-position:center;background-repeat:no-repeat;` : ''}` : '';
       const bgColorStyle = pl.bgColor ? `background-color:${pl.bgColor};` : '';
       const useStrip = pl.img && !pl.logoOnly;
       return `<div class="ad${pl.img ? (useStrip ? ' text-strip' : ' logo-only') : ''}${pl.logoOnly ? ' logo-only' : ''}${pl.fitContain ? ' fit-contain' : ''}" style="--cat-color:${col};${bgColorStyle}${imgStyle}">
@@ -392,7 +393,8 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
         const pl = byNum[n];
         if (!pl) return '';
         const col = R.cats[pl.cat] || 'var(--frame)';
-        const imgStyle = pl.img ? `background-image:url('${pl.img}');` : '';
+        const logoSize2 = pl.logoScale || 'contain';
+        const imgStyle = pl.img ? `background-image:url('${pl.img}');${pl.logoOnly ? `background-size:${logoSize2};background-position:center;background-repeat:no-repeat;` : ''}` : '';
         const bgColorStyle = pl.bgColor ? `background-color:${pl.bgColor};` : '';
         const useStrip = pl.img && !pl.logoOnly;
         return `<div class="ad${pl.img ? (useStrip ? ' text-strip' : ' logo-only') : ''}${pl.logoOnly ? ' logo-only' : ''}" style="--cat-color:${col};${bgColorStyle}${imgStyle}">
