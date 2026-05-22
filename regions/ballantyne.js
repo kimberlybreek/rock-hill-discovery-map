@@ -115,7 +115,7 @@ window.REGION = {
       short:'Paved multi-use trail · bikes &amp; strollers',
       desc:'Paved multi-use path connecting neighborhoods and parks — ideal for bikes, runs, and strollers.',
       meta:'Ballantyne Commons Pkwy · Daily dawn–dusk · Free',
-      img:'https://files.aptuitivcdn.com/JVXM9wad0E-1708/images/trails/trail-system/IMG_2596_horiz-57.1773311125.jpg' },
+      img:'https://files.aptuitivcdn.com/JVXM9wad0E-1708/images/trails/trail-system/IMG_6177-57.1773311125.jpeg' },
 
     /* Arts & community */
     { lat:35.0538, lon:-80.8473, n:13, cat:'arts',
@@ -171,7 +171,7 @@ window.REGION = {
       short:'Live game show experience · groups',
       desc:'Interactive live game show experience — compete in teams across hilarious TV-style challenges.',
       meta:'Ballantyne · Wed–Fri 3–9pm, Sat 11am–10pm, Sun 12–7pm',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/38/d7/3b/game-show-battle-rooms.jpg?w=700&h=400&s=1' },
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/38/d6/c5/game-show-battle-rooms.jpg?w=700&h=400&s=1' },
     { lat:35.0512, lon:-80.8435, n:21, cat:'family',
       name:'Sports Connection',
       short:'Bowling · laser tag · arcade · skating',

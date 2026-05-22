@@ -370,7 +370,9 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
       if (!pl) return '';
       const col = R.cats[pl.cat] || 'var(--frame)';
       const logoSize = pl.logoScale || (pl.fitContain ? '90%' : 'contain');
-      const imgStyle = pl.img ? `background-image:url('${pl.img}');${pl.logoOnly ? `background-size:${logoSize};background-position:center;background-repeat:no-repeat;` : ''}` : '';
+      const bgPos = pl.bgPosition || null;
+      const bgSz = pl.bgSize || null;
+      const imgStyle = pl.img ? `background-image:url('${pl.img}');${pl.logoOnly ? `background-size:${logoSize};background-position:${bgPos||'center'};background-repeat:no-repeat;` : `${bgPos ? `background-position:${bgPos};` : ''}${bgSz ? `background-size:${bgSz};background-repeat:no-repeat;` : ''}`}` : '';
       const bgColorStyle = pl.bgColor ? `background-color:${pl.bgColor};` : '';
       const useStrip = pl.img && !pl.logoOnly;
       return `<div class="ad${pl.img ? (useStrip ? ' text-strip' : ' logo-only') : ''}${pl.logoOnly ? ' logo-only' : ''}${pl.fitContain ? ' fit-contain' : ''}" style="--cat-color:${col};${bgColorStyle}${imgStyle}">
