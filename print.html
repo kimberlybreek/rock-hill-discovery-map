@@ -10,7 +10,7 @@
   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { background: #111; }
+  html { overflow-x: auto; background: #111; }
   body {
     font-family: 'DM Sans', sans-serif;
     color: var(--ink, #222);
@@ -18,13 +18,12 @@
       repeating-linear-gradient(45deg, transparent 0 8px, rgba(255,255,255,0.02) 8px 9px),
       #111;
     min-height: 100vh;
-    overflow-x: auto;
+    min-width: 2048px;
     padding: 24px;
   }
 
   .sheet-wrap {
     width: 2000px;
-    margin: 0 auto;
   }
 
   /* ── SHEET ── */
