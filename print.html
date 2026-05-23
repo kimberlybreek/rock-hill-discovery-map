@@ -10,7 +10,7 @@
   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { background: #111; overflow-x: auto; }
+  html, body { background: #111; }
   body {
     font-family: 'DM Sans', sans-serif;
     color: var(--ink, #222);
@@ -18,14 +18,13 @@
       repeating-linear-gradient(45deg, transparent 0 8px, rgba(255,255,255,0.02) 8px 9px),
       #111;
     min-height: 100vh;
-    padding: 24px;
-    display: flex; justify-content: flex-start; align-items: flex-start;
     overflow-x: auto;
+    padding: 24px;
   }
 
   .sheet-wrap {
-    display: flex; justify-content: center;
-    width: 100%;
+    width: 2000px;
+    margin: 0 auto;
   }
 
   /* ── SHEET ── */
@@ -440,7 +439,7 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
       <a href="index.html">← Gallery</a>
       <button onclick="this.textContent='⏳ Loading…'; setTimeout(() => { this.textContent='🖨 Print'; window.print(); }, 2000)">🖨 Print</button>
     </div>
-    <div class="sheet">
+    <div class="sheet-wrap"><div class="sheet">
       <header class="cartouche">
         <div class="free-badge"><div class="free">FREE</div><div class="take">TAKE ONE</div></div>
         <span class="edition">2026 EDITION</span>
@@ -472,7 +471,7 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
         <div class="footer-tip">Each number matches a card around the map.<br><strong>↔ 5 min walk</strong> ≈ 1 city block</div>
         <div class="footer-credit">${R.credit}</div>
       </div>
-    </div>`;
+    </div></div>`;
 
 
   /* Locked-down map — no interaction */
