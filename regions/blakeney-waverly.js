@@ -80,7 +80,7 @@ window.REGION = {
       short:'Infrared hot yoga · sculpt · barre',
       desc:"Charlotte's only infrared hot yoga studio — Bikram, Power Flow, Yin, and Sculpt classes in a state-of-the-art heated studio.",
       meta:'9852 Rea Rd, Ste D2 · Blakeney · Mon–Fri from 5:30am, Sat–Sun from 7am · athayogaclt.com',
-      img:'https://images.squarespace-cdn.com/content/v1/64ff4db243f4891854dfb0a3/ea483b5e-4d10-4435-b7bc-3844b0002307/athaclass-20.jpg' },
+      img:'https://s7d2.scene7.com/is/image/TWCNews/olga_hot_yoga_studio_11292021', fitContain:true },
 
     /* ── REA FARMS ── */
     { lat:35.0498, lon:-80.8365, n:7,  cat:'family',
