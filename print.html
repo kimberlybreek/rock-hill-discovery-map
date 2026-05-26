@@ -532,14 +532,65 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
   }).addTo(map);
 
   const catIcons = { outdoor: '🌿', food: '🍽', coffee: '☕', arts: '✨', family: '🎉' };
-  R.places.forEach(pl => {
-    const col = R.cats[pl.cat] || '#444';
-    const icon_emoji = catIcons[pl.cat] || '📍';
-    const html = `<div class="biz-marker" style="--cat-color:${col}"><div class="pin-body"><div class="pin-inner">${icon_emoji}</div></div><div class="pin-tip"></div></div>`;
-    const icon = L.divIcon({ html, className: '', iconSize: [28, 36], iconAnchor: [14, 36] });
-    L.marker([pl.lat, pl.lon], { icon })
-      .addTo(map)
-      .bindTooltip(`<b>${pl.n}.</b> ${pl.name}`, { className: 'biz-tip' });
+
+  /* Spread overlapping markers and draw leader lines */
+  const CLUSTER_PX = 28; // pixels — markers closer than this get spread
+  const SPREAD_PX  = 26; // how far to push them apart
+
+  // Wait for map to be ready, then place markers
+  map.whenReady(() => {
+    // Collect pixel positions
+    const positions = R.places.map(pl => {
+      const pt = map.latLngToContainerPoint([pl.lat, pl.lon]);
+      return { pl, origPt: pt.clone(), dispPt: pt.clone() };
+    });
+
+    // Iteratively spread overlapping markers
+    for (let iter = 0; iter < 5; iter++) {
+      for (let i = 0; i < positions.length; i++) {
+        for (let j = i + 1; j < positions.length; j++) {
+          const a = positions[i], b = positions[j];
+          const dx = b.dispPt.x - a.dispPt.x;
+          const dy = b.dispPt.y - a.dispPt.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < CLUSTER_PX && dist > 0) {
+            const push = (CLUSTER_PX - dist) / 2 + 2;
+            const nx = dx / dist, ny = dy / dist;
+            a.dispPt.x -= nx * push; a.dispPt.y -= ny * push;
+            b.dispPt.x += nx * push; b.dispPt.y += ny * push;
+          } else if (dist === 0) {
+            a.dispPt.x -= SPREAD_PX / 2; b.dispPt.x += SPREAD_PX / 2;
+          }
+        }
+      }
+    }
+
+    // Place markers and leader lines
+    positions.forEach(({ pl, origPt, dispPt }) => {
+      const col = R.cats[pl.cat] || '#444';
+      const icon_emoji = catIcons[pl.cat] || '📍';
+      const moved = Math.abs(dispPt.x - origPt.x) > 2 || Math.abs(dispPt.y - origPt.y) > 2;
+
+      // Leader line from pin tip to actual location
+      if (moved) {
+        const origLL = map.containerPointToLatLng(origPt);
+        const dispLL = map.containerPointToLatLng(dispPt);
+        L.polyline([origLL, dispLL], {
+          color: col, weight: 1.5, opacity: 0.6, dashArray: '3,3'
+        }).addTo(map);
+        // Small dot at actual location
+        L.circleMarker(origLL, {
+          radius: 3, color: col, fillColor: col, fillOpacity: 1, weight: 1.5
+        }).addTo(map);
+      }
+
+      const dispLL = map.containerPointToLatLng(dispPt);
+      const html = `<div class="biz-marker" style="--cat-color:${col}"><div class="pin-body"><div class="pin-inner">${icon_emoji}</div></div><div class="pin-tip"></div></div>`;
+      const icon = L.divIcon({ html, className: '', iconSize: [28, 36], iconAnchor: [14, 36] });
+      L.marker(dispLL, { icon })
+        .addTo(map)
+        .bindTooltip(`<b>${pl.n}.</b> ${pl.name}`, { className: 'biz-tip' });
+    });
   });
 
 
