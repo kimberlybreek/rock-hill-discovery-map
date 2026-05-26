@@ -6,7 +6,7 @@ window.REGION = {
   interactiveCredit: 'Click any marker · Pan &amp; zoom to explore · leisurelymaps.com',
   center: [35.007, -80.945],
   zoom: 13,
-  printZoom: 14,
+  printZoom: 15,
 
   palette: {
     '--ink':          '#2A1408',
