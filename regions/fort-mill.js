@@ -66,7 +66,7 @@ window.REGION = {
       short:'Wine · beer · charcuterie · flatbreads',
       desc:'Upscale wine bar pairing curated wines, craft beer, and cocktails with charcuterie boards and flatbreads in a relaxed Kingsley setting.',
       meta:'1680 Kingsley Bend, Ste 100 · Kingsley · Tue–Sun 3pm–10pm',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/bd/f1/24/napa-at-kingsley.jpg?w=900&h=500&s=1' },
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/12/52/cd/great-wine-bar.jpg?w=900&h=500&s=1' },
 
     { lat:34.9968, lon:-80.9258, n:5, cat:'food',
       name:'Carolina Ale House',
@@ -101,8 +101,8 @@ window.REGION = {
       name:'Pet Piv Beer Garden',
       short:'Beer garden · draft wine · Roman pizza',
       desc:"Fort Mill's newest beer garden next to The Fish Market — craft beers, draft wine, and creative Roman-style pizza in a lively open-air setting.",
-      meta:'945 Market St · Baxter Village · Wed–Sun 12–9pm',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/a6/41/ad/fish-market.jpg?w=900&h=500&s=1' },
+      meta:'990 Market St · Baxter Village · Wed–Sun 12–9pm',
+      img:'https://media-cdn.tripadvisor.com/media/photo-f/1a/fe/c4/49/one-of-many-tap-walls.jpg' },
 
     /* ── DOWNTOWN FORT MILL ── */
     { lat:35.0072, lon:-80.9437, n:10, cat:'coffee',
@@ -160,7 +160,7 @@ window.REGION = {
       short:'Picturesque 18-hole · championship course',
       desc:'Picturesque and challenging championship golf course winding through the natural landscape of Fort Mill — a must-play for golfers of all levels.',
       meta:'500 Springfield Pkwy · Fort Mill · Daily · springfieldgolfclub.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/45/73/56/anne-springs-close-greenway.jpg?w=900&h=500&s=1' },
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/45/a9/d8/springfield-golf-club.jpg?w=700&h=400&s=1' },
 
     /* ── ARTS & WELLNESS ── */
     { lat:35.0082, lon:-80.9455, n:18, cat:'arts',
