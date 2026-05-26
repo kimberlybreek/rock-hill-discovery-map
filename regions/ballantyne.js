@@ -226,6 +226,18 @@ window.REGION = {
     { lat: 35.0496, lon: -80.8400, name: 'Community House Rd', rotate: 80 },
   ],
 
+  boundaries: [
+    { name: 'Ballantyne Village', color: '#1E3C64', coords: [[35.050,-80.852],[35.050,-80.840],[35.057,-80.840],[35.057,-80.852]] },
+    { name: 'The Bowl', color: '#C04830', coords: [[35.049,-80.849],[35.049,-80.842],[35.054,-80.842],[35.054,-80.849]] },
+    { name: 'Piper Glen', color: '#2A6848', coords: [[35.061,-80.878],[35.061,-80.862],[35.070,-80.862],[35.070,-80.878]] },
+  ],
+
+  landmarks: [
+    { lat: 35.0542, lon: -80.8510, name: 'Ballantyne Elementary', type: 'school' },
+    { lat: 35.0470, lon: -80.8420, name: 'Novant Health', type: 'hospital' },
+    { lat: 35.0588, lon: -80.8648, name: 'Ballantyne Presbyterian', type: 'church' },
+  ],
+
   areaLabels: [
     { lat: 35.0550, lon: -80.8430, name: 'Ballantyne Village' },
     { lat: 35.0505, lon: -80.8460, name: 'The Bowl' },

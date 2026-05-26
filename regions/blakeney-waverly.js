@@ -198,6 +198,18 @@ window.REGION = {
     { lat: 35.0510, lon: -80.8220, name: 'Providence Rd', rotate: 80 },
   ],
 
+  boundaries: [
+    { name: 'Blakeney', color: '#C04830', coords: [[35.045,-80.844],[35.045,-80.833],[35.053,-80.833],[35.053,-80.844]] },
+    { name: 'Rea Farms', color: '#0A5848', coords: [[35.047,-80.840],[35.047,-80.830],[35.053,-80.830],[35.053,-80.840]] },
+    { name: 'Waverly', color: '#1E3C64', coords: [[35.050,-80.820],[35.050,-80.808],[35.057,-80.808],[35.057,-80.820]] },
+  ],
+
+  landmarks: [
+    { lat: 35.0421, lon: -80.8388, name: 'Ardrey Kell High School', type: 'school' },
+    { lat: 35.0468, lon: -80.8412, name: 'Atrium Health Blakeney', type: 'hospital' },
+    { lat: 35.0502, lon: -80.8178, name: 'Waverly Presbyterian', type: 'church' },
+  ],
+
   areaLabels: [
     { lat: 35.0475, lon: -80.8410, name: 'Blakeney' },
     { lat: 35.0515, lon: -80.8340, name: 'Rea Farms' },

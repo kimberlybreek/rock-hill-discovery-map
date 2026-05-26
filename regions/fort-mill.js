@@ -19,6 +19,18 @@ window.REGION = {
     { lat: 34.9930, lon: -80.9640, name: 'Springfield Pkwy', rotate: 0 },
   ],
 
+  boundaries: [
+    { name: 'Kingsley', color: '#8B3A2A', coords: [[34.994,-80.932],[34.994,-80.920],[35.001,-80.920],[35.001,-80.932]] },
+    { name: 'Downtown', color: '#5C3A1A', coords: [[35.003,-80.947],[35.003,-80.937],[35.010,-80.937],[35.010,-80.947]] },
+    { name: 'Baxter Village', color: '#5A6A2A', coords: [[35.010,-80.967],[35.010,-80.954],[35.020,-80.954],[35.020,-80.967]] },
+  ],
+
+  landmarks: [
+    { lat: 35.0032, lon: -80.9415, name: 'Fort Mill Town Hall', type: 'gov' },
+    { lat: 35.0128, lon: -80.9598, name: 'Gold Hill Elementary', type: 'school' },
+    { lat: 35.0089, lon: -80.9700, name: 'MUSC Health Fort Mill', type: 'hospital' },
+  ],
+
   areaLabels: [
     { lat: 34.9955, lon: -80.9210, name: 'Kingsley' },
     { lat: 35.0045, lon: -80.9460, name: 'Downtown Fort Mill' },
