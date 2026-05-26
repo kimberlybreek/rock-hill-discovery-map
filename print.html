@@ -83,7 +83,15 @@
   .body { display: grid; grid-template-columns: 220px 1fr 220px; gap: 10px; align-items: stretch; }
 
   /* ── HORIZONTAL RAILS (top / bottom of map) ── */
-  .h-rail { display: flex; flex-wrap: nowrap; gap: 4px; margin: 4px 0; align-items: stretch; height: 130px; }
+  .h-rail { display: flex; flex-wrap: nowrap; gap: 4px; margin: 4px 0; align-items: stretch; height: 130px; position: relative; }
+  .h-rail::before {
+    content: '';
+    position: absolute; left: 36px; right: 0; top: 50%;
+    height: 2px; margin-top: -1px;
+    background: repeating-linear-gradient(to right, var(--frame, #444) 0 6px, transparent 6px 10px);
+    opacity: 0.35;
+    z-index: 0; pointer-events: none;
+  }
   .h-rail .h-rail-head {
     writing-mode: vertical-lr; transform: rotate(180deg);
     background: linear-gradient(180deg, color-mix(in srgb, var(--navy, #444) 80%, black), var(--navy, #444));
@@ -107,7 +115,8 @@
     content: '';
     position: absolute; top: 38px; bottom: 8px; left: 50%;
     width: 2px; margin-left: -1px;
-    background: repeating-linear-gradient(to bottom, var(--inner-border, #bbb) 0 5px, transparent 5px 9px);
+    background: repeating-linear-gradient(to bottom, var(--frame, #444) 0 6px, transparent 6px 10px);
+    opacity: 0.35;
     z-index: 0; pointer-events: none;
   }
   .rail-head {
