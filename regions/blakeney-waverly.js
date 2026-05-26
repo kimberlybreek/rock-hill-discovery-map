@@ -154,6 +154,13 @@ window.REGION = {
       meta:'7315 Waverly Walk Ave · Waverly · Class-based schedule · cyclebar.com',
       img:'https://sweatnet.com/wp-content/uploads/elementor/thumbs/9994_CB-17-onlmqdi6gwwtnqbsx99gj6m26wj2idsr0yp8rxcw2g.jpg' },
 
+    { lat:35.0491, lon:-80.8396, n:21, cat:'arts',
+      name:'Pure Barre Blakeney',
+      short:'Barre · low-impact · high-intensity',
+      desc:'Full-body barre workout inspired by ballet, yoga, and Pilates — low-impact, high-intensity classes for all fitness levels in Blakeney.',
+      meta:'8430 Rea Rd, Ste 120 · Blakeney · Mon–Thu 6am–7pm, Fri 6am–1pm, Sat–Sun 7am–3pm · purebarre.com',
+      img:'https://4194181.fs1.hubspotusercontent-na1.net/hubfs/4194181/2024%20PB%20Website%20Images%20Resized/Classic_Class_Background_1100x800_Resized.webp' },
+
     { lat:35.0529, lon:-80.8152, n:17, cat:'family',
       name:'Waverly Commons',
       short:'Open-air plaza · dining · events',
@@ -199,7 +206,7 @@ window.REGION = {
 
   printRails: {
     top: [
-      { head: '⭐ Arts &amp; Wellness', cls: 'fam', nums: [6, 15, 16], lightText: true },
+      { head: '⭐ Arts &amp; Wellness', cls: 'fam', nums: [6, 15, 16, 21], lightText: true },
     ],
     left: [
       { head: '☕ Coffee &amp; Wine', cls: 'coffee', nums: [13, 14, 5, 4, 10] },
