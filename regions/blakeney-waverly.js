@@ -184,6 +184,12 @@ window.REGION = {
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/a1/55/f6/hilton-garden-inn-charlotte.jpg?w=900&h=500&s=1' },
   ],
 
+  areaLabels: [
+    { lat: 35.0475, lon: -80.8410, name: 'Blakeney' },
+    { lat: 35.0515, lon: -80.8340, name: 'Rea Farms' },
+    { lat: 35.0555, lon: -80.8120, name: 'Waverly' },
+  ],
+
   printRails: {
     top: [
       { head: '⭐ Arts &amp; Wellness', cls: 'fam', nums: [6, 15, 16, 14, 13], lightText: true },

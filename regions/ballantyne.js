@@ -218,6 +218,14 @@ window.REGION = {
       img:'https://images.axios.com/okQlcUmYthPGHDJeeW2b-AOzrmE=/0x426:4032x2694/1920x1080/2024/05/16/1715869904527.jpg' },
   ],
 
+  areaLabels: [
+    { lat: 35.0550, lon: -80.8430, name: 'Ballantyne Village' },
+    { lat: 35.0505, lon: -80.8460, name: 'The Bowl' },
+    { lat: 35.0595, lon: -80.8590, name: 'Ballantyne Hotel' },
+    { lat: 35.0475, lon: -80.8305, name: 'Stonecrest' },
+    { lat: 35.0675, lon: -80.8700, name: 'Piper Glen' },
+  ],
+
   printRails: {
     top: [
       { head: '⭐ Arts &amp; Wellness', cls: 'fam', nums: [7, 9, 23, 16, 17, 18], lightText: true },
