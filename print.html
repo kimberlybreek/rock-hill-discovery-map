@@ -470,7 +470,8 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
         if (!pl) return '';
         const col = R.cats[pl.cat] || 'var(--frame)';
         const logoSize2 = pl.logoScale || 'contain';
-        const imgStyle = pl.img ? `background-image:url('${pl.img}');${pl.logoOnly ? `background-size:${logoSize2};background-position:center;background-repeat:no-repeat;` : ''}` : '';
+        const bgPos2 = pl.bgPosition || null;
+        const imgStyle = pl.img ? `background-image:url('${pl.img}');${pl.logoOnly ? `background-size:${logoSize2};background-position:center;background-repeat:no-repeat;` : `${bgPos2 ? `background-position:${bgPos2} !important;` : ''}`}` : '';
         const bgColorStyle = pl.bgColor ? `background-color:${pl.bgColor};` : '';
         const useStrip = pl.img && !pl.logoOnly;
         return `<div class="ad${pl.img ? (useStrip ? ' text-strip' : ' logo-only') : ''}${pl.logoOnly ? ' logo-only' : ''}" style="--cat-color:${col};${bgColorStyle}${imgStyle}">
