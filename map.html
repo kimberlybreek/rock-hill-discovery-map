@@ -389,9 +389,9 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
     minZoom: 12, maxZoom: 18,
   }).setView(R.center, R.zoom);
 
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
     maxZoom: 19,
-    attribution: '© OpenStreetMap contributors · Map ✦ ' + R.credit,
+    attribution: '© OpenStreetMap contributors © CARTO · Map ✦ ' + R.credit,
   }).addTo(map);
 
   /* Markers */

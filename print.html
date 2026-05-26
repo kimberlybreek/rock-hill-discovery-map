@@ -480,8 +480,8 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
     boxZoom: false, keyboard: false, tap: false, zoomSnap: 0,
   }).setView(R.center, R.printZoom || R.zoom);
 
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19, attribution: '© OpenStreetMap',
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    maxZoom: 19, attribution: '© OpenStreetMap contributors © CARTO',
   }).addTo(map);
 
   R.places.forEach(pl => {
