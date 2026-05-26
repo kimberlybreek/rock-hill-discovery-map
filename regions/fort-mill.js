@@ -168,7 +168,7 @@ window.REGION = {
       short:'Infrared hot yoga · pilates · barre · 24hr',
       desc:'24-hour infrared fitness studio offering Hot Yoga, Pilates, Barre, Cycle, and HIIT workouts — all in a private heated pod environment.',
       meta:'604 Crossroads Plaza · Fort Mill · 24 hours · hotworx.net',
-      img:'https://sanjosespotlight.s3.us-east-2.amazonaws.com/wp-content/uploads/2022/07/04113459/PXL_20220701_014142722.MP_-1160x560.jpg' },
+      img:'https://sanjosespotlight.s3.us-east-2.amazonaws.com/wp-content/uploads/2022/07/01181645/IMG_5364-1024x768.jpg' },
 
     { lat:35.0058, lon:-80.9420, n:19, cat:'arts',
       name:'Fort Mill History Museum',
