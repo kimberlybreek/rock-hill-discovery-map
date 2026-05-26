@@ -6,7 +6,7 @@ window.REGION = {
   interactiveCredit: 'Click any marker · Pan &amp; zoom to explore · ballantyneMap.com',
   center: [35.051, -80.827],
   zoom: 13,
-  printZoom: 15,
+  printZoom: 14,
 
   palette: {
     '--ink':          '#1A2838',
