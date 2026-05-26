@@ -160,7 +160,7 @@
   }
   .ad.text-strip {
     background-size: cover;
-    background-position: center calc(50% - 21px);
+    background-position: center 30%;
     padding: 0;
   }
   .ad.text-strip.fit-contain {
@@ -445,7 +445,7 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
       const logoSize = pl.logoScale || (pl.fitContain ? '90%' : 'contain');
       const bgPos = pl.bgPosition || null;
       const bgSz = pl.bgSize || null;
-      const imgStyle = pl.img ? `background-image:url('${pl.img}');${pl.logoOnly ? `background-size:${logoSize};background-position:${bgPos||'center'};background-repeat:no-repeat;` : `${bgPos ? `background-position:${bgPos};` : ''}${bgSz ? `background-size:${bgSz};background-repeat:no-repeat;` : ''}`}` : '';
+      const imgStyle = pl.img ? `background-image:url('${pl.img}');${pl.logoOnly ? `background-size:${logoSize};background-position:${bgPos||'center'};background-repeat:no-repeat;` : `${bgPos ? `background-position:${bgPos} !important;` : ''}${bgSz ? `background-size:${bgSz};background-repeat:no-repeat;` : ''}`}` : '';
       const bgColorStyle = pl.bgColor ? `background-color:${pl.bgColor};` : '';
       const useStrip = pl.img && !pl.logoOnly;
       return `<div class="ad${pl.img ? (useStrip ? ' text-strip' : ' logo-only') : ''}${pl.logoOnly ? ' logo-only' : ''}${pl.fitContain ? ' fit-contain' : ''}" style="--cat-color:${col};${bgColorStyle}${imgStyle}">
