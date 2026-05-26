@@ -525,7 +525,7 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
     zoomControl: false, dragging: false, touchZoom: false,
     doubleClickZoom: false, scrollWheelZoom: false,
     boxZoom: false, keyboard: false, tap: false, zoomSnap: 0,
-  }).setView(R.center, R.printZoom || R.zoom);
+  }).setView(R.printCenter || R.center, R.printZoom || R.zoom);
 
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
     maxZoom: 19, attribution: '© OpenStreetMap contributors © CARTO',
