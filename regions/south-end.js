@@ -215,10 +215,10 @@ window.REGION = {
       { head: '🍺 Brew &amp; Bar', cls: 'coffee', nums: [1, 2, 3, 4, 5], lightText: true },
     ],
     left: [
-      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [6, 7, 8, 9, 10, 11] },
+      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [6, 7, 8, 9, 10] },
     ],
     right: [
-      { head: '☕ Coffee &amp; Wellness', cls: 'coffee', nums: [12, 13, 17, 19] },
+      { head: '☕ Coffee &amp; Wellness', cls: 'coffee', nums: [11, 12, 13, 17, 19] },
     ],
     mapBelow: [
       { head: '🌿 Outdoors', cls: 'do', nums: [14, 15] },
