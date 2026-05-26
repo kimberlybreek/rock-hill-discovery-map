@@ -184,6 +184,13 @@ window.REGION = {
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/a1/55/f6/hilton-garden-inn-charlotte.jpg?w=900&h=500&s=1' },
   ],
 
+  streetLabels: [
+    { lat: 35.0490, lon: -80.8370, name: 'Rea Rd', rotate: 80 },
+    { lat: 35.0497, lon: -80.8345, name: 'Sandy Rock Pl', rotate: 0 },
+    { lat: 35.0535, lon: -80.8152, name: 'Waverly Walk Ave', rotate: 0 },
+    { lat: 35.0510, lon: -80.8220, name: 'Providence Rd', rotate: 80 },
+  ],
+
   areaLabels: [
     { lat: 35.0475, lon: -80.8410, name: 'Blakeney' },
     { lat: 35.0515, lon: -80.8340, name: 'Rea Farms' },

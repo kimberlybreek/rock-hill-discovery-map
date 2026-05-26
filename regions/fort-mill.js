@@ -9,6 +9,16 @@ window.REGION = {
   printZoom: 14,
   printCenter: [35.0082, -80.952],
 
+  streetLabels: [
+    { lat: 35.0066, lon: -80.9415, name: 'Main St', rotate: -10 },
+    { lat: 35.0055, lon: -80.9435, name: 'Tom Hall St', rotate: 0 },
+    { lat: 35.0010, lon: -80.9350, name: 'Broadcloth St', rotate: -5 },
+    { lat: 34.9974, lon: -80.9290, name: 'Kingsley Bend', rotate: 10 },
+    { lat: 35.0148, lon: -80.9590, name: 'Market St', rotate: 0 },
+    { lat: 35.0180, lon: -80.9720, name: 'Lake Haigler Dr', rotate: 20 },
+    { lat: 34.9930, lon: -80.9640, name: 'Springfield Pkwy', rotate: 0 },
+  ],
+
   areaLabels: [
     { lat: 34.9955, lon: -80.9210, name: 'Kingsley' },
     { lat: 35.0045, lon: -80.9460, name: 'Downtown Fort Mill' },

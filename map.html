@@ -155,6 +155,15 @@
     font-family: 'Cabin Sketch', cursive; font-weight: 700; font-size: 11px; color: #fff;
     text-shadow: 0 1px 2px rgba(0,0,0,.4);
   }
+  .street-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase;
+    color: #555;
+    white-space: nowrap;
+    pointer-events: none;
+    text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff;
+  }
   .area-label {
     background: rgba(255,255,255,0.88);
     border: 1px solid rgba(0,0,0,0.15);
@@ -436,6 +445,13 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
       .bindPopup(popupHtml, { maxWidth: 280, closeButton: true });
 
     markerMap[pl.n] = { marker, pl, col };
+  });
+
+  /* Street labels */
+  (R.streetLabels || []).forEach(({ lat, lon, name, rotate = 0 }) => {
+    const html = `<div class="street-label" style="transform:rotate(${rotate}deg)">${name}</div>`;
+    const icon = L.divIcon({ html, className: '', iconAnchor: [0, 0] });
+    L.marker([lat, lon], { icon, interactive: false, zIndexOffset: 500 }).addTo(map);
   });
 
   /* Area labels */

@@ -218,6 +218,14 @@ window.REGION = {
       img:'https://images.axios.com/okQlcUmYthPGHDJeeW2b-AOzrmE=/0x426:4032x2694/1920x1080/2024/05/16/1715869904527.jpg' },
   ],
 
+  streetLabels: [
+    { lat: 35.0535, lon: -80.8462, name: 'Ballantyne Village Way', rotate: 80 },
+    { lat: 35.0514, lon: -80.8448, name: 'Bowl St', rotate: 0 },
+    { lat: 35.0600, lon: -80.8560, name: 'Ballantyne Commons Pkwy', rotate: -10 },
+    { lat: 35.0490, lon: -80.8360, name: 'Rea Rd', rotate: 80 },
+    { lat: 35.0496, lon: -80.8400, name: 'Community House Rd', rotate: 80 },
+  ],
+
   areaLabels: [
     { lat: 35.0550, lon: -80.8430, name: 'Ballantyne Village' },
     { lat: 35.0505, lon: -80.8460, name: 'The Bowl' },

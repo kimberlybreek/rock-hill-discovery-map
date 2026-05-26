@@ -317,6 +317,15 @@
     margin-top: -1px;
     filter: brightness(0.75);
   }
+  .street-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase;
+    color: #555;
+    white-space: nowrap;
+    pointer-events: none;
+    text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff;
+  }
   .area-label {
     background: color-mix(in srgb, var(--parch, #f5f0e8) 92%, transparent);
     border: 1px solid var(--inner-border, #bbb);
@@ -545,6 +554,13 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
     maxZoom: 19, attribution: '© OpenStreetMap contributors © CARTO',
   }).addTo(map);
+
+  /* Street labels */
+  (R.streetLabels || []).forEach(({ lat, lon, name, rotate = 0 }) => {
+    const html = `<div class="street-label" style="transform:rotate(${rotate}deg)">${name}</div>`;
+    const icon = L.divIcon({ html, className: '', iconAnchor: [0, 0] });
+    L.marker([lat, lon], { icon, interactive: false, zIndexOffset: 500 }).addTo(map);
+  });
 
   /* Area labels */
   (R.areaLabels || []).forEach(({ lat, lon, name }) => {
