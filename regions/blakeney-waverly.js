@@ -80,7 +80,7 @@ window.REGION = {
       short:'Infrared hot yoga · sculpt · barre',
       desc:"Charlotte's only infrared hot yoga studio — Bikram, Power Flow, Yin, and Sculpt classes in a state-of-the-art heated studio.",
       meta:'9852 Rea Rd, Ste D2 · Blakeney · Mon–Fri from 5:30am, Sat–Sun from 7am · athayogaclt.com',
-      img:'https://images.squarespace-cdn.com/content/v1/64ff4db243f4891854dfb0a3/444675f9-6fd2-475b-9c70-c136895ba09c/sweatnet-00229.jpg' },
+      img:'https://sweatnet.com/wp-content/uploads/listing-uploads/cover/glow-scaled.jpg' },
 
     /* ── REA FARMS ── */
     { lat:35.0498, lon:-80.8365, n:7,  cat:'family',
@@ -138,7 +138,7 @@ window.REGION = {
       short:'Wine bar · seasonal menu · date nights',
       desc:'Beloved Charlotte wine bar and restaurant pairing rotating seasonal menus with globally curated bottles — ideal for leisurely afternoons and date nights.',
       meta:'7416 Waverly Walk Ave, H-1A · Waverly · Mon–Thu 12–9pm, Fri–Sat 12–10pm',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/58/dc/0a/foxcroft-wine-co-is-the.jpg?w=900&h=500&s=1' },
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/44/70/e2/wine-food-friends-we.jpg?w=900&h=500&s=1' },
 
     { lat:35.0530, lon:-80.8148, n:15, cat:'arts',
       name:'The Invigory',
