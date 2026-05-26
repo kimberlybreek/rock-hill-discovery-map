@@ -568,17 +568,6 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
     maxZoom: 19, attribution: '© OpenStreetMap contributors © CARTO',
   }).addTo(map);
 
-  /* Neighborhood boundaries */
-  (R.boundaries || []).forEach(({ color, coords }) => {
-    L.polygon(coords, {
-      color: color,
-      weight: 1.5,
-      opacity: 0.4,
-      fillColor: color,
-      fillOpacity: 0.08,
-      dashArray: '4,4',
-    }).addTo(map);
-  });
 
   /* Landmarks */
   const landmarkIcons = { school: '🎓', hospital: '🏥', church: '⛪', gov: '🏛' };
