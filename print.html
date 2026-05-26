@@ -318,7 +318,7 @@
     filter: brightness(0.75);
   }
   .area-label {
-    background: color-mix(in srgb, var(--parch, #f5f0e8) 85%, transparent);
+    background: color-mix(in srgb, var(--parch, #f5f0e8) 92%, transparent);
     border: 1px solid var(--inner-border, #bbb);
     border-radius: 10px;
     padding: 2px 8px;
@@ -329,6 +329,8 @@
     white-space: nowrap;
     box-shadow: 0 1px 4px rgba(0,0,0,0.15);
     pointer-events: none;
+    z-index: 1000 !important;
+    position: relative;
   }
   .leaflet-tooltip.biz-tip {
     background: color-mix(in srgb, var(--parch, #f5f0e8) 96%, transparent);
@@ -548,7 +550,7 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
   (R.areaLabels || []).forEach(({ lat, lon, name }) => {
     const html = `<div class="area-label">${name}</div>`;
     const icon = L.divIcon({ html, className: '', iconAnchor: [0, 0] });
-    L.marker([lat, lon], { icon, interactive: false }).addTo(map);
+    L.marker([lat, lon], { icon, interactive: false, zIndexOffset: 2000 }).addTo(map);
   });
 
   const catIcons = { outdoor: '🌿', food: '🍽', coffee: '☕', arts: '✨', family: '🎉' };

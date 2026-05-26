@@ -10,11 +10,11 @@ window.REGION = {
   printCenter: [35.0082, -80.952],
 
   areaLabels: [
-    { lat: 34.9990, lon: -80.9310, name: 'Kingsley' },
-    { lat: 35.0090, lon: -80.9470, name: 'Downtown Fort Mill' },
-    { lat: 35.0165, lon: -80.9650, name: 'Baxter Village' },
-    { lat: 35.0240, lon: -80.9820, name: 'Anne Springs Greenway' },
-    { lat: 34.9920, lon: -80.9750, name: 'Springfield' },
+    { lat: 34.9955, lon: -80.9210, name: 'Kingsley' },
+    { lat: 35.0045, lon: -80.9460, name: 'Downtown Fort Mill' },
+    { lat: 35.0180, lon: -80.9580, name: 'Baxter Village' },
+    { lat: 35.0210, lon: -80.9840, name: 'Anne Springs Greenway' },
+    { lat: 34.9910, lon: -80.9660, name: 'Springfield' },
   ],
 
   palette: {
