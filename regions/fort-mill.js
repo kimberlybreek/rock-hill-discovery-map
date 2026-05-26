@@ -9,6 +9,14 @@ window.REGION = {
   printZoom: 14,
   printCenter: [35.0082, -80.952],
 
+  areaLabels: [
+    { lat: 34.9990, lon: -80.9310, name: 'Kingsley' },
+    { lat: 35.0090, lon: -80.9470, name: 'Downtown Fort Mill' },
+    { lat: 35.0165, lon: -80.9650, name: 'Baxter Village' },
+    { lat: 35.0240, lon: -80.9820, name: 'Anne Springs Greenway' },
+    { lat: 34.9920, lon: -80.9750, name: 'Springfield' },
+  ],
+
   palette: {
     '--ink':          '#2A1408',
     '--frame':        '#8B3A2A',

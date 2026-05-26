@@ -317,6 +317,19 @@
     margin-top: -1px;
     filter: brightness(0.75);
   }
+  .area-label {
+    background: color-mix(in srgb, var(--parch, #f5f0e8) 85%, transparent);
+    border: 1px solid var(--inner-border, #bbb);
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-family: 'Cinzel', serif;
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--frame, #444);
+    white-space: nowrap;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    pointer-events: none;
+  }
   .leaflet-tooltip.biz-tip {
     background: color-mix(in srgb, var(--parch, #f5f0e8) 96%, transparent);
     border: 1.5px solid var(--frame, #444); border-radius: 3px;
@@ -530,6 +543,13 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
     maxZoom: 19, attribution: '© OpenStreetMap contributors © CARTO',
   }).addTo(map);
+
+  /* Area labels */
+  (R.areaLabels || []).forEach(({ lat, lon, name }) => {
+    const html = `<div class="area-label">${name}</div>`;
+    const icon = L.divIcon({ html, className: '', iconAnchor: [0, 0] });
+    L.marker([lat, lon], { icon, interactive: false }).addTo(map);
+  });
 
   const catIcons = { outdoor: '🌿', food: '🍽', coffee: '☕', arts: '✨', family: '🎉' };
 
