@@ -226,6 +226,13 @@ window.REGION = {
       meta:'11220 Golf Links Dr · Blakeney · Mon–Fri 4am–midnight, Sat–Sun 5am–10pm · lifetime.life',
       img:'https://assets.lifetimefitness.com/content/dam/lifetime/images/clubs/club-overview/spaces-carousel/pool/indoor-pool/indoor-lap-pool.png.dmtransform/image.jpg' },
 
+    { lat:35.0528, lon:-80.8135, n:27, cat:'family',
+      name:'Small Hands Big Art',
+      short:'Kids\' art studio · classes · drop-in · parties',
+      desc:'A bright, creative studio where kids explore painting, sculpting, mixed media, and more. Drop-in sessions, weekly classes, and memorable birthday parties in the heart of Waverly.',
+      meta:'7415 Waverly Walk Ave F2A · Waverly · Tue–Sat 10am–6pm · smallhandsbigart.com',
+      img:'https://www.smallhandsbigart.com/south-charlotte/wp-content/uploads/sites/12/2022/07/cover-1024x824-1.jpg' },
+
   ],
 
   streetLabels: [
@@ -267,7 +274,7 @@ window.REGION = {
       { head: '👗 Boutiques &amp; Wellness', cls: 'fam', nums: [22, 23, 24, 25] },
     ],
     bottom: [
-      { head: '🎳 Family &amp; Fun', cls: 'fam', nums: [7, 8, 17, 20, 26] },
+      { head: '🎳 Family &amp; Fun', cls: 'fam', nums: [7, 8, 17, 20, 26, 27] },
     ],
   },
 };
