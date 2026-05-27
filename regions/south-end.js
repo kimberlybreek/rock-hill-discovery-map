@@ -126,7 +126,7 @@ window.REGION = {
       short:'Charlotte-grown specialty coffee · cozy',
       desc:'Charlotte\'s homegrown specialty coffee brand — beautifully crafted lattes, exceptional pour-overs, and a warm, welcoming café atmosphere perfect for working or catching up.',
       meta:'1427 S Tryon St · South End · Mon–Fri 7am–5pm, Sat–Sun 8am–4pm · notjustcoffee.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/ee/07/ed/not-just-coffee.jpg?w=900&h=500&s=1' },
+      img:'https://img.ctykit.com/cdn/nc-charlotte-south-end/images/tr:w-1800/225732914_373091704212397_8433839562704475303_n.jpg' },
 
     { lat:35.2195, lon:-80.8614, n:13, cat:'coffee',
       name:'Undercurrent Coffee',
