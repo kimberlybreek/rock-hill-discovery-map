@@ -261,7 +261,6 @@ window.REGION = {
     ],
     bottom: [
       { head: '🎳 Family &amp; Fun', cls: 'fam', nums: [7, 8, 17, 20] },
-      { head: '🥾 Get Outside!', cls: 'do', nums: [18, 19] },
     ],
   },
 };
