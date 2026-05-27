@@ -80,7 +80,7 @@ window.REGION = {
       short:'Infrared hot yoga · sculpt · barre',
       desc:"Charlotte's only infrared hot yoga studio — Bikram, Power Flow, Yin, and Sculpt classes in a state-of-the-art heated studio.",
       meta:'9852 Rea Rd, Ste D2 · Blakeney · Mon–Fri from 5:30am, Sat–Sun from 7am · athayogaclt.com',
-      img:'https://s7d2.scene7.com/is/image/TWCNews/olga_hot_yoga_studio_11292021' },
+      img:'https://images.squarespace-cdn.com/content/v1/64ff4db243f4891854dfb0a3/59e4f5f1-933d-4aaa-9b87-e77798afa187/2.png?format=1500w', logoOnly:true, logoScale:'70%' },
 
     /* ── REA FARMS ── */
     { lat:35.0498, lon:-80.8365, n:7,  cat:'family',
@@ -159,7 +159,7 @@ window.REGION = {
       short:'Barre · low-impact · high-intensity',
       desc:'Full-body barre workout inspired by ballet, yoga, and Pilates — low-impact, high-intensity classes for all fitness levels in Blakeney.',
       meta:'8430 Rea Rd, Ste 120 · Blakeney · Mon–Thu 6am–7pm, Fri 6am–1pm, Sat–Sun 7am–3pm · purebarre.com',
-      img:'https://4194181.fs1.hubspotusercontent-na1.net/hubfs/4194181/24DIGITAL_Homepage-Mobile1-Oct-15-2024-10-39-17-0978-PM.jpg' },
+      img:'https://4194181.fs1.hubspotusercontent-na1.net/hubfs/4194181/Pure%20Barre%20Logo-1.png', logoOnly:true, logoScale:'70%' },
 
     { lat:35.0529, lon:-80.8152, n:17, cat:'family',
       name:'Waverly Commons',
