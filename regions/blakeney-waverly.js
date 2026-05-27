@@ -210,7 +210,7 @@ window.REGION = {
       short:'Women\'s boutique · curated · fun',
       desc:'A vibrant women\'s boutique known for its perfectly curated mix of clothing, jewelry, and accessories. Scout & Molly\'s makes getting dressed fun — great finds at every visit.',
       meta:'7315 Waverly Walk Ave, Ste F1-3 · Waverly · Mon–Sat 10am–7pm, Sun 12–5pm · scoutandmollys.com',
-      img:'https://scoutandmollyssouthpark.com/cdn/shop/files/Scout-Mollys-Emblem-r1-1-1024x1024.png?v=1692030835', logoOnly:true, logoScale:'65%' },
+      img:'https://www.scoutandmollys.com/wp-content/uploads/2022/07/smlogo1-1024x312.png', logoOnly:true, logoScale:'75%' },
 
     { lat:35.0558, lon:-80.8188, n:25, cat:'family',
       name:'Teddy &amp; Lu',
