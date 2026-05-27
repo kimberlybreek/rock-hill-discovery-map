@@ -165,12 +165,12 @@ window.REGION = {
       meta:'1500 S Tryon St, Ste 140 · South End · Daily 6am–8pm · corepoweryoga.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/bc/91/00/photo0jpg.jpg?w=900&h=500&s=1' },
 
-    { lat:35.2220, lon:-80.8596, n:18, cat:'arts',
-      name:'Resident Culture Brewing',
-      short:'Hazy IPAs · taproom · South End outpost',
-      desc:'The South End outpost of one of Charlotte\'s most lauded craft breweries — known for juicy hazy IPAs and a dedicated local following. Relaxed taproom with great beer.',
-      meta:'1225 S Tryon St · South End · Mon–Thu 4–10pm, Fri 2–11pm, Sat 12–11pm, Sun 12–8pm · residentculturebrewing.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/f2/1c/26/resident-culture-brewing.jpg?w=900&h=500&s=1' },
+    { lat:35.2220, lon:-80.8570, n:18, cat:'coffee',
+      name:'Hi-Wire Brewing South End',
+      short:'Craft lagers & ales · taproom · patio',
+      desc:'Asheville-born Hi-Wire brings its celebrated lineup of lagers, IPAs, and seasonal ales to a lively South End taproom — bright space, friendly crowd, and consistently great beer.',
+      meta:'1737 Camden Rd · South End · Mon–Thu 3–10pm, Fri 2–11pm, Sat 12–11pm, Sun 12–8pm · hiwirebrewing.com',
+      img:'https://hiwirebrewing.com/wp-content/uploads/2025/07/CharlotteTaproom_Javi_20231013_7106-1030x1030.jpg' },
 
     { lat:35.2170, lon:-80.8610, n:19, cat:'arts',
       name:'CycleBar South End',
@@ -182,9 +182,9 @@ window.REGION = {
     { lat:35.2145, lon:-80.8615, n:20, cat:'family',
       name:'South End Farmers Market',
       short:'Saturday market · local produce · artisans',
-      desc:'A beloved Saturday tradition — local farmers, bakers, artisan makers, and food vendors gathering along the Rail Trail. Perfect for a slow morning browse.',
-      meta:'1715 South Blvd (Rail Trail) · South End · Saturdays 9am–1pm, year-round · charlottefarmersmarket.com',
-      img:'https://southendmkt.com/wp-content/uploads/sefm-slides-01-400x400.jpg' },
+      desc:'A beloved Saturday tradition — local farmers, bakers, artisan makers, and food vendors gathering at Atherton Mill along the Rail Trail. Fresh produce, live music, and great local energy every weekend.',
+      meta:'2000 South Blvd, Atherton Mill · South End · Saturdays 8am–1pm, year-round · southendmkt.com',
+      img:'https://southendmkt.com/wp-content/uploads/southend-1200x730-1.png' },
 
   ],
 
