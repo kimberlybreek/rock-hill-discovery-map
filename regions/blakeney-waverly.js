@@ -189,6 +189,36 @@ window.REGION = {
       desc:'Full-service hotel right on Waverly Walk with a lobby bar, outdoor pool, and easy walkable access to all the best dining and shops.',
       meta:'7415 Waverly Walk Ave · Waverly · hilton.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/a1/55/f6/hilton-garden-inn-charlotte.jpg?w=900&h=500&s=1' },
+
+    /* ── BOUTIQUES & WELLNESS ── */
+    { lat:35.0552, lon:-80.8202, n:22, cat:'arts',
+      name:'Mainstream Boutique',
+      short:'Women\'s clothing · locally owned · Waverly',
+      desc:'A beloved local women\'s clothing boutique at Waverly — thoughtfully curated tops, dresses, denim, and accessories for everyday style. Friendly staff and fresh arrivals weekly.',
+      meta:'7314 Waverly Walk Ave, Ste E-5 · Waverly · Mon–Sat 10am–7pm, Sun 12–5pm · mainstreamboutiquecharlotte.com',
+      img:'https://mainstreamboutiquecharlotte.com/cdn/shop/files/Mainstream-Boutique-Spring-2025-NUE-NUE-Russell-Heeter-Photography-1236_1.jpg' },
+
+    { lat:35.0553, lon:-80.8200, n:23, cat:'arts',
+      name:'OVME',
+      short:'Med spa · Botox · fillers · facials',
+      desc:'A modern medical aesthetics boutique offering Botox, dermal fillers, facials, and skin treatments in a sleek, welcoming environment. Expert injectors and a results-driven approach.',
+      meta:'7314 Waverly Walk Ave, Ste E-7 · Waverly · Mon–Fri 9am–6pm, Sat 9am–4pm · ovme.com',
+      img:'https://ovme.com/cdn/shop/files/CLT_lobby_1.webp?v=1773334297' },
+
+    { lat:35.0554, lon:-80.8195, n:24, cat:'arts',
+      name:'Scout &amp; Molly\'s',
+      short:'Women\'s boutique · curated · fun',
+      desc:'A vibrant women\'s boutique known for its perfectly curated mix of clothing, jewelry, and accessories. Scout & Molly\'s makes getting dressed fun — great finds at every visit.',
+      meta:'7315 Waverly Walk Ave, Ste F1-3 · Waverly · Mon–Sat 10am–7pm, Sun 12–5pm · scoutandmollys.com',
+      img:'https://scoutandmollyssouthpark.com/cdn/shop/files/IMG_7887.webp?v=1767801771&width=3000' },
+
+    { lat:35.0558, lon:-80.8188, n:25, cat:'family',
+      name:'Teddy &amp; Lu',
+      short:'Children\'s clothing · gifts · adorable',
+      desc:'Waverly\'s sweetest boutique — a beautiful collection of children\'s clothing, gifts, and accessories. From heirloom smocking to modern prints, Teddy & Lu has something special for every little one.',
+      meta:'7404 Waverly Walk Ave, Ste I-2A · Waverly · Mon–Sat 10am–6pm, Sun 12–5pm · teddyandlu.com',
+      img:'https://teddyandlu.com/cdn/shop/files/New_Arrivals.webp?v=1771778856&width=1440' },
+
   ],
 
   streetLabels: [
@@ -231,6 +261,7 @@ window.REGION = {
     ],
     bottom: [
       { head: '🎳 Family &amp; Fun', cls: 'fam', nums: [7, 8, 17, 20] },
+      { head: '👗 Boutiques &amp; Wellness', cls: 'fam', nums: [22, 23, 24, 25] },
     ],
   },
 };
