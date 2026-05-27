@@ -179,12 +179,34 @@ window.REGION = {
       meta:'1432 S Tryon St, Ste 105 · South End · Daily 6am–8pm · cyclebar.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/10/9c/0f/patio.jpg?w=900&h=500&s=1' },
 
-    { lat:35.2145, lon:-80.8615, n:20, cat:'family',
+    { lat:35.2145, lon:-80.8615, n:20, cat:'outdoor',
       name:'South End Farmers Market',
       short:'Saturday market · local produce · artisans',
       desc:'A beloved Saturday tradition — local farmers, bakers, artisan makers, and food vendors gathering at Atherton Mill along the Rail Trail. Fresh produce, live music, and great local energy every weekend.',
       meta:'2000 South Blvd, Atherton Mill · South End · Saturdays 8am–1pm, year-round · southendmkt.com',
       img:'https://southendmkt.com/wp-content/uploads/southend-1200x730-1.png' },
+
+    /* ── ATHERTON MILL ── */
+    { lat:35.2138, lon:-80.8607, n:21, cat:'coffee',
+      name:'Trolley Barn Fermentory',
+      short:'Historic brewery · food hall · skyline views',
+      desc:'Set in an 1890s trolley maintenance barn, this stunning two-story brewery and food hall pours locally crafted beers and infused spirits alongside three distinct food stalls — with a rooftop patio overlooking the Charlotte skyline.',
+      meta:'2104 South Blvd · Atherton Mill · Sun–Thu 11am–10pm, Fri–Sat 11am–midnight · trolleybarn.legionbrewing.com',
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/4f/d3/11/bar-and-bartender.jpg?w=900&h=500&s=1' },
+
+    { lat:35.2132, lon:-80.8612, n:22, cat:'arts',
+      name:'west elm',
+      short:'Modern home design · furniture · décor',
+      desc:'West Elm\'s stunning 11,000 sq ft flagship at Atherton Mill — beautifully curated modern furniture, home décor, and accessories, plus free in-store interior design services from their Design Crew.',
+      meta:'2140 South Blvd, Ste 1 · Atherton Mill · Mon–Sat 10am–8pm, Sun 11am–6pm · westelm.com',
+      img:'https://img.ctykit.com/cdn/nc-charlotte-south-end/images/tr:w-1800/101055144_1332726980254950_2684389438516990661_n.jpg' },
+
+    { lat:35.2142, lon:-80.8618, n:23, cat:'arts',
+      name:'Savory Spice Shop',
+      short:'Artisan spices · blends · sample before you buy',
+      desc:'A fragrant treasure at Atherton Mill — hundreds of house-blended spices, salts, and seasonings you can smell and taste before buying. Perfect for home cooks and food lovers.',
+      meta:'2000 South Blvd, Ste 520 · Atherton Mill · Mon–Sat 10am–7pm, Sun 11am–5pm · savoryspiceshop.com',
+      img:'https://img.ctykit.com/cdn/nc-charlotte-south-end/images/tr:w-1800/242356372_561001281846730_3480298682239118650_n.jpg' },
 
   ],
 
@@ -221,10 +243,10 @@ window.REGION = {
       { head: '☕ Coffee &amp; Wellness', cls: 'coffee', nums: [11, 12, 13, 17, 19] },
     ],
     mapBelow: [
-      { head: '🌿 Outdoors', cls: 'do', nums: [14, 15] },
+      { head: '🌿 Outdoors', cls: 'do', nums: [14, 15, 20] },
     ],
     bottom: [
-      { head: '🎨 Arts &amp; Community', cls: 'fam', nums: [16, 18, 20] },
+      { head: '🎨 Arts &amp; Community', cls: 'fam', nums: [16, 18, 21, 22, 23] },
     ],
   },
 };
