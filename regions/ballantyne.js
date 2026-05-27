@@ -57,7 +57,7 @@ window.REGION = {
       short:'Davidson-rooted specialty roasts',
       desc:'Davidson-rooted specialty coffee — locally sourced beans, excellent pour-overs, and a welcoming crowd.',
       meta:'Ballantyne Village · Mon–Fri 7am–6pm, Sat 8am–5pm',
-      img:'assets/summit-coffee.png', logoOnly:true, logoScale:'75%' },
+      img:'assets/summit-coffee.png', logoOnly:true, logoScale:'95%' },
     { lat:35.0517, lon:-80.8452, n:4,  cat:'food',
       name:"Postino's Ballantyne",
       short:'Wine · bruschetta boards · The Bowl',
@@ -75,7 +75,7 @@ window.REGION = {
       short:'French bakery · pastries · full bar',
       desc:'Ballantyne\'s beloved French boulangerie-pâtisserie — handcrafted croissants, fresh-baked breads, pastries, and a full brasserie bar.',
       meta:'14020 Stream Way · The Bowl at Ballantyne · Daily 7am–10pm',
-      img:'assets/copain-logo.svg', logoOnly:true, logoScale:'110%' },
+      img:'assets/copain-logo.svg', logoOnly:true, logoScale:'110%', bgColor:'#ffffff' },
 
     /* Ballantyne Hotel campus */
     { lat:35.0578, lon:-80.8622, n:7,  cat:'arts',
