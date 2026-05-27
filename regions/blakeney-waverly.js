@@ -159,7 +159,7 @@ window.REGION = {
       short:'Barre · low-impact · high-intensity',
       desc:'Full-body barre workout inspired by ballet, yoga, and Pilates — low-impact, high-intensity classes for all fitness levels in Blakeney.',
       meta:'8430 Rea Rd, Ste 120 · Blakeney · Mon–Thu 6am–7pm, Fri 6am–1pm, Sat–Sun 7am–3pm · purebarre.com',
-      img:'https://4194181.fs1.hubspotusercontent-na1.net/hubfs/4194181/2024%20PB%20Website%20Images%20Resized/Classic_Class_Background_1100x800_Resized.webp' },
+      img:'https://4194181.fs1.hubspotusercontent-na1.net/hubfs/4194181/24DIGITAL_Homepage-Mobile1-Oct-15-2024-10-39-17-0978-PM.jpg' },
 
     { lat:35.0529, lon:-80.8152, n:17, cat:'family',
       name:'Waverly Commons',
