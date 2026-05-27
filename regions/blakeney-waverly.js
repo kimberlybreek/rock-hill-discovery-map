@@ -219,6 +219,13 @@ window.REGION = {
       meta:'7404 Waverly Walk Ave, Ste I-2A · Waverly · Mon–Sat 10am–6pm, Sun 12–5pm · teddyandlu.com',
       img:'https://teddyandlu.com/cdn/shop/collections/BloomingFloralFlutterBubble-1.jpg' },
 
+    { lat:35.0430, lon:-80.8445, n:26, cat:'family',
+      name:'Life Time Fitness',
+      short:'Luxury athletic club · pools · spa · tennis',
+      desc:'South Charlotte\'s premier luxury athletic club — resort-style indoor and outdoor pools, full gym floor, yoga and cycling studios, pickleball and tennis courts, eucalyptus steam rooms, and a full spa.',
+      meta:'11220 Golf Links Dr · Blakeney · Mon–Fri 4am–midnight, Sat–Sun 5am–10pm · lifetime.life',
+      img:'https://assets.lifetimefitness.com/content/dam/lifetime/images/clubs/club-overview/spaces-carousel/pool/indoor-pool/indoor-lap-pool.png.dmtransform/image.jpg' },
+
   ],
 
   streetLabels: [
@@ -260,7 +267,7 @@ window.REGION = {
       { head: '👗 Boutiques &amp; Wellness', cls: 'fam', nums: [22, 23, 24, 25] },
     ],
     bottom: [
-      { head: '🎳 Family &amp; Fun', cls: 'fam', nums: [7, 8, 17, 20] },
+      { head: '🎳 Family &amp; Fun', cls: 'fam', nums: [7, 8, 17, 20, 26] },
     ],
   },
 };
