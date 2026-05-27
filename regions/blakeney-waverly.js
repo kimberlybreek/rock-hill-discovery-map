@@ -161,12 +161,12 @@ window.REGION = {
       meta:'8430 Rea Rd, Ste 120 · Blakeney · Mon–Thu 6am–7pm, Fri 6am–1pm, Sat–Sun 7am–3pm · purebarre.com',
       img:'https://4194181.fs1.hubspotusercontent-na1.net/hubfs/4194181/Pure%20Barre%20Logo-1.png', logoOnly:true, logoScale:'70%' },
 
-    { lat:35.0529, lon:-80.8152, n:17, cat:'family',
-      name:'Waverly Commons',
-      short:'Open-air plaza · dining · events',
-      desc:"Waverly's vibrant open-air district with walkable dining, boutique shops, a central green, and frequent community events and pop-ups.",
-      meta:'Waverly Walk Ave · Charlotte · Daily · waverlyclt.com',
-      img:'https://www.childressklein.com/sites/default/files/styles/hero_xs/public/2024-07/Waverly_Summer2024_3.jpg?itok=Y9FqFkg9' },
+    { lat:35.0529, lon:-80.8152, n:17, cat:'coffee',
+      name:'Bagel Boys',
+      short:'NY-style bagels · sandwiches · spreads',
+      desc:'New Jersey natives brought authentic New York-style bagels to Waverly — 18 flavors, 15 house-made spreads, and legendary sandwiches like The Bae Gal. A South Charlotte morning staple.',
+      meta:'7107 Waverly Walk Ave, Ste A2 · Waverly · Tue–Fri 6am–2pm, Sat–Sun 7am–2pm · bagelboysclt.com',
+      img:'https://images.axios.com/RawMsHd7eax-jyqGRI3xXMfbA5c=/1920x1080/smart/2024/01/06/1704506087758.webp' },
 
     /* ── OUTDOORS ── */
     { lat:35.0505, lon:-80.8185, n:18, cat:'outdoor',
@@ -257,11 +257,11 @@ window.REGION = {
       { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [9, 12, 11, 3, 1] },
     ],
     mapBelow: [
-      { head: '🥾 Get Outside!', cls: 'do', nums: [18, 19] },
+      { head: '👗 Boutiques &amp; Wellness', cls: 'fam', nums: [22, 23, 24, 25] },
     ],
     bottom: [
       { head: '🎳 Family &amp; Fun', cls: 'fam', nums: [7, 8, 17, 20] },
-      { head: '👗 Boutiques &amp; Wellness', cls: 'fam', nums: [22, 23, 24, 25] },
+      { head: '🥾 Get Outside!', cls: 'do', nums: [18, 19] },
     ],
   },
 };
