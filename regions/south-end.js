@@ -163,7 +163,7 @@ window.REGION = {
       short:'Hot yoga · sculpt · all levels',
       desc:'Nationally loved hot yoga and sculpt classes in a sleek South End studio. Whether you\'re a first-timer or daily practitioner, CorePower brings great energy and consistency.',
       meta:'1500 S Tryon St, Ste 140 · South End · Daily 6am–8pm · corepoweryoga.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/bc/91/00/photo0jpg.jpg?w=900&h=500&s=1' },
+      img:'https://www.honolulumagazine.com/wp-content/uploads/data-import/ed1435dc/corepower-yoga-ward-honolulu-class-exercise.jpg' },
 
     { lat:35.2220, lon:-80.8570, n:18, cat:'coffee',
       name:'Hi-Wire Brewing South End',
