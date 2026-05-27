@@ -87,10 +87,10 @@ window.REGION = {
 
     { lat:35.2155, lon:-80.8593, n:7, cat:'food',
       name:'Seoul Food Meat Co',
-      short:'Korean BBQ · table grills · soju',
-      desc:'Charlotte\'s go-to Korean BBQ — cook premium marinated meats on tabletop grills, pair with banchan, and share a bottle of soju with friends.',
-      meta:'2101 South Blvd, Ste 110 · South End · Mon–Thu 5–10pm, Fri–Sat 5–11pm, Sun 5–9pm · seoulfoodmeatco.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1f/e6/dc/47/seoul-food.jpg?w=900&h=500&s=1' },
+      short:'Korean bulgogi burgers · wings · milkbread',
+      desc:'Charlotte\'s beloved Korean-fusion spot — now serving sizzling bulgogi burgers on house-made milkbread toast, Korean wings, tacos, and patty melts. Bold flavors, great vibe.',
+      meta:'1400 S Church St · South End · Mon–Thu 11am–10pm, Fri–Sat 11am–11pm, Sun 11am–9pm · seoulfoodmeatcoclt.com',
+      img:'https://images.squarespace-cdn.com/content/v1/5e39e3b09dbf2e41c9a8d0e3/97652d9e-f8d5-4178-ae4c-05ec2d33855d/PXL_20250904_173006261.LONG_EXPOSURE-01.COVER.jpg' },
 
     { lat:35.2132, lon:-80.8600, n:8, cat:'food',
       name:'The Goodyear House',
