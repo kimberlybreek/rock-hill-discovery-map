@@ -227,7 +227,7 @@ window.REGION = {
       short:'Charlotte streetwear · local pride · CLT apparel',
       desc:'Homegrown Charlotte brand celebrating local pride — tees, hats, and apparel featuring the city skyline, sports teams, and CLT culture. Available online and at pop-ups.',
       meta:'South End · Online & pop-ups · 704shop.com',
-      img:'https://704shop.com/cdn/shop/files/704_shop.png', logoOnly:true, logoScale:'65%' },
+      img:'', logoOnly:true },
 
   ],
 
