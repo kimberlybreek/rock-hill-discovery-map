@@ -227,7 +227,7 @@ window.REGION = {
       short:'Indie gift shop · books · local goods · 35+ years',
       desc:'A beloved Charlotte institution for over 35 years — quirky gifts, books, stationery, home goods, and locally made products that perfectly capture the spirit of the city.',
       meta:'330 East Blvd · Dilworth · Mon–Fri 10am–7pm, Sat 10am–6pm, Sun 12–5pm · paperskyscraper.com',
-      img:'https://www.paperskyscraper.com/cdn/shop/files/Logo-PaperSkyscraper-with-space-orig_1_200x_2x_png.webp', logoOnly:true, logoScale:'80%', bgColor:'#ffffff' },
+      img:'https://www.paperskyscraper.com/cdn/shop/files/IMG_6630_jpg.jpg', bgPosition:'center 50%' },
 
   ],
 
