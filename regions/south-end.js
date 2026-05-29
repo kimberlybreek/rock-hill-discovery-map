@@ -222,12 +222,12 @@ window.REGION = {
       meta:'1930 Camden Rd · South End · Mon–Sat 10am–6pm, Sun 12–5pm · lilbelle.com',
       img:'https://lilbelle.com/cdn/shop/files/lilbelle_logo_2_810b3a41-a47f-412c-be55-6943e62e33e2.jpg', logoOnly:true, logoScale:'75%' },
 
-    { lat:35.2108, lon:-80.8600, n:26, cat:'arts',
-      name:'704 Shop',
-      short:'Charlotte streetwear · local pride · CLT apparel',
-      desc:'Homegrown Charlotte brand celebrating local pride — tees, hats, and apparel featuring the city skyline, sports teams, and CLT culture. Available online and at pop-ups.',
-      meta:'South End · Online & pop-ups · 704shop.com',
-      img:'', logoOnly:true },
+    { lat:35.2108, lon:-80.8598, n:26, cat:'arts',
+      name:'Paper Skyscraper',
+      short:'Indie gift shop · books · local goods · 35+ years',
+      desc:'A beloved Charlotte institution for over 35 years — quirky gifts, books, stationery, home goods, and locally made products that perfectly capture the spirit of the city.',
+      meta:'330 East Blvd · Dilworth · Mon–Fri 10am–7pm, Sat 10am–6pm, Sun 12–5pm · paperskyscraper.com',
+      img:'https://www.paperskyscraper.com/cdn/shop/files/IMG_8083.jpg' },
 
   ],
 
