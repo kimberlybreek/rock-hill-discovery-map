@@ -208,6 +208,27 @@ window.REGION = {
       meta:'2000 South Blvd, Ste 520 · Atherton Mill · Mon–Sat 10am–7pm, Sun 11am–5pm · savoryspiceshop.com',
       img:'https://img.ctykit.com/cdn/nc-charlotte-south-end/images/tr:w-1800/242356372_561001281846730_3480298682239118650_n.jpg' },
 
+    { lat:35.2132, lon:-80.8605, n:24, cat:'arts',
+      name:'BOEM',
+      short:'Women\'s boutique · curated fashion · South End',
+      desc:'Effortlessly curated women\'s fashion with handpicked styles from contemporary brands — a South End staple for stylish, wearable pieces at 2028 South Blvd.',
+      meta:'2028 South Blvd, Ste 1B · South End · Mon–Sat 10am–6pm, Sun 12–5pm · shopboem.com',
+      img:'https://www.shopboem.com/cdn/shop/files/boem_logo_-_holiday_25_2_410x.png?v=1767016584', logoOnly:true, logoScale:'70%' },
+
+    { lat:35.2118, lon:-80.8608, n:25, cat:'arts',
+      name:'Lilbelle',
+      short:'Boutique · closet staples · statement pieces',
+      desc:'Locally-owned women\'s fashion boutique tucked in the Heart Wall alley — cute, stylish, affordable pieces from closet staples to statement looks.',
+      meta:'1930 Camden Rd · South End · Mon–Sat 10am–6pm, Sun 12–5pm · lilbelle.com',
+      img:'https://lilbelle.com/cdn/shop/files/lilbelle_logo_2_810b3a41-a47f-412c-be55-6943e62e33e2.jpg', logoOnly:true, logoScale:'75%' },
+
+    { lat:35.2108, lon:-80.8600, n:26, cat:'arts',
+      name:'704 Shop',
+      short:'Charlotte streetwear · local pride · CLT apparel',
+      desc:'Homegrown Charlotte brand celebrating local pride — tees, hats, and apparel featuring the city skyline, sports teams, and CLT culture. Available online and at pop-ups.',
+      meta:'South End · Online & pop-ups · 704shop.com',
+      img:'https://704shop.com/cdn/shop/files/704_shop.png', logoOnly:true, logoScale:'65%' },
+
   ],
 
   streetLabels: [
@@ -243,10 +264,11 @@ window.REGION = {
       { head: '☕ Coffee &amp; Wellness', cls: 'coffee', nums: [11, 12, 13, 17, 19] },
     ],
     mapBelow: [
-      { head: '🌿 Outdoors', cls: 'do', nums: [14, 15, 20] },
+      { head: '🌿 Outdoors', cls: 'do', nums: [14, 15] },
     ],
     bottom: [
-      { head: '🎨 Arts &amp; Community', cls: 'fam', nums: [16, 18, 21, 22, 23] },
+      { head: '🎨 Arts &amp; Community', cls: 'fam', nums: [16, 18, 20, 21, 22, 23] },
+      { head: '🛍 Boutiques &amp; Shops', cls: 'fam', nums: [24, 25, 26] },
     ],
   },
 };
