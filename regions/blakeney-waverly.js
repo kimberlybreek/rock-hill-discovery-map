@@ -253,7 +253,8 @@ window.REGION = {
     { lat: 35.0468, lon: -80.8412, name: 'Atrium Health Blakeney', type: 'hospital' },
     { lat: 35.0502, lon: -80.8178, name: 'Waverly Presbyterian', type: 'church' },
     { lat: 35.0435, lon: -80.8445, name: 'Golf Links', type: 'golf' },
-    { lat: 35.0560, lon: -80.8200, name: '', type: 'duck' },
+    { lat: 35.0576, lon: -80.7942, name: '', type: 'duck' },
+    { lat: 35.0480, lon: -80.8360, name: '', type: 'duck' },
   ],
 
   areaLabels: [

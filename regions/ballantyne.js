@@ -237,7 +237,10 @@ window.REGION = {
     { lat: 35.0470, lon: -80.8420, name: 'Novant Health', type: 'hospital' },
     { lat: 35.0588, lon: -80.8648, name: 'Ballantyne Presbyterian', type: 'church' },
     { lat: 35.0610, lon: -80.8680, name: 'Golf Course', type: 'golf' },
-    { lat: 35.0490, lon: -80.8490, name: '', type: 'duck' },
+    { lat: 35.0598, lon: -80.8518, name: '', type: 'duck' },
+    { lat: 35.0640, lon: -80.8571, name: '', type: 'duck' },
+    { lat: 35.0625, lon: -80.8526, name: '', type: 'duck' },
+    { lat: 35.0564, lon: -80.8609, name: '', type: 'duck' },
   ],
 
   areaLabels: [
