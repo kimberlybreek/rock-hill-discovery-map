@@ -566,7 +566,7 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
 
 
   /* Landmarks */
-  const landmarkIcons = { school: '🎓', hospital: '🏥', church: '⛪', gov: '🏛', duck: '🦆', golf: '⛳' };
+  const landmarkIcons = { school: '🎓', hospital: '🏥', church: '⛪', gov: '🏛', duck: '🦆', golf: '⛳', kayak: '🚣' };
   (R.landmarks || []).forEach(({ lat, lon, name, type }) => {
     const emoji = landmarkIcons[type] || '📍';
     const html = `<div class="landmark-label"><span class="landmark-icon">${emoji}</span><span class="landmark-name">${name}</span></div>`;

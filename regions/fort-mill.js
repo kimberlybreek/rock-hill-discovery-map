@@ -30,6 +30,8 @@ window.REGION = {
     { lat: 35.0128, lon: -80.9598, name: 'Gold Hill Elementary', type: 'school' },
     { lat: 35.0089, lon: -80.9700, name: 'MUSC Health Fort Mill', type: 'hospital' },
     { lat: 34.9910, lon: -80.9630, name: 'Springfield Golf Club', type: 'golf' },
+    { lat: 35.0212, lon: -81.0081, name: '', type: 'kayak' },
+    { lat: 34.9980, lon: -80.9900, name: '', type: 'kayak' },
     { lat: 34.9921, lon: -80.9314, name: '', type: 'duck' },
     { lat: 35.0228, lon: -80.9653, name: '', type: 'duck' },
   ],

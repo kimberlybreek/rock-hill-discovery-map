@@ -245,6 +245,7 @@ window.REGION = {
     { lat: 35.1960, lon: -80.8592, name: 'New Bern Station (LYNX)', type: 'gov' },
     { lat: 35.2180, lon: -80.8580, name: 'Charlotte Rail Trail', type: 'outdoor' },
     { lat: 35.2090, lon: -80.8640, name: '', type: 'duck' },
+    { lat: 35.2176, lon: -80.8330, name: '', type: 'kayak' },
   ],
 
   areaLabels: [
