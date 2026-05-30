@@ -236,6 +236,8 @@ window.REGION = {
     { lat: 35.0542, lon: -80.8510, name: 'Ballantyne Elementary', type: 'school' },
     { lat: 35.0470, lon: -80.8420, name: 'Novant Health', type: 'hospital' },
     { lat: 35.0588, lon: -80.8648, name: 'Ballantyne Presbyterian', type: 'church' },
+    { lat: 35.0610, lon: -80.8680, name: 'Golf Course', type: 'golf' },
+    { lat: 35.0490, lon: -80.8490, name: '', type: 'duck' },
   ],
 
   areaLabels: [
