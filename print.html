@@ -412,6 +412,10 @@
     .map-col { display: flex !important; flex-direction: column !important; }
     .map-below { flex: 1 !important; display: flex !important; flex-direction: column !important; }
     .map-below .h-rail { flex: 1 !important; height: auto !important; }
+    /* Remove black squares around map pins when printing */
+    .leaflet-div-icon,
+    .leaflet-marker-icon,
+    .leaflet-marker-pane > * { background: transparent !important; border: none !important; box-shadow: none !important; }
   }
 </style>
 </head>
