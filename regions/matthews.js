@@ -46,7 +46,7 @@ window.REGION = {
       short:'Craft beer · wine · pizza · largest patio downtown',
       desc:'Matthews\' anchor craft brewery with the town\'s largest patio, house-brewed beers, wine, and a pizza kitchen — the social heart of downtown.',
       meta:'213 N Trade St · Downtown Matthews · Mon–Thu 11:30am–10pm, Fri–Sat 11:30am–11pm, Sun 11:30am–9pm · seaboardbrewing.com',
-      img:'https://images.squarespace-cdn.com/content/v1/58a4a2591e5b6c8fd240f6cf/46328e61-de39-4bb8-bacc-e1822ab07cbe/Website+Food+9-8-20221024_1.jpg' },
+      img:'https://images.squarespace-cdn.com/content/v1/58a4a2591e5b6c8fd240f6cf/1599787613381-6RIT8F0YTY5RLSNQY536/Brewery' },
 
     { lat:35.1210, lon:-80.7198, n:2, cat:'coffee',
       name:'Carolina Beer Temple',
@@ -75,7 +75,7 @@ window.REGION = {
       short:'Award-winning BBQ · craft beer · biker-bar vibes',
       desc:'Award-winning BBQ and craft beer joint with slow-smoked brisket, pulled pork, and an unbeatable atmosphere in the heart of downtown Matthews.',
       meta:'142 E John St · Downtown Matthews · Sun–Wed 11am–10pm, Thu–Sat 11am–11pm · macspeedshop.com',
-      img:'https://macspeedshop.com/wp-content/uploads/2018/08/location-matthews.jpg' },
+      img:'https://media-cdn.tripadvisor.com/media/photo-f/11/f6/1c/39/nice-and-clean.jpg' },
 
     { lat:35.1098, lon:-80.7195, n:6, cat:'food',
       name:'Stacks Kitchen',
@@ -89,14 +89,14 @@ window.REGION = {
       short:'Authentic Thai · Pad Thai · curries · local gem',
       desc:'Authentic Thai flavors served in a relaxed setting, from classic Pad Thai to punchy green curries that keep regulars coming back.',
       meta:'131 Matthews Station St · Matthews · Mon–Fri 11am–3pm & 5–9pm, Sat 11am–9:30pm · thaistaste.com',
-      img:'https://s3-media0.fl.yelpcdn.com/bphoto/5JqCHvUoGKZi9SRTxNdz8w/o.jpg' },
+      img:'https://img02.restaurantguru.com/c333-Thai-Taste-Charlotte-interior.jpg' },
 
     { lat:35.1175, lon:-80.7220, n:8, cat:'food',
       name:'Lam\'s Kitchen',
       short:'Vietnamese · neighborhood gem · loyal locals',
       desc:'A quiet neighborhood gem serving authentic Vietnamese dishes — the kind of under-the-radar spot that loyal locals keep to themselves.',
       meta:'3016 Weddington Rd · Matthews · Mon & Wed–Fri 11:30am–2:30pm & 4:30–9:30pm · lamskitchen.com',
-      img:'https://s3-media0.fl.yelpcdn.com/bphoto/GWPRLbdyKCDLoLj-PBg4nA/o.jpg' },
+      img:'https://media-cdn.tripadvisor.com/media/photo-s/16/4e/7d/c6/lam-s-kitchen.jpg' },
 
     /* ── COFFEE ── */
     { lat:35.1100, lon:-80.7185, n:9, cat:'coffee',
@@ -111,7 +111,7 @@ window.REGION = {
       short:'Downtown staple · espresso · railroad history',
       desc:'A beloved downtown Matthews coffee shop named after the town\'s railroad history, serving quality espresso and supply goods on charming Trade Street.',
       meta:'225 N Trade St · Downtown Matthews · Mon–Fri 6am–7pm, Sat 7am–7pm · brakemanscoffee.com',
-      img:'https://images.squarespace-cdn.com/content/v1/5a3e0e0be2c483a55e0f8e0b/1514403025478-VQOYZR9U4Y9VBM7U6BZ9/brakemans+exterior.jpg' },
+      img:'https://media-cdn.tripadvisor.com/media/photo-s/17/30/96/7b/come-see-us-and-find.jpg' },
 
     { lat:35.1155, lon:-80.7050, n:11, cat:'coffee',
       name:'The Collective Cafe',
@@ -126,21 +126,21 @@ window.REGION = {
       short:'Fishing pier · disc golf · greenway access · 36 acres',
       desc:'A 36-acre park with a fishing pier on a serene pond, 12-hole disc golf, playgrounds, and direct trail access to the Four Mile Creek Greenway.',
       meta:'1631 Pleasant Plains Rd · Matthews · Dawn to dusk · matthewsnc.gov',
-      img:'https://www.charlottesgotalot.com/sites/default/files/styles/featured_image/public/images/squirrel-lake-park-disc-golf.jpg' },
+      img:'https://cdn.prod.website-files.com/65696e115a35f03f3de93b22/66a9ef2583ed9a58e5a1c8ef_66694b6a6277ae1c45703aa5_Squirrel%252520Lake%252520Park.webp' },
 
     { lat:35.1185, lon:-80.7175, n:13, cat:'outdoor',
       name:'Four Mile Creek Greenway',
       short:'2.3-mile paved trail · boardwalks · pine forest',
       desc:'A beloved 2.3-mile paved greenway winding through mixed pine forest and wetlands with boardwalk sections, connecting downtown to Squirrel Lake Park.',
       meta:'Trailhead at 1102 E John St · Matthews · Dawn to dusk · matthewsnc.gov',
-      img:'https://www.matthewsnc.gov/Files/Images/greenway-four-mile.jpg' },
+      img:'https://files.aptuitivcdn.com/JVXM9wad0E-1708/images/trails/trail-system/four-mile-creek-greenway-2016-23-large-2-large-2-57.1773311125.jpg' },
 
     { lat:35.1035, lon:-80.7088, n:14, cat:'outdoor',
       name:'Colonel Francis Beatty Park',
       short:'265 acres · mountain biking · kayak rentals · lake',
       desc:'A sprawling 265-acre park with mountain biking and hiking trails, a lake with kayak and canoe rentals, tennis courts, and picnic areas.',
       meta:'4330 Weddington Rd · Matthews · Dawn to dusk · charmeck.org',
-      img:'https://www.charlottesgotalot.com/sites/default/files/styles/featured_image/public/images/colonel-beatty-park-trails.jpg' },
+      img:'https://kiddingaroundcharlotte.com/wp-content/uploads/sites/3/2026/02/Beatty-Park-4.jpg' },
 
     /* ── ARTS & COMMUNITY ── */
     { lat:35.1178, lon:-80.7198, n:15, cat:'arts',
@@ -162,7 +162,7 @@ window.REGION = {
       short:'Producer-only · 50-mile radius · largest in area',
       desc:'The Charlotte area\'s largest, oldest, and most diverse producer-only farmers market, with all goods grown or made within 50 miles of Matthews.',
       meta:'188 N Trade St · Downtown Matthews · Sat 8am–12pm (Apr–Nov) · matthewsfarmersmarket.com',
-      img:'https://static.wixstatic.com/media/17ea1a_710214f267af449a8d78742ec5653571~mv2.jpg' },
+      img:'https://static.wixstatic.com/media/17ea1a_38c82503dce946a4b901267d84a2d78e~mv2.jpg' },
 
     { lat:35.1218, lon:-80.7202, n:18, cat:'arts',
       name:'Renfrow Hardware',
@@ -184,7 +184,7 @@ window.REGION = {
       short:'Classes · theater · yoga · music · all ages',
       desc:'The town\'s civic hub offering dance, art, yoga, and music programs for all ages, plus the Fullwood Theater hosting local performances year-round.',
       meta:'100 E McDowell St · Matthews · Mon–Fri 9am–8pm, Sat 9am–2pm, Sun 1–6pm · matthewsnc.gov',
-      img:'https://www.matthewsnc.gov/Files/Images/Facilities/mcc-exterior.jpg' },
+      img:'https://applications-media.feverup.com/image/upload/w_620,h_420,c_fill,q_auto,f_auto,g_auto/fever2/plan/photo/ff1e1f96-3437-11f1-9191-52d442d483c4.jpg' },
 
     { lat:35.1068, lon:-80.7238, n:21, cat:'family',
       name:'High Five Playhouse',
