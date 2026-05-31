@@ -42,11 +42,11 @@ window.REGION = {
 
     /* ── BREW & BAR ── */
     { lat:35.1215, lon:-80.7208, n:1, cat:'coffee',
-      name:'Seaboard Brewing',
-      short:'Craft beer · wine · pizza · largest patio downtown',
-      desc:'Matthews\' anchor craft brewery with the town\'s largest patio, house-brewed beers, wine, and a pizza kitchen — the social heart of downtown.',
-      meta:'213 N Trade St · Downtown Matthews · Mon–Thu 11:30am–10pm, Fri–Sat 11:30am–11pm, Sun 11:30am–9pm · seaboardbrewing.com',
-      img:'https://images.squarespace-cdn.com/content/v1/58a4a2591e5b6c8fd240f6cf/1599787613381-6RIT8F0YTY5RLSNQY536/Brewery' },
+      name:'Matthews Social House',
+      short:'Irish pub · craft beer · live music · beer garden',
+      desc:'A neighborhood whiskey pub with an Irish soul — perfectly poured Guinness, a lively beer garden, live music, and rotating food trucks make this downtown Matthews\' go-to local hangout.',
+      meta:'105 W Charles St · Downtown Matthews · Mon–Thu 3pm–12am, Fri 12pm–2am, Sat 11am–2am, Sun 11am–12am · matthewssocialhouse.com',
+      img:'https://static.spotapps.co/spots/58/11d1390327404bbaedaab8e9f74881/:original' },
 
     { lat:35.1210, lon:-80.7198, n:2, cat:'coffee',
       name:'Carolina Beer Temple',
