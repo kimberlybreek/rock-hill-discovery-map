@@ -5,14 +5,14 @@
 <title>Map</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Cormorant+Garamond:wght@600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,700;0,6..96,900;1,6..96,400&family=Cinzel:wght@700;900&family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@400;700&family=Caveat:wght@500;600;700&family=Patrick+Hand&family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@0,300;0,400;0,500;0,600&family=Cinzel:wght@700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { height: 100%; }
   body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     background: #1c1008
       repeating-linear-gradient(45deg, transparent 0 8px, rgba(255,255,255,0.02) 8px 9px);
     color: var(--ink, #222);
@@ -53,7 +53,7 @@
   }
   .cartouche h1 {
     display: inline-block;
-    font-family: 'Yeseva One', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
     font-size: 48px;
     color: var(--ink, #222);
@@ -62,7 +62,7 @@
     vertical-align: middle;
   }
   .cartouche .sub {
-    font-family: 'Lato', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 13px;
     color: var(--frame, #444);
     letter-spacing: 6px;
@@ -74,7 +74,7 @@
     border: 2px solid var(--parch, #f5f0e8); border-radius: 50%;
     width: 64px; height: 64px;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-family: 'Cinzel', serif; font-weight: 700;
     box-shadow: 0 3px 10px rgba(0,0,0,.4);
     transform: rotate(-8deg);
   }
@@ -82,7 +82,7 @@
   .cartouche .free-badge .take { font-size: 8px; letter-spacing: 1px; margin-top: 3px; opacity: 0.85; }
   .back-link {
     position: absolute; top: 18px; right: 18px;
-    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-family: 'Cinzel', serif; font-weight: 700;
     font-size: 13px; letter-spacing: 2px;
     background: var(--frame, #444); color: var(--parch, #f5f0e8);
     border: 2px solid var(--inner-border, #bbb);
@@ -132,11 +132,11 @@
   .legend { display: flex; gap: 18px; flex-wrap: wrap; }
   .legend-item {
     display: inline-flex; align-items: center; gap: 6px;
-    font-family: 'Caveat', cursive; font-size: 18px; font-weight: 700;
+    font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 700;
     color: var(--ink, #222);
   }
   .legend-dot { width: 16px; height: 16px; border-radius: 4px; border: 1.5px solid var(--ink, #222); }
-  .credit { font-family: 'Patrick Hand', cursive; font-size: 12px; color: var(--frame, #444); letter-spacing: 1px; }
+  .credit { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--frame, #444); letter-spacing: 1px; }
 
   .biz-marker {
     width: 28px; height: 36px;
@@ -152,7 +152,7 @@
   .biz-marker:hover { transform: rotate(-45deg) scale(1.2); z-index: 1000; }
   .biz-marker .num {
     transform: rotate(45deg);
-    font-family: 'Cabin Sketch', cursive; font-weight: 700; font-size: 11px; color: #fff;
+    font-family: 'Cinzel', serif; font-weight: 700; font-size: 11px; color: #fff;
     text-shadow: 0 1px 2px rgba(0,0,0,.4);
   }
   .street-label {
@@ -188,7 +188,7 @@
   .leaflet-popup-tip { background: var(--parch-dark, #ddd); }
   .popup {
     padding: 12px 14px; min-width: 220px;
-    font-family: 'Lato', sans-serif; color: var(--ink, #222);
+    font-family: 'DM Sans', sans-serif; color: var(--ink, #222);
   }
   .popup img { width: 100%; border-radius: 4px; border: 1.5px solid var(--frame, #444); margin-bottom: 8px; }
   .popup h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 4px; color: var(--cat-color, var(--ink, #222)); }
@@ -197,7 +197,7 @@
     background: var(--cat-color, #444); color: var(--parch, #f5f0e8);
     font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
     padding: 2px 8px; border-radius: 10px; margin-bottom: 6px;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'DM Sans', sans-serif;
   }
   .popup .desc { font-size: 14px; line-height: 1.4; }
   .popup .meta {
@@ -212,7 +212,7 @@
   .popup .dirs a {
     flex: 1; display: inline-block;
     background: var(--cat-color, #444); color: #fff;
-    font-family: 'Cabin Sketch', cursive; font-weight: 700;
+    font-family: 'Cinzel', serif; font-weight: 700;
     font-size: 11px; letter-spacing: 1px;
     text-align: center; text-decoration: none;
     padding: 6px 4px; border-radius: 3px; border: 1.5px solid var(--frame, #444);
@@ -240,7 +240,7 @@
     padding: 14px 20px;
   }
   .spin-title {
-    font-family: 'Yeseva One', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 18px; color: var(--accent, #800);
     text-align: center; margin-bottom: 10px;
     letter-spacing: 2px;
@@ -249,7 +249,7 @@
     display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 12px;
   }
   .spin-cat-btn {
-    font-family: 'Lato', sans-serif; font-weight: 700; font-size: 13px;
+    font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 13px;
     color: #fff; border: none; border-radius: 20px;
     padding: 7px 16px; cursor: pointer;
     transition: transform 0.15s, filter 0.15s;
@@ -282,20 +282,20 @@
     100% { opacity: 0.4; }
   }
   .spin-result-label {
-    font-family: 'Lato', sans-serif; font-size: 11px; letter-spacing: 2px;
+    font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 2px;
     text-transform: uppercase; color: var(--frame, #444); margin-bottom: 4px;
   }
   .spin-place-name {
-    font-family: 'Yeseva One', serif; font-size: 24px;
+    font-family: 'Cormorant Garamond', serif; font-size: 24px;
     color: var(--spin-color, var(--accent, #800));
     margin-bottom: 4px; line-height: 1.2;
   }
   .spin-place-short {
-    font-family: 'Lato', sans-serif; font-size: 13px;
+    font-family: 'DM Sans', sans-serif; font-size: 13px;
     color: var(--frame, #444); margin-bottom: 10px;
   }
   .spin-again-btn {
-    font-family: 'Cabin Sketch', cursive; font-weight: 700; font-size: 13px;
+    font-family: 'Cinzel', serif; font-weight: 700; font-size: 13px;
     letter-spacing: 1px; background: var(--spin-color, var(--accent, #800));
     color: #fff; border: none; border-radius: 20px;
     padding: 7px 20px; cursor: pointer;
@@ -314,7 +314,7 @@
 
   /* ── NEAR ME ── */
   #near-me-btn {
-    font-family: 'Cabin Sketch', cursive; font-weight: 700; font-size: 13px;
+    font-family: 'Cinzel', serif; font-weight: 700; font-size: 13px;
     letter-spacing: 1px;
     background: var(--frame, #444); color: var(--parch, #f5f0e8);
     border: none; border-radius: 20px; padding: 7px 16px; cursor: pointer;
@@ -340,7 +340,7 @@
     100% { box-shadow: 0 0 0 0 rgba(66,133,244,0); }
   }
   .popup-dist {
-    font-family: 'Lato', sans-serif; font-size: 12px;
+    font-family: 'DM Sans', sans-serif; font-size: 12px;
     color: #2A6848; font-weight: 700;
     margin-bottom: 5px; letter-spacing: 0.3px;
   }
