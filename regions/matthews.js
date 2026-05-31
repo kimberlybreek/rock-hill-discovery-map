@@ -1,0 +1,251 @@
+window.REGION = {
+  id: 'matthews',
+  name: 'Matthews',
+  sub: '· MECKLENBURG COUNTY · NORTH CAROLINA · 2026 EDITION ·',
+  credit: '© LeisurelyMaps · 2026 · leisurelymaps.com',
+  interactiveCredit: 'Click any marker · Pan &amp; zoom to explore · leisurelymaps.com',
+  center: [35.1193, -80.7201],
+  zoom: 14,
+  printZoom: 14.5,
+
+  palette: {
+    '--ink':          '#0E1E2A',
+    '--frame':        '#2A6848',
+    '--parch':        '#F2F8F4',
+    '--parch-dark':   '#D4EAD8',
+    '--accent':       '#D4783A',
+    '--navy':         '#2A6848',
+    '--green':        '#2A6848',
+    '--inner-border': '#A8CEB8',
+    '--tile-filter':  'saturate(1.0) brightness(1.05) contrast(0.92)',
+    '--tile-blend':   'normal',
+    '--tile-opa':     '1',
+  },
+
+  cats: {
+    outdoor: '#2A6848',
+    food:    '#C04830',
+    coffee:  '#7A4A18',
+    arts:    '#1E4A8A',
+    family:  '#8A3A70',
+  },
+
+  legend: [
+    { color: '#2A6848', label: 'Outdoors' },
+    { color: '#C04830', label: 'Eat &amp; Drink' },
+    { color: '#7A4A18', label: 'Coffee &amp; Brew' },
+    { color: '#1E4A8A', label: 'Arts &amp; Community' },
+    { color: '#8A3A70', label: 'Family &amp; Wellness' },
+  ],
+
+  places: [
+
+    /* ── BREW & BAR ── */
+    { lat:35.1215, lon:-80.7208, n:1, cat:'coffee',
+      name:'Seaboard Brewing',
+      short:'Craft beer · wine · pizza · largest patio downtown',
+      desc:'Matthews\' anchor craft brewery with the town\'s largest patio, house-brewed beers, wine, and a pizza kitchen — the social heart of downtown.',
+      meta:'213 N Trade St · Downtown Matthews · Mon–Thu 11:30am–10pm, Fri–Sat 11:30am–11pm, Sun 11:30am–9pm · seaboardbrewing.com',
+      img:'https://images.squarespace-cdn.com/content/v1/58a4a2591e5b6c8fd240f6cf/46328e61-de39-4bb8-bacc-e1822ab07cbe/Website+Food+9-8-20221024_1.jpg' },
+
+    { lat:35.1210, lon:-80.7198, n:2, cat:'coffee',
+      name:'Carolina Beer Temple',
+      short:'28 rotating taps · rare craft beer · bottle shop',
+      desc:'An independent-only craft beer bar and bottle shop with 28 rotating taps featuring rare finds from the Carolinas and around the world.',
+      meta:'215 N Ames St · Ames Station · Mon–Wed 2–10pm, Thu–Sat 12–11pm, Sun 12–8pm · carolinabeertemple.com',
+      img:'https://images.squarespace-cdn.com/content/v1/6041a53adf805e76f59d8e4b/1616269448841-JXWEB3ZX6FSJFBE583LV/taps2.jpg' },
+
+    { lat:35.1195, lon:-80.7185, n:3, cat:'coffee',
+      name:'Cellar &amp; Ale',
+      short:'Wine bar · craft beer · book nook · community events',
+      desc:'A cozy, community-minded wine bar and craft beer spot with a book nook, monthly wine tastings, weekly events, and local goods on the shelves.',
+      meta:'131 Matthews Station St · Matthews · Tue–Wed 2–9pm, Thu 12–9pm, Fri–Sat 12–10pm, Sun 1–8pm · cellarandale.com',
+      img:'https://static.wixstatic.com/media/3cd3fe_485863dc021d4488a72146b8f3437fe0~mv2.jpg' },
+
+    /* ── EAT & DRINK ── */
+    { lat:35.1200, lon:-80.7215, n:4, cat:'food',
+      name:'Santé Fine Dining',
+      short:'French-American fine dining · downtown landmark',
+      desc:'Elegant French-American fine dining in the heart of historic downtown Matthews, celebrated as the area\'s premier destination restaurant.',
+      meta:'165 N Trade St · Downtown Matthews · Tue–Thu 5–9pm, Fri–Sat 5–10pm · santeofmatthews.com',
+      img:'https://static.wixstatic.com/media/9aaea0_2bd4599ac3e9409b8924e38749430114~mv2.jpeg' },
+
+    { lat:35.1188, lon:-80.7205, n:5, cat:'food',
+      name:'Mac\'s Speed Shop',
+      short:'Award-winning BBQ · craft beer · biker-bar vibes',
+      desc:'Award-winning BBQ and craft beer joint with slow-smoked brisket, pulled pork, and an unbeatable atmosphere in the heart of downtown Matthews.',
+      meta:'142 E John St · Downtown Matthews · Sun–Wed 11am–10pm, Thu–Sat 11am–11pm · macspeedshop.com',
+      img:'https://macspeedshop.com/wp-content/uploads/2018/08/location-matthews.jpg' },
+
+    { lat:35.1098, lon:-80.7195, n:6, cat:'food',
+      name:'Stacks Kitchen',
+      short:'Breakfast & brunch · generous portions · local favorite',
+      desc:'A beloved Matthews breakfast-and-brunch institution known for generous portions, fluffy pancakes, and a warm neighborhood welcome.',
+      meta:'11100 Monroe Rd · Matthews · Daily 6am–3pm · stackskitchen.com',
+      img:'https://res.cloudinary.com/spothopper/image/fetch/f_auto,q_auto:best,c_fit,h_1200/http://static.spotapps.co/spots/61/ebb3a5cf4146da9335efdc2b358323/:original' },
+
+    { lat:35.1192, lon:-80.7180, n:7, cat:'food',
+      name:'Thai Taste Matthews',
+      short:'Authentic Thai · Pad Thai · curries · local gem',
+      desc:'Authentic Thai flavors served in a relaxed setting, from classic Pad Thai to punchy green curries that keep regulars coming back.',
+      meta:'131 Matthews Station St · Matthews · Mon–Fri 11am–3pm & 5–9pm, Sat 11am–9:30pm · thaistaste.com',
+      img:'https://s3-media0.fl.yelpcdn.com/bphoto/5JqCHvUoGKZi9SRTxNdz8w/o.jpg' },
+
+    { lat:35.1175, lon:-80.7220, n:8, cat:'food',
+      name:'Lam\'s Kitchen',
+      short:'Vietnamese · neighborhood gem · loyal locals',
+      desc:'A quiet neighborhood gem serving authentic Vietnamese dishes — the kind of under-the-radar spot that loyal locals keep to themselves.',
+      meta:'3016 Weddington Rd · Matthews · Mon & Wed–Fri 11:30am–2:30pm & 4:30–9:30pm · lamskitchen.com',
+      img:'https://s3-media0.fl.yelpcdn.com/bphoto/GWPRLbdyKCDLoLj-PBg4nA/o.jpg' },
+
+    /* ── COFFEE ── */
+    { lat:35.1100, lon:-80.7185, n:9, cat:'coffee',
+      name:'Platform Coffee',
+      short:'In-house roasted · espresso · pour-overs · 4.9 stars',
+      desc:'A beloved neighborhood roaster with a 4.9-star reputation, roasting all beans in-house and serving meticulously crafted espresso and pour-overs.',
+      meta:'11011 Monroe Rd · Matthews · Mon–Sat 7am–5pm · platformcoffee.com',
+      img:'https://platformcoffee.com/cdn/shop/files/CoffeeAtStationWest_CheyenneSchultzPhotography0194.jpg?v=1739388314&width=1200' },
+
+    { lat:35.1225, lon:-80.7212, n:10, cat:'coffee',
+      name:'Brakeman\'s Coffee',
+      short:'Downtown staple · espresso · railroad history',
+      desc:'A beloved downtown Matthews coffee shop named after the town\'s railroad history, serving quality espresso and supply goods on charming Trade Street.',
+      meta:'225 N Trade St · Downtown Matthews · Mon–Fri 6am–7pm, Sat 7am–7pm · brakemanscoffee.com',
+      img:'https://images.squarespace-cdn.com/content/v1/5a3e0e0be2c483a55e0f8e0b/1514403025478-VQOYZR9U4Y9VBM7U6BZ9/brakemans+exterior.jpg' },
+
+    { lat:35.1155, lon:-80.7050, n:11, cat:'coffee',
+      name:'The Collective Cafe',
+      short:'Locally roasted coffee · fresh food · community hub',
+      desc:'A relaxed neighborhood cafe serving locally roasted coffee and fresh, wholesome food in a space that doubles as a community gathering spot.',
+      meta:'1031 Matthews-Mint Hill Rd · Matthews · Mon–Sat 7am–4:30pm · collective-cafe.com',
+      img:'https://static.wixstatic.com/media/17ea1a_9fdf48a7e8544d328cc8b2f56814755a~mv2.jpg' },
+
+    /* ── OUTDOORS ── */
+    { lat:35.1108, lon:-80.7118, n:12, cat:'outdoor',
+      name:'Squirrel Lake Park',
+      short:'Fishing pier · disc golf · greenway access · 36 acres',
+      desc:'A 36-acre park with a fishing pier on a serene pond, 12-hole disc golf, playgrounds, and direct trail access to the Four Mile Creek Greenway.',
+      meta:'1631 Pleasant Plains Rd · Matthews · Dawn to dusk · matthewsnc.gov',
+      img:'https://www.charlottesgotalot.com/sites/default/files/styles/featured_image/public/images/squirrel-lake-park-disc-golf.jpg' },
+
+    { lat:35.1185, lon:-80.7175, n:13, cat:'outdoor',
+      name:'Four Mile Creek Greenway',
+      short:'2.3-mile paved trail · boardwalks · pine forest',
+      desc:'A beloved 2.3-mile paved greenway winding through mixed pine forest and wetlands with boardwalk sections, connecting downtown to Squirrel Lake Park.',
+      meta:'Trailhead at 1102 E John St · Matthews · Dawn to dusk · matthewsnc.gov',
+      img:'https://www.matthewsnc.gov/Files/Images/greenway-four-mile.jpg' },
+
+    { lat:35.1035, lon:-80.7088, n:14, cat:'outdoor',
+      name:'Colonel Francis Beatty Park',
+      short:'265 acres · mountain biking · kayak rentals · lake',
+      desc:'A sprawling 265-acre park with mountain biking and hiking trails, a lake with kayak and canoe rentals, tennis courts, and picnic areas.',
+      meta:'4330 Weddington Rd · Matthews · Dawn to dusk · charmeck.org',
+      img:'https://www.charlottesgotalot.com/sites/default/files/styles/featured_image/public/images/colonel-beatty-park-trails.jpg' },
+
+    /* ── ARTS & COMMUNITY ── */
+    { lat:35.1178, lon:-80.7198, n:15, cat:'arts',
+      name:'Matthews Playhouse',
+      short:'Community theater · productions · classes · camps',
+      desc:'A beloved nonprofit community theater offering mainstage productions for all ages, year-round drama classes, and summer camps for kids and teens.',
+      meta:'100 E McDowell St · Matthews · Box office Mon–Fri 9am–5pm · matthewsplayhouse.com',
+      img:'https://static.wixstatic.com/media/99dd65_f00847adebcb46928bf57faff1b2e619~mv2.jpg' },
+
+    { lat:35.1228, lon:-80.7205, n:16, cat:'arts',
+      name:'Matthews Heritage Museum',
+      short:'Free admission · 1879 historic home · railroad history',
+      desc:'Housed in the 1879 Massey-Clark House, this free local history museum preserves the story of the town\'s railroad past in a National Register building.',
+      meta:'232 N Trade St · Downtown Matthews · Thu–Sat 10am–4:30pm · Free · matthewsheritagemuseum.org',
+      img:'https://matthewsheritagemuseum.org/wp-content/uploads/2021/03/mhm-side-view.jpg?w=1024' },
+
+    { lat:35.1222, lon:-80.7210, n:17, cat:'arts',
+      name:'Matthews Farmers\' Market',
+      short:'Producer-only · 50-mile radius · largest in area',
+      desc:'The Charlotte area\'s largest, oldest, and most diverse producer-only farmers market, with all goods grown or made within 50 miles of Matthews.',
+      meta:'188 N Trade St · Downtown Matthews · Sat 8am–12pm (Apr–Nov) · matthewsfarmersmarket.com',
+      img:'https://static.wixstatic.com/media/17ea1a_710214f267af449a8d78742ec5653571~mv2.jpg' },
+
+    { lat:35.1218, lon:-80.7202, n:18, cat:'arts',
+      name:'Renfrow Hardware',
+      short:'120-year-old institution · seeds · hardware · historic',
+      desc:'A 120-year-old downtown institution on the National Register of Historic Places, selling hardware, seeds, and general goods just as it has since 1900.',
+      meta:'188 N Trade St · Downtown Matthews · Tue–Fri 8am–4pm · renfrowhardware.com',
+      img:'https://www.renfrowhardware.com/wp-content/uploads/2017/06/home-1122x490.jpg' },
+
+    { lat:35.1205, lon:-80.7200, n:19, cat:'arts',
+      name:'ZABS Place',
+      short:'Thrift & designer boutique · social enterprise · downtown',
+      desc:'A community thrift and designer boutique that employs and empowers young adults with disabilities — shop with purpose in the heart of downtown Matthews.',
+      meta:'100 N Trade St · Downtown Matthews · Mon–Thu 10am–6pm, Fri 10am–4pm, Sun 12–6pm · zabsplace.org',
+      img:'https://zabsplace.org/wp-content/uploads/2019/05/logo_19.png', logoOnly:true, logoScale:'70%', bgColor:'#ffffff' },
+
+    /* ── FAMILY & WELLNESS ── */
+    { lat:35.1182, lon:-80.7195, n:20, cat:'family',
+      name:'Matthews Community Center',
+      short:'Classes · theater · yoga · music · all ages',
+      desc:'The town\'s civic hub offering dance, art, yoga, and music programs for all ages, plus the Fullwood Theater hosting local performances year-round.',
+      meta:'100 E McDowell St · Matthews · Mon–Fri 9am–8pm, Sat 9am–2pm, Sun 1–6pm · matthewsnc.gov',
+      img:'https://www.matthewsnc.gov/Files/Images/Facilities/mcc-exterior.jpg' },
+
+    { lat:35.1068, lon:-80.7238, n:21, cat:'family',
+      name:'High Five Playhouse',
+      short:'Indoor playground · ages 10 & under · birthday parties',
+      desc:'A squeaky-clean indoor playground featuring ball pits, slides, swings, and a cafe — perfect for playdates and birthday parties for kids 10 and under.',
+      meta:'10101 E Independence Blvd · Matthews · Mon–Thu 10am–7pm, Fri–Sun 10am–8pm · highfiveplayhouse.com',
+      img:'https://highfiveplayhouse.com/wp-content/uploads/2023/09/student-hanging-from-green-bar-1-1.png' },
+
+    { lat:35.1208, lon:-80.7195, n:22, cat:'family',
+      name:'Matthews Yoga Collective',
+      short:'Community yoga · downtown studio · all levels',
+      desc:'A welcoming downtown yoga studio offering a community-centered practice just steps from Trade Street shops and cafes.',
+      meta:'189 N Trade St · Downtown Matthews · matthewsyogacollective.com',
+      img:'https://matthewsyogacollective.com/wp-content/uploads/2025/11/about-img.png' },
+
+    { lat:35.1145, lon:-80.7175, n:23, cat:'family',
+      name:'Re·Invent Fitness',
+      short:'Hot yoga · circuit training · boutique studio',
+      desc:'A boutique studio blending hot yoga and circuit strength training in a supportive environment that pushes you to discover a stronger version of yourself.',
+      meta:'1150 Crews Rd · Matthews · Daily 9am–6pm · reinventfitness.com',
+      img:'https://images.squarespace-cdn.com/content/v1/5f7897d7ed6aec42e58fe542/1603722930171-DXKZNWZ7F9B49XRYSF4J/AF8I4905.jpg' },
+
+  ],
+
+  streetLabels: [
+    { lat: 35.1210, lon: -80.7200, name: 'N Trade St', rotate: 80 },
+    { lat: 35.1185, lon: -80.7170, name: 'E John St', rotate: 0 },
+    { lat: 35.1100, lon: -80.7190, name: 'Monroe Rd', rotate: 80 },
+    { lat: 35.1175, lon: -80.7225, name: 'Weddington Rd', rotate: 0 },
+  ],
+
+  landmarks: [
+    { lat: 35.1178, lon: -80.7182, name: 'Matthews Town Hall', type: 'gov' },
+    { lat: 35.1145, lon: -80.7210, name: 'Matthews Elementary', type: 'school' },
+    { lat: 35.1108, lon: -80.7118, name: '', type: 'duck' },
+    { lat: 35.1038, lon: -80.7092, name: '', type: 'duck' },
+  ],
+
+  areaLabels: [
+    { lat: 35.1210, lon: -80.7200, name: 'Downtown Matthews' },
+    { lat: 35.1100, lon: -80.7185, name: 'Matthews Station' },
+    { lat: 35.1050, lon: -80.7100, name: 'Squirrel Lake' },
+    { lat: 35.1035, lon: -80.7088, name: 'Beatty Park' },
+  ],
+
+  printRails: {
+    top: [
+      { head: '🍺 Brew &amp; Bar', cls: 'coffee', nums: [1, 2, 3], lightText: true },
+    ],
+    left: [
+      { head: '☕ Coffee', cls: 'coffee', nums: [9, 10, 11] },
+      { head: '🌿 Outdoors', cls: 'do', nums: [12, 13, 14] },
+    ],
+    right: [
+      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [4, 5, 6, 7, 8] },
+    ],
+    mapBelow: [
+      { head: '🎨 Arts &amp; Community', cls: 'fam', nums: [15, 16, 17, 18, 19] },
+    ],
+    bottom: [
+      { head: '🏃 Family &amp; Wellness', cls: 'fam', nums: [20, 21, 22, 23] },
+    ],
+  },
+};
