@@ -252,17 +252,17 @@ window.REGION = {
     ],
     left: [
       { head: '☕ Coffee', cls: 'coffee', nums: [9, 10, 11] },
-      { head: '🌿 Outdoors', cls: 'do', nums: [12, 13, 14] },
+      { head: '🧒 Kids &amp; Family', cls: 'kids', nums: [21, 15, 26] },
     ],
     right: [
       { head: '🍺 Brew &amp; Bar', cls: 'coffee', nums: [1, 2, 3] },
+      { head: '🌿 Outdoors', cls: 'do', nums: [12, 13, 14] },
     ],
     mapBelow: [
       { head: '🎨 Arts &amp; Community', cls: 'fam', nums: [16, 17, 18, 19] },
     ],
     bottom: [
       { head: '🏃 Family &amp; Wellness', cls: 'fam', nums: [20, 22, 23] },
-      { head: '🧒 Kids &amp; Family', cls: 'kids', nums: [21, 15, 26] },
     ],
   },
 };
