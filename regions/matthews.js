@@ -238,14 +238,14 @@ window.REGION = {
 
   printRails: {
     top: [
-      { head: '🍺 Brew &amp; Bar', cls: 'coffee', nums: [1, 2, 3], lightText: true },
+      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [4, 5, 6, 7, 8, 24], lightText: true },
     ],
     left: [
       { head: '☕ Coffee', cls: 'coffee', nums: [9, 10, 11] },
       { head: '🌿 Outdoors', cls: 'do', nums: [12, 13, 14] },
     ],
     right: [
-      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [4, 5, 6, 7, 8, 24] },
+      { head: '🍺 Brew &amp; Bar', cls: 'coffee', nums: [1, 2, 3] },
     ],
     mapBelow: [
       { head: '🎨 Arts &amp; Community', cls: 'fam', nums: [15, 16, 17, 18, 19] },
