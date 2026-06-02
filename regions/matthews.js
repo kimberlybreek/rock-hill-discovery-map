@@ -46,7 +46,7 @@ window.REGION = {
       short:'Irish pub · craft beer · live music · beer garden',
       desc:'A neighborhood whiskey pub with an Irish soul — perfectly poured Guinness, a lively beer garden, live music, and rotating food trucks make this downtown Matthews\' go-to local hangout.',
       meta:'105 W Charles St · Downtown Matthews · Mon–Thu 3pm–12am, Fri 12pm–2am, Sat 11am–2am, Sun 11am–12am · matthewssocialhouse.com',
-      img:'https://static.spotapps.co/spots/58/11d1390327404bbaedaab8e9f74881/:original' },
+      img:'https://static.spotapps.co/website_images/ab_websites/162723_website/events_pbg.jpg' },
 
     { lat:35.1210, lon:-80.7198, n:2, cat:'coffee',
       name:'Carolina Beer Temple',
@@ -98,13 +98,27 @@ window.REGION = {
       meta:'3016 Weddington Rd · Matthews · Mon & Wed–Fri 11:30am–2:30pm & 4:30–9:30pm · lamskitchen.com',
       img:'https://media-cdn.tripadvisor.com/media/photo-s/16/4e/7d/c6/lam-s-kitchen.jpg' },
 
+    { lat:35.1220, lon:-80.7202, n:24, cat:'food',
+      name:'Jekyll &amp; Hyde Taphouse',
+      short:'49 craft taps · steampunk gastropub · weekend brunch',
+      desc:'A split-personality downtown gastropub where the Jekyll side is a classic English dining room and Hyde is a steampunk bar pouring 49 craft beers alongside hearty American and Irish pub fare.',
+      meta:'316 N Trade St · Downtown Matthews · Mon–Thu 11am–11pm, Fri–Sat 11am–12am, Sun 10am–10pm · hydestaphouse.com',
+      img:'https://i0.wp.com/craftbeerspots.com/wp-content/uploads/2020/03/IMG_4267.jpeg' },
+
+    { lat:35.1172, lon:-80.7218, n:25, cat:'food',
+      name:'The One Tapas &amp; Bar',
+      short:'Global small plates · bold cocktails · date-night gem',
+      desc:'The only tapas bar in Matthews — globally inspired small plates from charred octopus to wagyu sliders, paired with creative cocktails in a warm, intimate setting.',
+      meta:'3116 Weddington Rd · Matthews · Tue–Thu 4:30–10pm, Fri 4:30–10:30pm, Sat 1–10:30pm, Sun 11:30am–8pm · theonetapas.com',
+      img:'https://static.spotapps.co/spots/95/85a3ef8a264a1dbe6aa2986136884b/:original' },
+
     /* ── COFFEE ── */
     { lat:35.1100, lon:-80.7185, n:9, cat:'coffee',
       name:'Platform Coffee',
       short:'In-house roasted · espresso · pour-overs · 4.9 stars',
       desc:'A beloved neighborhood roaster with a 4.9-star reputation, roasting all beans in-house and serving meticulously crafted espresso and pour-overs.',
       meta:'11011 Monroe Rd · Matthews · Mon–Sat 7am–5pm · platformcoffee.com',
-      img:'https://platformcoffee.com/cdn/shop/files/CoffeeAtStationWest_CheyenneSchultzPhotography0194.jpg?v=1739388314&width=1200' },
+      img:'https://platformcoffee.com/cdn/shop/files/CoffeeAtStationWest_CheyenneSchultzPhotography0122.jpg?v=1717438386&width=1500' },
 
     { lat:35.1225, lon:-80.7212, n:10, cat:'coffee',
       name:'Brakeman\'s Coffee',
@@ -239,7 +253,7 @@ window.REGION = {
       { head: '🌿 Outdoors', cls: 'do', nums: [12, 13, 14] },
     ],
     right: [
-      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [4, 5, 6, 7, 8] },
+      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [4, 5, 6, 7, 8, 24, 25] },
     ],
     mapBelow: [
       { head: '🎨 Arts &amp; Community', cls: 'fam', nums: [15, 16, 17, 18, 19] },
