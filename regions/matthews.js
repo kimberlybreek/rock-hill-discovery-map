@@ -9,33 +9,32 @@ window.REGION = {
   printZoom: 14.5,
 
   palette: {
-    '--ink':          '#0E1E2A',
-    '--frame':        '#2A6848',
-    '--parch':        '#F2F8F4',
-    '--parch-dark':   '#D4EAD8',
-    '--accent':       '#D4783A',
-    '--navy':         '#2A6848',
-    '--green':        '#2A6848',
-    '--inner-border': '#A8CEB8',
+    '--ink':          '#0A1E24',
+    '--frame':        '#1A5C6B',
+    '--parch':        '#F2F8F9',
+    '--parch-dark':   '#D4ECF0',
+    '--accent':       '#D4943A',
+    '--navy':         '#1A5C6B',
+    '--inner-border': '#8ABFC8',
     '--tile-filter':  'saturate(1.0) brightness(1.05) contrast(0.92)',
     '--tile-blend':   'normal',
     '--tile-opa':     '1',
   },
 
   cats: {
-    outdoor: '#2A6848',
+    outdoor: '#1A5C6B',
     food:    '#C04830',
-    coffee:  '#7A4A18',
-    arts:    '#1E4A8A',
-    family:  '#8A3A70',
+    coffee:  '#8A5A1A',
+    arts:    '#1A4A7A',
+    family:  '#7A3A8A',
   },
 
   legend: [
-    { color: '#2A6848', label: 'Outdoors' },
+    { color: '#1A5C6B', label: 'Outdoors' },
     { color: '#C04830', label: 'Eat &amp; Drink' },
-    { color: '#7A4A18', label: 'Coffee &amp; Brew' },
-    { color: '#1E4A8A', label: 'Arts &amp; Community' },
-    { color: '#8A3A70', label: 'Family &amp; Wellness' },
+    { color: '#8A5A1A', label: 'Coffee &amp; Brew' },
+    { color: '#1A4A7A', label: 'Arts &amp; Community' },
+    { color: '#7A3A8A', label: 'Family &amp; Wellness' },
   ],
 
   places: [
