@@ -27,6 +27,7 @@ window.REGION = {
     coffee:  '#8A5A1A',
     arts:    '#1A4A7A',
     family:  '#7A3A8A',
+    kids:    '#2A8A5A',
   },
 
   legend: [
@@ -35,6 +36,7 @@ window.REGION = {
     { color: '#8A5A1A', label: 'Coffee &amp; Brew' },
     { color: '#1A4A7A', label: 'Arts &amp; Community' },
     { color: '#7A3A8A', label: 'Family &amp; Wellness' },
+    { color: '#2A8A5A', label: 'Kids &amp; Family' },
   ],
 
   places: [
@@ -213,6 +215,14 @@ window.REGION = {
       meta:'1150 Crews Rd · Matthews · Daily 9am–6pm · reinventfitness.com',
       img:'https://images.squarespace-cdn.com/content/v1/5f7897d7ed6aec42e58fe542/1603722930171-DXKZNWZ7F9B49XRYSF4J/AF8I4905.jpg' },
 
+    /* ── KIDS & FAMILY ── */
+    { lat:35.1058, lon:-80.7312, n:26, cat:'kids',
+      name:'Matthews Sportsplex',
+      short:'11 fields · tournaments · playground · all ages',
+      desc:'A massive multi-sport complex with 11 lighted fields, a 4,300-seat stadium, and a playground — perfect for catching a tournament or letting the kids run wild.',
+      meta:'2425 Sports Pkwy · Matthews · Daily 8am–9pm · charlottesports.com',
+      img:'https://crva.imgix.net/Matthews-SportsPlex-Kyo-H-Nam-2018-36-of-60.jpg?auto=compress%2Cformat&fit=crop&fm=webp&ixlib=php-3.1.0&q=80&v=1614621202' },
+
   ],
 
   streetLabels: [
@@ -248,10 +258,11 @@ window.REGION = {
       { head: '🍺 Brew &amp; Bar', cls: 'coffee', nums: [1, 2, 3] },
     ],
     mapBelow: [
-      { head: '🎨 Arts &amp; Community', cls: 'fam', nums: [15, 16, 17, 18, 19] },
+      { head: '🎨 Arts &amp; Community', cls: 'fam', nums: [16, 17, 18, 19] },
     ],
     bottom: [
-      { head: '🏃 Family &amp; Wellness', cls: 'fam', nums: [20, 21, 22, 23] },
+      { head: '🏃 Family &amp; Wellness', cls: 'fam', nums: [20, 22, 23] },
+      { head: '🧒 Kids &amp; Family', cls: 'kids', nums: [21, 15, 26] },
     ],
   },
 };
