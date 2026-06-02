@@ -394,6 +394,23 @@
   .footer-legend { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
   .footer-legend .item { display: inline-flex; align-items: center; gap: 5px; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 11px; color: var(--ink, #222); }
   .footer-legend .dot { width: 13px; height: 13px; border-radius: 3px; border: 1.5px solid rgba(0,0,0,0.2); flex-shrink: 0; }
+  .tag-legend {
+    display: flex; flex-wrap: wrap; gap: 5px 10px; align-items: center;
+    padding: 6px 10px;
+    background: var(--parch-dark, #e8e0d4);
+    border-radius: 5px;
+    border: 1px solid var(--inner-border, #ccc);
+    margin-bottom: 6px;
+  }
+  .tag-legend-label {
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--frame, #444); margin-right: 4px; flex-shrink: 0;
+  }
+  .tag-legend-item {
+    font-family: 'DM Sans', sans-serif; font-size: 9px;
+    color: var(--ink, #222); white-space: nowrap;
+  }
 
   .footer-tip { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--frame, #444); line-height: 1.5; border-left: 1.5px dashed var(--inner-border,#bbb); padding-left: 14px; }
   .footer-tip strong { font-family: 'Yeseva One', serif; color: var(--accent, #800); font-size: 13px; }
@@ -564,6 +581,19 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
         <aside class="rail">${rightHtml}</aside>
       </div>
       ${bottomHtml}
+      <div class="tag-legend">
+        <span class="tag-legend-label">Key</span>
+        <span class="tag-legend-item">🌙 Date night</span>
+        <span class="tag-legend-item">👨‍👩‍👧 Families</span>
+        <span class="tag-legend-item">🧒 Kid-friendly</span>
+        <span class="tag-legend-item">☀️ Outdoor seating</span>
+        <span class="tag-legend-item">🎵 Live music</span>
+        <span class="tag-legend-item">🥂 Brunch</span>
+        <span class="tag-legend-item">⭐ Local fave</span>
+        <span class="tag-legend-item">🐾 Dog-friendly</span>
+        <span class="tag-legend-item">🌿 Scenic</span>
+        <span class="tag-legend-item">$ Inexpensive &nbsp; $$ Moderate &nbsp; $$$ Upscale</span>
+      </div>
       <div class="bottom-strip">
         <div class="footer-qr">
           <img src="${qrSrc}" alt="QR code">
