@@ -7,6 +7,8 @@ window.REGION = {
   center: [35.1193, -80.7201],
   zoom: 14,
   printZoom: 14.5,
+  tileUrl: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
+  tileAttrib: 'Tiles © Esri — Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong)',
 
   palette: {
     '--ink':          '#0A1E24',

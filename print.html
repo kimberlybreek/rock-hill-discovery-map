@@ -616,9 +616,12 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
     boxZoom: false, keyboard: false, tap: false, zoomSnap: 0,
   }).setView(R.printCenter || R.center, R.printZoom || R.zoom);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-    maxZoom: 19, attribution: '© OpenStreetMap contributors © CARTO',
-  }).addTo(map);
+  const tileUrl = R.tileUrl || 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
+  const tileAttrib = R.tileAttrib || '© OpenStreetMap contributors © CARTO';
+  const tileOpts = R.tileUrl
+    ? { maxZoom: 19, attribution: tileAttrib }
+    : { maxZoom: 19, attribution: tileAttrib, subdomains: 'abcd' };
+  L.tileLayer(tileUrl, tileOpts).addTo(map);
 
 
   /* Landmarks */
