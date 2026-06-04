@@ -7,9 +7,6 @@ window.REGION = {
   center: [35.1193, -80.7201],
   zoom: 14,
   printZoom: 14.5,
-  tileUrl: 'https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}.png',
-  tileAttrib: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>.',
-
   palette: {
     '--ink':          '#0A1E24',
     '--frame':        '#1A5C6B',
