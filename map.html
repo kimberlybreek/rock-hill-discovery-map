@@ -103,7 +103,7 @@
   #map { height: 720px; width: 100%; }
 
   .leaflet-tile-pane {
-    filter: var(--tile-filter, none);
+    filter: var(--tile-filter, saturate(1.6) contrast(1.08) brightness(1.02));
     mix-blend-mode: var(--tile-blend, normal);
     opacity: var(--tile-opa, 1);
   }
@@ -481,9 +481,9 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
     minZoom: 12, maxZoom: 18,
   }).setView(R.center, R.zoom);
 
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
     maxZoom: 19,
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors · Map ✦ ' + R.credit,
+    attribution: '© OpenStreetMap contributors © CARTO · Map ✦ ' + R.credit,
   }).addTo(map);
 
   /* Markers */
