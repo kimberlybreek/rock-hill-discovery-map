@@ -234,40 +234,44 @@
   /* ── SPIN & EXPLORE ── */
   .spin-bar {
     margin-bottom: 14px;
-    background: #FDFAF5;
-    border: 1.5px solid #C9A96E;
-    border-radius: 6px;
+    background: #fff;
+    border: 1.5px solid #E2D9CC;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,.10);
+    box-shadow: 0 2px 18px rgba(0,0,0,.08);
   }
   .spin-bar-header {
-    padding: 22px 28px 18px;
+    padding: 24px 28px 20px;
     text-align: center;
-    border-bottom: 1px solid #E8DCC8;
+    background: linear-gradient(to bottom, #fff 0%, #FAF7F2 100%);
+    border-bottom: 1.5px solid #E2D9CC;
     position: relative;
-    background: #FDFAF5;
   }
-  .spin-bar-header::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(to right, #C9A96E, #E8C98A, #C9A96E);
+  .spin-bar-header::after {
+    content: '— ✦ —';
+    display: block;
+    font-size: 11px;
+    color: #C9A96E;
+    letter-spacing: 6px;
+    margin-top: 10px;
+    opacity: 0.7;
   }
   .spin-bar-body {
     padding: 20px 32px 24px;
+    background: #FAF7F2;
   }
   .spin-title {
     font-family: 'Cinzel', serif;
-    font-size: 17px; font-weight: 700;
-    color: #2C2118;
-    letter-spacing: 8px;
+    font-size: 22px; font-weight: 700;
+    color: #1A1A1A;
+    letter-spacing: 6px;
     text-transform: uppercase;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
   .spin-subtitle {
     font-family: 'DM Sans', sans-serif;
-    font-size: 10px; font-weight: 400;
-    letter-spacing: 3.5px;
+    font-size: 11px; font-weight: 300;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: #C9A96E;
   }
@@ -277,7 +281,7 @@
   }
   .spin-divider::before, .spin-divider::after {
     content: ''; flex: 1; height: 1px;
-    background: #E8DCC8;
+    background: #E2D9CC;
   }
   .spin-divider-dot {
     width: 4px; height: 4px; border-radius: 50%;
@@ -289,29 +293,26 @@
   .spin-cat-btn {
     font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 10px;
     letter-spacing: 1.5px; text-transform: uppercase;
-    color: #fff;
-    border: none; border-radius: 3px;
-    padding: 8px 18px; cursor: pointer;
+    color: #fff; border: none; border-radius: 20px;
+    padding: 8px 20px; cursor: pointer;
     transition: all 0.18s ease;
-    box-shadow: 0 1px 4px rgba(0,0,0,.12);
-    opacity: 0.82;
+    box-shadow: 0 1px 5px rgba(0,0,0,.12);
   }
   .spin-cat-btn:hover {
-    opacity: 1;
     transform: translateY(-1px);
-    box-shadow: 0 3px 10px rgba(0,0,0,.18);
+    box-shadow: 0 4px 12px rgba(0,0,0,.18);
+    filter: brightness(1.08);
   }
   .spin-cat-btn.active {
-    opacity: 1;
-    box-shadow: 0 0 0 2px #2C2118, 0 2px 8px rgba(0,0,0,.15);
+    box-shadow: 0 0 0 2.5px #1A1A1A, 0 2px 8px rgba(0,0,0,.15);
   }
 
   .spin-result {
     display: none;
     background: #fff;
-    border: 1px solid #E8DCC8;
-    border-radius: 5px;
-    padding: 24px 28px 20px;
+    border: 1.5px solid #E2D9CC;
+    border-radius: 8px;
+    padding: 26px 28px 22px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -322,7 +323,7 @@
     content: '';
     position: absolute; top: 0; left: 0; right: 0;
     height: 3px;
-    background: linear-gradient(to right, #C9A96E, #E8C98A, #C9A96E);
+    background: linear-gradient(to right, #C9A96E, #F0D898, #C9A96E);
   }
   @keyframes spin-reveal {
     from { opacity: 0; transform: translateY(8px); }
@@ -337,35 +338,34 @@
     100% { opacity: 0.3; }
   }
   .spin-result-label {
-    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 400;
+    font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 500;
     letter-spacing: 5px; text-transform: uppercase;
     color: #C9A96E; margin-bottom: 10px;
   }
   .spin-place-name {
-    font-family: 'Cinzel', serif; font-size: 21px; font-weight: 700;
-    color: #2C2118;
+    font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700;
+    color: #1A1A1A;
     margin-bottom: 7px; line-height: 1.3;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
   }
   .spin-place-short {
-    font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 400;
-    color: #7A6A58; margin-bottom: 18px;
+    font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 300;
+    color: #888; margin-bottom: 20px;
     letter-spacing: 0.2px;
   }
   .spin-again-btn {
     font-family: 'Cinzel', serif; font-weight: 700; font-size: 9px;
     letter-spacing: 3px; text-transform: uppercase;
-    background: #2C2118;
-    color: #E8C98A;
-    border: 1px solid #2C2118;
-    border-radius: 3px;
-    padding: 10px 28px; cursor: pointer;
+    background: transparent;
+    color: #1A1A1A;
+    border: 1.5px solid #1A1A1A;
+    border-radius: 20px;
+    padding: 10px 30px; cursor: pointer;
     transition: all 0.2s ease;
   }
   .spin-again-btn:hover {
-    background: #C9A96E;
-    border-color: #C9A96E;
-    color: #fff;
+    background: #1A1A1A;
+    color: #F0D898;
   }
 
   @keyframes pin-pulse {
