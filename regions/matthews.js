@@ -261,6 +261,7 @@ window.REGION = {
     { lat: 35.1198, lon: -80.7208, name: 'Parking', type: 'parking' },
     { lat: 35.1108, lon: -80.7118, name: '', type: 'duck' },
     { lat: 35.1038, lon: -80.7092, name: '', type: 'duck' },
+    { lat: 35.1058, lon: -80.7105, name: 'Disc Golf', type: 'golf' },
   ],
 
   areaLabels: [
