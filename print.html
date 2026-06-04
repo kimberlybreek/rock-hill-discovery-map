@@ -618,11 +618,9 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
     boxZoom: false, keyboard: false, tap: false, zoomSnap: 0,
   }).setView(R.printCenter || R.center, R.printZoom || R.zoom);
 
-  const tileUrl = R.tileUrl || 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
-  const tileAttrib = R.tileAttrib || '© OpenStreetMap contributors © CARTO';
-  const tileOpts = R.tileUrl
-    ? { maxZoom: 19, attribution: tileAttrib }
-    : { maxZoom: 19, attribution: tileAttrib, subdomains: 'abcd' };
+  const tileUrl = R.tileUrl || 'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}';
+  const tileAttrib = R.tileAttrib || '© Esri, National Geographic, DeLorme, HERE · © OpenStreetMap contributors';
+  const tileOpts = { maxZoom: 16, attribution: tileAttrib };
   L.tileLayer(tileUrl, tileOpts).addTo(map);
 
 
