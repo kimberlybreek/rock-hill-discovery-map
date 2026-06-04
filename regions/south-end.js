@@ -123,13 +123,13 @@ window.REGION = {
       img:'https://lh3.googleusercontent.com/p/AF1QipMtoaYcYo0MSUJiLHK0QQR-kCghp0w0IlsuT2Y8=w900-h500-p-no-v0',
       price:'$', tags:['local'] },
 
-    { lat:35.2162, lon:-80.8588, n:11, cat:'food',
-      name:'Hawkers Asian Street Fare',
-      short:'Pan-Asian street food · vibrant · shareable',
-      desc:'Bold, vibrant pan-Asian street food inspired by the night markets of Southeast Asia — roti canai, pad thai, bao buns, and house cocktails in a lively setting.',
-      meta:'2000 South Blvd, Ste 400 · South End · Mon–Thu 11am–10pm, Fri–Sat 11am–11pm, Sun 11am–9pm · eathawkers.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/3a/45/62/hawkers-interiors.jpg?w=900&h=500&s=1',
-      price:'$$', tags:['family','outdoor'] },
+    { lat:35.2145, lon:-80.8610, n:11, cat:'coffee',
+      name:'ROOTS Cafe',
+      short:'Neighborhood café · brunch · local ingredients',
+      desc:'The quintessential South End neighborhood café — breakfast and brunch all day with fresh, locally sourced ingredients, Enderly Coffee espresso, and a cozy plant-filled space. Order at the counter and stay a while.',
+      meta:'2135 Southend Dr, Ste 109 · South End · Mon–Fri 7am–3pm, Sat 8am–10pm, Sun 8am–3pm · rootscafesouthend.com',
+      img:'https://images.squarespace-cdn.com/content/v1/589b39c5bebafb6528343d57/1626543818544-XENFWUFQHO2KAMPT1O9B/image-asset.jpeg',
+      price:'$', tags:['brunch','outdoor','dogs','local'] },
 
     /* ── COFFEE ── */
     { lat:35.2209, lon:-80.8603, n:12, cat:'coffee',
