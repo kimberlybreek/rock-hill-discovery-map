@@ -83,7 +83,7 @@
   .body { display: grid; grid-template-columns: 220px 1fr 220px; gap: 10px; align-items: stretch; }
 
   /* ── HORIZONTAL RAILS (top / bottom of map) ── */
-  .h-rail { display: flex; flex-wrap: nowrap; gap: 4px; margin: 4px 0; align-items: stretch; height: 130px; position: relative; }
+  .h-rail { display: flex; flex-wrap: nowrap; gap: 4px; margin: 4px 0; align-items: stretch; min-height: 130px; position: relative; }
   .h-rail::before {
     content: '';
     position: absolute; left: 36px; right: 0; top: 50%;
@@ -97,7 +97,7 @@
     background: linear-gradient(180deg, color-mix(in srgb, var(--navy, #444) 80%, black), var(--navy, #444));
     color: var(--parch, #f5f0e8);
     font-family: 'Cinzel', serif; font-weight: 700;
-    font-size: 9px; letter-spacing: 1.5px;
+    font-size: 8px; letter-spacing: 1px;
     text-align: center; padding: 10px 5px; border-radius: 4px;
     white-space: nowrap; flex-shrink: 0; align-self: stretch;
     border: 1.5px solid color-mix(in srgb, var(--navy, #444) 60%, white);
@@ -481,6 +481,8 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
   const byNum = {};
   R.places.forEach(p => { byNum[p.n] = p; });
 
+  const tagIcons = { date:'🌙 Date night', family:'👨‍👩‍👧 Families', outdoor:'☀️ Outdoor seating', kids:'🧒 Kid-friendly', livemusic:'🎵 Live music', brunch:'🥂 Brunch', local:'⭐ Local fave', dogs:'🐾 Dog-friendly', scenic:'🌿 Scenic' };
+
   /* Render a single rail section */
   function renderSection({ head, cls, nums }) {
     const ads = nums.map(n => {
@@ -626,7 +628,6 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
 
   /* Landmarks */
   const landmarkIcons = { school: '🎓', hospital: '🏥', church: '⛪', gov: '🏛', duck: '🦆', golf: '⛳', kayak: '🚣', parking: '🅿' };
-  const tagIcons = { date:'🌙 Date night', family:'👨‍👩‍👧 Families', outdoor:'☀️ Outdoor seating', kids:'🧒 Kid-friendly', livemusic:'🎵 Live music', brunch:'🥂 Brunch', local:'⭐ Local fave', dogs:'🐾 Dog-friendly', scenic:'🌿 Scenic' };
   (R.landmarks || []).forEach(({ lat, lon, name, type }) => {
     const emoji = landmarkIcons[type] || '📍';
     const html = `<div class="landmark-label"><span class="landmark-icon">${emoji}</span><span class="landmark-name">${name}</span></div>`;

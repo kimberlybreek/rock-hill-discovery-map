@@ -295,7 +295,7 @@ window.REGION = {
       { head: '🌿 Outdoors', cls: 'do', nums: [14, 15] },
     ],
     bottom: [
-      { head: '🎨 Arts &amp; Community', cls: 'fam', nums: [16, 18, 20, 21, 22, 23] },
+      { head: '🎨 Arts &amp; Culture', cls: 'fam', nums: [16, 18, 20, 21, 22, 23] },
       { head: '🛍 Boutiques &amp; Shops', cls: 'fam', nums: [24, 25, 26] },
     ],
   },
