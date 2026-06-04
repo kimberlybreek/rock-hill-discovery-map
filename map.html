@@ -233,29 +233,42 @@
 
   /* ── SPIN & EXPLORE ── */
   .spin-bar {
-    margin-top: 12px;
-    background: var(--parch, #f5f0e8);
-    border: 1px solid var(--inner-border, #bbb);
-    border-top: 3px solid var(--frame, #444);
-    border-radius: 0 0 8px 8px;
-    padding: 20px 20px 18px;
+    margin-bottom: 14px;
+    background: linear-gradient(to bottom, var(--parch, #F8F4EE) 0%, var(--parch-dark, #EDE5D8) 100%);
+    border: 2px solid var(--frame, #444);
+    border-radius: 6px;
+    padding: 22px 28px 20px;
+    box-shadow: 0 3px 14px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,0.7);
+    position: relative;
+    overflow: hidden;
+  }
+  .spin-bar::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--frame, #444), var(--accent, #C4883A), var(--frame, #444));
   }
   .spin-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px; font-weight: 600;
-    color: var(--frame, #444);
-    text-align: center; margin-bottom: 4px;
-    letter-spacing: 4px;
+    font-family: 'Cinzel', serif;
+    font-size: 18px; font-weight: 700;
+    color: var(--frame, #1E3A4A);
+    text-align: center; margin-bottom: 5px;
+    letter-spacing: 6px;
     text-transform: uppercase;
   }
+  .spin-title .spin-deco {
+    color: var(--accent, #C4883A);
+    font-size: 14px;
+    opacity: 0.85;
+  }
   .spin-subtitle {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px; letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent, #800);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px; font-style: italic;
+    letter-spacing: 0.5px;
+    color: var(--accent, #C4883A);
     text-align: center;
     margin-bottom: 16px;
-    opacity: 0.85;
+    opacity: 0.9;
   }
   .spin-divider {
     display: flex; align-items: center; gap: 10px;
@@ -263,32 +276,39 @@
   }
   .spin-divider::before, .spin-divider::after {
     content: ''; flex: 1; height: 1px;
-    background: var(--inner-border, #bbb);
+    background: var(--border, #D8CFC4);
   }
   .spin-divider-dot {
     width: 5px; height: 5px; border-radius: 50%;
-    background: var(--accent, #800); opacity: 0.6;
+    background: var(--accent, #C4883A); opacity: 0.7;
   }
   .spin-cats {
     display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 16px;
   }
   .spin-cat-btn {
-    font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 12px;
-    letter-spacing: 0.5px;
-    color: #fff; border: none; border-radius: 4px;
+    font-family: 'Cinzel', serif; font-weight: 700; font-size: 10px;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: #fff; border: 1.5px solid transparent; border-radius: 3px;
     padding: 8px 16px; cursor: pointer;
     transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
-    box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
   }
-  .spin-cat-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,.2); }
-  .spin-cat-btn.active { box-shadow: 0 0 0 2px var(--ink,#222), 0 2px 6px rgba(0,0,0,.2); }
+  .spin-cat-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    filter: brightness(1.1);
+  }
+  .spin-cat-btn.active {
+    border-color: var(--frame, #444);
+    box-shadow: 0 0 0 1px var(--frame, #444), 0 2px 8px rgba(0,0,0,.2);
+  }
 
   .spin-result {
     display: none;
-    background: linear-gradient(135deg, var(--parch-dark, #e8e0d4) 0%, var(--parch, #f5f0e8) 100%);
-    border: 1px solid var(--inner-border, #bbb);
-    border-radius: 6px;
-    padding: 18px 20px 16px;
+    background: linear-gradient(135deg, rgba(196,136,58,0.08) 0%, rgba(248,244,238,0.6) 100%);
+    border: 1.5px solid var(--border, #D8CFC4);
+    border-radius: 5px;
+    padding: 20px 24px 18px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -298,7 +318,7 @@
     content: '';
     position: absolute; top: 0; left: 0; right: 0;
     height: 3px;
-    background: var(--spin-color, var(--accent, #800));
+    background: linear-gradient(to right, transparent, var(--accent, #C4883A), transparent);
   }
   @keyframes spin-reveal {
     from { opacity: 0; transform: translateY(8px); }
@@ -313,35 +333,36 @@
     100% { opacity: 0.4; }
   }
   .spin-result-label {
-    font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 3px;
-    text-transform: uppercase; color: var(--frame, #444); margin-bottom: 8px;
-    opacity: 0.7;
+    font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--accent, #C4883A); margin-bottom: 8px;
+    opacity: 0.75;
   }
   .spin-place-name {
-    font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600;
+    font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600;
     font-style: italic;
-    color: var(--spin-color, var(--accent, #800));
-    margin-bottom: 4px; line-height: 1.2;
+    color: var(--frame, #1E3A4A);
+    margin-bottom: 5px; line-height: 1.2;
   }
   .spin-place-short {
     font-family: 'DM Sans', sans-serif; font-size: 12px;
-    color: var(--frame, #444); margin-bottom: 14px;
+    color: var(--frame, #444); margin-bottom: 16px;
     letter-spacing: 0.3px;
-    opacity: 0.8;
+    opacity: 0.7;
   }
   .spin-again-btn {
-    font-family: 'Cinzel', serif; font-weight: 700; font-size: 11px;
+    font-family: 'Cinzel', serif; font-weight: 700; font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    background: transparent;
-    color: var(--spin-color, var(--accent, #800));
-    border: 1px solid var(--spin-color, var(--accent, #800));
+    background: var(--frame, #1E3A4A);
+    color: var(--parch, #F8F4EE);
+    border: 1.5px solid var(--frame, #1E3A4A);
     border-radius: 3px;
-    padding: 8px 22px; cursor: pointer;
-    transition: background 0.2s, color 0.2s;
+    padding: 8px 24px; cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
   }
   .spin-again-btn:hover {
-    background: var(--spin-color, var(--accent, #800));
+    background: var(--accent, #C4883A);
+    border-color: var(--accent, #C4883A);
     color: #fff;
   }
 
@@ -418,17 +439,8 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
         <span class="deco">✦</span><h1>${R.name}</h1><span class="deco">✦</span>
         <div class="sub">${R.sub}</div>
       </header>
-      <div class="map-frame">
-        <div id="map"></div>
-        <img class="compass-corner" src="assets/compass.png" alt="compass" onerror="this.style.display='none'">
-      </div>
-      <div class="bottom-bar">
-        <div class="legend" id="legend"></div>
-        <button id="near-me-btn">📍 Near Me</button>
-        <div class="credit">${R.interactiveCredit}</div>
-      </div>
       <div class="spin-bar">
-        <div class="spin-title">Spin &amp; Explore</div>
+        <div class="spin-title">✦ &nbsp;Spin &amp; Explore&nbsp; ✦</div>
         <div class="spin-subtitle">Discover your next adventure</div>
         <div class="spin-divider"><div class="spin-divider-dot"></div></div>
         <div class="spin-cats" id="spin-cats"></div>
@@ -438,6 +450,15 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
           <div class="spin-place-short" id="spin-short"></div>
           <button class="spin-again-btn" id="spin-again">Spin Again</button>
         </div>
+      </div>
+      <div class="map-frame">
+        <div id="map"></div>
+        <img class="compass-corner" src="assets/compass.png" alt="compass" onerror="this.style.display='none'">
+      </div>
+      <div class="bottom-bar">
+        <div class="legend" id="legend"></div>
+        <button id="near-me-btn">📍 Near Me</button>
+        <div class="credit">${R.interactiveCredit}</div>
       </div>
     </div>`;
 
