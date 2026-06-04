@@ -50,13 +50,13 @@ window.REGION = {
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/0b/82/df/triple-c-brewing-co-charlotte.jpg?w=900&h=500&s=1',
       price:'$$', tags:['outdoor','dogs','local'] },
 
-    { lat:35.2148, lon:-80.8602, n:2, cat:'coffee',
-      name:'Sycamore Brewing',
-      short:'Warehouse brewery · rotating taps · food trucks',
-      desc:'A South End staple set in a converted warehouse — rotating craft taps, local food trucks, and a massive dog-friendly outdoor space that hums on weekends.',
-      meta:'2161 Hawkins St · South End · Mon–Thu 4–10pm, Fri 2–11pm, Sat–Sun 12–11pm · sycamorebrewing.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/09/9e/4d/sycamore-brewing.jpg?w=700&h=400&s=1',
-      price:'$$', tags:['outdoor','dogs','livemusic','local'] },
+    { lat:35.2195, lon:-80.8562, n:2, cat:'family',
+      name:'Puttery',
+      short:'Immersive mini golf · cocktails · chef bites',
+      desc:'South End\'s most fun night out — play themed 9-hole indoor mini golf courses as many times as you like, paired with craft cocktails, chef-inspired shareables, and weekend brunch. Walk-ins welcome.',
+      meta:'210 Rampart St · South End · Sun–Thu open to all ages, Fri–Sat 18+ after 5pm · puttery.com',
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/5f/2d/6b/caption.jpg?w=900&h=500&s=1',
+      price:'$$', tags:['date','family','livemusic'] },
 
     { lat:35.2183, lon:-80.8617, n:3, cat:'coffee',
       name:'Wooden Robot Brewery',
@@ -283,7 +283,7 @@ window.REGION = {
 
   printRails: {
     top: [
-      { head: '🍺 Brew &amp; Bar', cls: 'coffee', nums: [1, 2, 3, 4, 5], lightText: true },
+      { head: '🎨 Arts &amp; Culture', cls: 'fam', nums: [16, 18, 20, 21, 22, 23], lightText: true },
     ],
     left: [
       { head: '☕ Coffee &amp; Wellness', cls: 'coffee', nums: [11, 12, 13, 17, 19] },
@@ -295,7 +295,7 @@ window.REGION = {
       { head: '🌿 Outdoors', cls: 'do', nums: [14, 15] },
     ],
     bottom: [
-      { head: '🎨 Arts &amp; Culture', cls: 'fam', nums: [16, 18, 20, 21, 22, 23] },
+      { head: '🍺 Brew &amp; Bar', cls: 'coffee', nums: [1, 2, 3, 4, 5] },
       { head: '🛍 Boutiques &amp; Shops', cls: 'fam', nums: [24, 25, 26] },
     ],
   },
