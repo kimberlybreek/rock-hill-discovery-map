@@ -55,7 +55,7 @@ window.REGION = {
       short:'Immersive mini golf · cocktails · chef bites',
       desc:'South End\'s most fun night out — play themed 9-hole indoor mini golf courses as many times as you like, paired with craft cocktails, chef-inspired shareables, and weekend brunch. Walk-ins welcome.',
       meta:'210 Rampart St · South End · Sun–Thu open to all ages, Fri–Sat 18+ after 5pm · puttery.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/5f/2d/6b/caption.jpg?w=900&h=500&s=1',
+      img:'https://www.puttery.com/wp-content/uploads/2022/10/conservatory-2.jpg',
       price:'$$', tags:['date','family','livemusic'] },
 
     { lat:35.2183, lon:-80.8617, n:3, cat:'coffee',
@@ -128,7 +128,7 @@ window.REGION = {
       short:'Neighborhood café · brunch · local ingredients',
       desc:'The quintessential South End neighborhood café — breakfast and brunch all day with fresh, locally sourced ingredients, Enderly Coffee espresso, and a cozy plant-filled space. Order at the counter and stay a while.',
       meta:'2135 Southend Dr, Ste 109 · South End · Mon–Fri 7am–3pm, Sat 8am–10pm, Sun 8am–3pm · rootscafesouthend.com',
-      img:'https://images.squarespace-cdn.com/content/v1/589b39c5bebafb6528343d57/1626543818544-XENFWUFQHO2KAMPT1O9B/image-asset.jpeg', bgSize:'85%', bgPosition:'center',
+      img:'https://images.squarespace-cdn.com/content/v1/589b39c5bebafb6528343d57/1626543818544-XENFWUFQHO2KAMPT1O9B/image-asset.jpeg', bgPosition:'center 30%',
       price:'$', tags:['brunch','outdoor','dogs','local'] },
 
     /* ── COFFEE ── */
