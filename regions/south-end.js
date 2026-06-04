@@ -128,7 +128,7 @@ window.REGION = {
       short:'Neighborhood café · brunch · local ingredients',
       desc:'The quintessential South End neighborhood café — breakfast and brunch all day with fresh, locally sourced ingredients, Enderly Coffee espresso, and a cozy plant-filled space. Order at the counter and stay a while.',
       meta:'2135 Southend Dr, Ste 109 · South End · Mon–Fri 7am–3pm, Sat 8am–10pm, Sun 8am–3pm · rootscafesouthend.com',
-      img:'https://images.squarespace-cdn.com/content/v1/589b39c5bebafb6528343d57/1626543818544-XENFWUFQHO2KAMPT1O9B/image-asset.jpeg',
+      img:'https://images.squarespace-cdn.com/content/v1/589b39c5bebafb6528343d57/1626543818544-XENFWUFQHO2KAMPT1O9B/image-asset.jpeg', bgSize:'85%', bgPosition:'center',
       price:'$', tags:['brunch','outdoor','dogs','local'] },
 
     /* ── COFFEE ── */
