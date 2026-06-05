@@ -15,7 +15,7 @@ window.REGION = {
     '--accent':       '#D4943A',
     '--navy':         '#1A5C6B',
     '--inner-border': '#8ABFC8',
-    '--tile-filter':  'saturate(1.0) brightness(1.05) contrast(0.92)',
+    '--tile-filter':  'saturate(1.5) brightness(1.04) contrast(1.1)',
     '--tile-blend':   'normal',
     '--tile-opa':     '1',
   },
