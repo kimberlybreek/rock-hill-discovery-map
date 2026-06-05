@@ -97,7 +97,7 @@ window.REGION = {
       desc:"Charlotte's beloved upscale grocer — artisan cheeses, charcuterie, fine wines, and a café serving breakfast and lunch made from the finest local and imported ingredients. A Ballantyne staple.",
       meta:'Ballantyne · Daily 7am–4pm · reidsfinefoods.com',
       img:'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbg9j_Lq74elh3tEb5tbABOJ3eKjN4EMkguTXlJu6bgcAwcUBtMhCxSvnhIGzxGkfNDIVHg1rulE2IUJpCvyHWpnLMSexkl04nRhQ9K8OpwDgG6QoxR9TwBTaRBQDtENcbhhCTN6NQ2S83=s1360-w1360-h1020-rw',
-      bgPosition:'center 35%',
+      bgPosition:'center 50%',
       price:'$$', tags:['date','local'] },
     { lat:35.0576, lon:-80.8626, n:9,  cat:'arts',
       name:'The Spa at Ballantyne',
