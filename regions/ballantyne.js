@@ -65,7 +65,7 @@ window.REGION = {
       name:"Postino's Ballantyne",
       short:'Wine · bruschetta boards · The Bowl',
       desc:'Lively Italian-inspired wine bar and café serving bruschetta boards, sandwiches, and an excellent wine list in a vibrant setting.',
-      meta:'15210 Bowl St · Ballantyne · Hours vary by day · postino.com',
+      meta:'15210 Bowl St, Ste 103 · The Bowl at Ballantyne · Mon–Thu 11am–11pm, Fri 11am–midnight, Sat 10am–midnight, Sun 10am–10pm',
       img:'https://images.ctfassets.net/wguhd2dxl74h/4qNQxQhRiFNab5vXA8nhMn/642f1bc604578231b4ba7e1fa400fb00/postino_highres-49-_1_.jpg',
       bgPosition:'center center',
       price:'$$', tags:['date','outdoor','brunch'] },
