@@ -20,7 +20,7 @@ window.REGION = {
     '--tile-filter':  'saturate(1.2) brightness(1.05) contrast(0.92)',
     '--tile-blend':   'normal',
     '--tile-opa':     '1',
-    '--cartouche-bg': 'radial-gradient(circle, rgba(0,0,0,0.12) 1px, transparent 1px) 0 0 / 22px 22px, var(--parch, #f5f0e8)',
+    '--cartouche-bg': 'radial-gradient(circle, rgba(0,0,0,0.12) 1px, transparent 1px) 0 0 / 22px 22px, #EEF4F8',
   },
 
   cats: {
