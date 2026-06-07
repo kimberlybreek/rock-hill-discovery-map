@@ -321,16 +321,17 @@
 
   /* ── MARKERS ── */
   .biz-marker {
-    background: transparent; border: none;
+    background: transparent !important; border: none !important;
     width: 26px; height: 26px;
     display: flex; align-items: center; justify-content: center;
     position: relative;
+    overflow: hidden;
+    clip-path: circle(50% at 50% 50%);
   }
   .biz-marker .pin-body {
     width: 26px; height: 26px; border-radius: 50%;
     background: var(--cat-color, var(--frame, #444));
     border: 2px solid #fff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.35);
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
   }
