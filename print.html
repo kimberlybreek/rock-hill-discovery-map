@@ -243,6 +243,7 @@
   .leaflet-control-container, .leaflet-control-zoom { display: none !important; }
   .leaflet-control-attribution { font-size: 8px; opacity: 0.4; }
   .leaflet-div-icon { background: none !important; border: none !important; box-shadow: none !important; outline: none !important; }
+  html body .leaflet-pane .leaflet-div-icon { background: transparent !important; border: none !important; }
   .leaflet-tile-pane {
     filter: var(--tile-filter, none);
     mix-blend-mode: var(--tile-blend, normal);
@@ -717,6 +718,16 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
     });
   });
 
+
+  // Fix Leaflet div icon dark squares when printing
+  window.addEventListener('beforeprint', () => {
+    document.querySelectorAll('.leaflet-div-icon').forEach(el => {
+      el.style.background = 'transparent';
+      el.style.border = 'none';
+      el.style.boxShadow = 'none';
+      el.style.outline = 'none';
+    });
+  });
 
 })();
 </script>
