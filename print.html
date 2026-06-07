@@ -446,14 +446,13 @@
     .map-col { display: flex !important; flex-direction: column !important; }
     .map-below { flex: 1 !important; display: flex !important; flex-direction: column !important; }
     .map-below .h-rail { flex: 1 !important; height: auto !important; }
-    /* Remove black squares around map pins when printing */
+    /* Remove dark squares around map pins when printing */
     .leaflet-div-icon,
     .leaflet-marker-icon,
     .leaflet-marker-pane > *,
-    .leaflet-marker-pane img,
-    .leaflet-pane .leaflet-marker-icon,
     img.leaflet-marker-icon { background: transparent !important; border: none !important; box-shadow: none !important; outline: none !important; }
-    .leaflet-div-icon { background: transparent !important; border: none !important; }
+    .biz-marker .pin-body { box-shadow: none !important; }
+    .biz-marker, .landmark-label, .street-label, .area-label { box-shadow: none !important; }
   }
 </style>
 </head>
