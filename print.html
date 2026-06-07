@@ -242,7 +242,7 @@
   #map { height: 520px; width: 100%; }
   .leaflet-control-container, .leaflet-control-zoom { display: none !important; }
   .leaflet-control-attribution { font-size: 8px; opacity: 0.4; }
-  .leaflet-div-icon { background: none !important; border: none !important; }
+  .leaflet-div-icon { background: none !important; border: none !important; box-shadow: none !important; outline: none !important; }
   .leaflet-tile-pane {
     filter: var(--tile-filter, none);
     mix-blend-mode: var(--tile-blend, normal);
@@ -448,7 +448,11 @@
     /* Remove black squares around map pins when printing */
     .leaflet-div-icon,
     .leaflet-marker-icon,
-    .leaflet-marker-pane > * { background: transparent !important; border: none !important; box-shadow: none !important; }
+    .leaflet-marker-pane > *,
+    .leaflet-marker-pane img,
+    .leaflet-pane .leaflet-marker-icon,
+    img.leaflet-marker-icon { background: transparent !important; border: none !important; box-shadow: none !important; outline: none !important; }
+    .leaflet-div-icon { background: transparent !important; border: none !important; }
   }
 </style>
 </head>
