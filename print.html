@@ -451,21 +451,12 @@
     .map-col { display: flex !important; flex-direction: column !important; }
     .map-below { flex: 1 !important; display: flex !important; flex-direction: column !important; }
     .map-below .h-rail { flex: 1 !important; height: auto !important; }
+    /* Force Chrome to print background colors correctly */
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     /* Remove dark squares around map pins when printing */
-    .leaflet-div-icon,
-    .leaflet-marker-icon,
-    .leaflet-marker-shadow,
-    .leaflet-marker-pane *,
-    .leaflet-shadow-pane * {
-      background: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
-      outline: none !important;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-    .biz-marker .pin-body { box-shadow: none !important; }
+    .leaflet-div-icon { background: transparent !important; border: none !important; box-shadow: none !important; }
     .leaflet-shadow-pane { display: none !important; }
+    .biz-marker .pin-body { box-shadow: none !important; }
   }
 </style>
 </head>
