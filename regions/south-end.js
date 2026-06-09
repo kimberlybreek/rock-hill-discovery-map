@@ -89,6 +89,7 @@ window.REGION = {
       desc:'An iconic Charlotte institution — slow-smoked BBQ ribs and brisket, cold beer, and a motorcycle-themed patio that hosts live music on weekends. Classic Charlotte.',
       meta:'2511 South Blvd · South End · Hours vary · macsspeedshop.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/04/5f/ca/beer-bikes-bbq.jpg?w=900&h=500&s=1',
+      bgPosition:'center 60%',
       price:'$$', tags:['livemusic','outdoor','local'] },
 
     { lat:35.2155, lon:-80.8593, n:7, cat:'food',
