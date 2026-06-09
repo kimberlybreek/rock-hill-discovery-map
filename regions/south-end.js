@@ -46,7 +46,7 @@ window.REGION = {
       name:'Triple C Brewing',
       short:'Flagship craft brewery · taproom · patio',
       desc:'One of Charlotte\'s most beloved craft breweries — award-winning ales and lagers poured in a lively taproom with a sprawling patio. The Falcon is a must-try.',
-      meta:'2900 Griffith St · South End · Mon–Thu 4–10pm, Fri 2–11pm, Sat 12–11pm, Sun 12–9pm · triplebrewing.com',
+      meta:'2900 Griffith St · South End · triplebrewing.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/0b/82/df/triple-c-brewing-co-charlotte.jpg?w=900&h=500&s=1',
       price:'$$', tags:['outdoor','dogs','local'] },
 
@@ -54,7 +54,7 @@ window.REGION = {
       name:'Puttery',
       short:'Immersive mini golf · cocktails · chef bites',
       desc:'South End\'s most fun night out — play themed 9-hole indoor mini golf courses as many times as you like, paired with craft cocktails, chef-inspired shareables, and weekend brunch. Walk-ins welcome.',
-      meta:'210 Rampart St · South End · Sun–Thu open to all ages, Fri–Sat 18+ after 5pm · puttery.com',
+      meta:'210 Rampart St · South End · puttery.com',
       img:'https://www.puttery.com/wp-content/uploads/2022/10/conservatory-2.jpg',
       price:'$$', tags:['date','family','livemusic'] },
 
@@ -62,7 +62,7 @@ window.REGION = {
       name:'Wooden Robot Brewery',
       short:'Neighborhood brewery · creative small-batch ales',
       desc:'Creative small-batch brewery known for inventive, approachable ales and a cozy taproom vibe right off the Rail Trail. Perfect pre- or post-walk pint stop.',
-      meta:'1440 S Tryon St, Ste 110 · South End · Mon–Thu 4–10pm, Fri 2–11pm, Sat 12–11pm, Sun 12–8pm · woodenrobotbrewery.com',
+      meta:'1440 S Tryon St · South End · woodenrobotbrewery.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/c6/43/89/img-20170630-183142-585.jpg?w=700&h=400&s=1',
       price:'$$', tags:['local'] },
 
@@ -70,7 +70,7 @@ window.REGION = {
       name:'Protagonist Brewing',
       short:'Cozy taproom · IPAs · lagers',
       desc:'A neighborhood gem focused on approachable, well-crafted lagers and IPAs in a warm, intimate taproom. Great for a quiet pint without the crowds.',
-      meta:'1715 South Blvd, Ste 120 · South End · Wed–Thu 4–10pm, Fri 2–11pm, Sat 12–11pm, Sun 12–8pm · protagonistbrewing.com',
+      meta:'1715 South Blvd · South End · protagonistbrewing.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/46/15/14/16-pepperoni-small.jpg?w=900&h=500&s=1',
       price:'$$', tags:['local'] },
 
@@ -78,7 +78,7 @@ window.REGION = {
       name:'Suffolk Punch',
       short:'Coffee by day · craft cocktails by night',
       desc:'South End\'s most versatile spot — exceptional specialty coffee and pastries in the morning, then seamlessly transitions to craft cocktails and small plates by evening.',
-      meta:'1508 S Tryon St · South End · Daily 7am–midnight · suffolkpunchclt.com',
+      meta:'1508 S Tryon St · South End · suffolkpunchclt.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/a6/06/6d/outdoor-seating.jpg?w=900&h=500&s=1',
       price:'$$', tags:['date','outdoor','local'] },
 
@@ -127,7 +127,7 @@ window.REGION = {
       name:'ROOTS Cafe',
       short:'Neighborhood café · brunch · local ingredients',
       desc:'The quintessential South End neighborhood café — breakfast and brunch all day with fresh, locally sourced ingredients, Enderly Coffee espresso, and a cozy plant-filled space. Order at the counter and stay a while.',
-      meta:'2135 Southend Dr, Ste 109 · South End · Mon–Fri 7am–3pm, Sat 8am–10pm, Sun 8am–3pm · rootscafesouthend.com',
+      meta:'2135 Southend Dr · South End · rootscafesouthend.com',
       img:'https://images.squarespace-cdn.com/content/v1/589b39c5bebafb6528343d57/1626543818544-XENFWUFQHO2KAMPT1O9B/image-asset.jpeg', bgSize:'80%', bgPosition:'center 70%',
       price:'$', tags:['brunch','outdoor','dogs','local'] },
 
@@ -136,7 +136,7 @@ window.REGION = {
       name:'Not Just Coffee',
       short:'Charlotte-grown specialty coffee · cozy',
       desc:'Charlotte\'s homegrown specialty coffee brand — beautifully crafted lattes, exceptional pour-overs, and a warm, welcoming café atmosphere perfect for working or catching up.',
-      meta:'1427 S Tryon St · South End · Mon–Fri 7am–5pm, Sat–Sun 8am–4pm · notjustcoffee.com',
+      meta:'1427 S Tryon St · South End · notjustcoffee.com',
       img:'https://img.ctykit.com/cdn/nc-charlotte-south-end/images/tr:w-1800/225732914_373091704212397_8433839562704475303_n.jpg',
       price:'$', tags:['local'] },
 
@@ -144,7 +144,7 @@ window.REGION = {
       name:'Undercurrent Coffee',
       short:'Specialty roasts · minimalist · focused',
       desc:'A beautifully minimalist specialty coffee bar committed to sourcing and brewing exceptional single-origin coffees. One of Charlotte\'s most thoughtful coffee experiences.',
-      meta:'1523 Elizabeth Ave · South End · Mon–Fri 7am–5pm, Sat–Sun 8am–4pm · undercurrentcoffee.com',
+      meta:'1523 Elizabeth Ave · South End · undercurrentcoffee.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/fb/88/b8/photo0jpg.jpg?w=900&h=500&s=1',
       price:'$', tags:['local'] },
 
@@ -153,7 +153,7 @@ window.REGION = {
       name:'Charlotte Rail Trail',
       short:'4-mile greenway · art · light rail views',
       desc:'A 4-mile urban greenway running alongside the LYNX Blue Line — walk, run, or bike past public art installations, breweries, and restaurants. South End\'s green spine.',
-      meta:'South Blvd corridor · South End to Uptown · Open daily, dawn to dusk · charlottenc.gov',
+      meta:'South Blvd corridor · South End to Uptown · charlottenc.gov',
       img:'https://cloudfront.traillink.com/photos/charlotte-rail-trail_228391_sc.jpg',
       tags:['scenic','dogs','family'] },
 
@@ -161,7 +161,7 @@ window.REGION = {
       name:'Little Sugar Creek Greenway',
       short:'Urban trail · creekside · serene',
       desc:'A peaceful creekside urban trail weaving through South End — ideal for a morning run or bike ride away from the bustle. Connects to a broader greenway network across Charlotte.',
-      meta:'S Tryon St trailhead · South End · Open daily, dawn to dusk · charlottenc.gov',
+      meta:'S Tryon St trailhead · South End · charlottenc.gov',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/c1/53/88/little-sugar-creek-greenway.jpg?w=900&h=500&s=1',
       tags:['scenic','dogs'] },
 
@@ -170,7 +170,7 @@ window.REGION = {
       name:'Goodyear Arts',
       short:'Artist collective · gallery · events',
       desc:'A thriving creative collective housed in a former warehouse — rotating gallery exhibitions, live performances, and studio residencies showcasing Charlotte\'s most exciting emerging artists.',
-      meta:'2115 Hawkins St · South End · Wed–Sun 12–6pm · goodyeararts.org',
+      meta:'2115 Hawkins St · South End · goodyeararts.org',
       img:'https://goodyeararts.com/wp-content/uploads/2025/06/JULY_AUGUST_INSTALL-26-1-1024x683.jpg',
       tags:['local'] },
 
@@ -178,14 +178,14 @@ window.REGION = {
       name:'CorePower Yoga South End',
       short:'Hot yoga · sculpt · all levels',
       desc:'Nationally loved hot yoga and sculpt classes in a sleek South End studio. Whether you\'re a first-timer or daily practitioner, CorePower brings great energy and consistency.',
-      meta:'1500 S Tryon St, Ste 140 · South End · Daily 6am–8pm · corepoweryoga.com',
+      meta:'1500 S Tryon St · South End · corepoweryoga.com',
       img:'https://www.honolulumagazine.com/wp-content/uploads/data-import/ed1435dc/corepower-yoga-ward-honolulu-class-exercise.jpg' },
 
     { lat:35.2220, lon:-80.8570, n:18, cat:'coffee',
       name:'Hi-Wire Brewing South End',
       short:'Craft lagers & ales · taproom · patio',
       desc:'Asheville-born Hi-Wire brings its celebrated lineup of lagers, IPAs, and seasonal ales to a lively South End taproom — bright space, friendly crowd, and consistently great beer.',
-      meta:'1737 Camden Rd · South End · Mon–Thu 3–10pm, Fri 2–11pm, Sat 12–11pm, Sun 12–8pm · hiwirebrewing.com',
+      meta:'1737 Camden Rd · South End · hiwirebrewing.com',
       img:'https://hiwirebrewing.com/wp-content/uploads/2025/07/CharlotteTaproom_Javi_20231013_7106-1030x1030.jpg',
       price:'$$', tags:['outdoor','local'] },
 
@@ -193,14 +193,14 @@ window.REGION = {
       name:'CycleBar South End',
       short:'Indoor cycling · high-energy · music',
       desc:'Premium indoor cycling studio with performance tracking, energetic instructors, and a party-like atmosphere. One of South End\'s most popular fitness studios.',
-      meta:'1432 S Tryon St, Ste 105 · South End · Daily 6am–8pm · cyclebar.com',
+      meta:'1432 S Tryon St · South End · cyclebar.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/10/9c/0f/patio.jpg?w=900&h=500&s=1' },
 
     { lat:35.2145, lon:-80.8615, n:20, cat:'outdoor',
       name:'South End Farmers Market',
       short:'Saturday market · local produce · artisans',
       desc:'A beloved Saturday tradition — local farmers, bakers, artisan makers, and food vendors gathering at Atherton Mill along the Rail Trail. Fresh produce, live music, and great local energy every weekend.',
-      meta:'2000 South Blvd, Atherton Mill · South End · Saturdays 8am–1pm, year-round · southendmkt.com',
+      meta:'2000 South Blvd · Atherton Mill · southendmkt.com',
       img:'https://southendmkt.com/wp-content/uploads/southend-1200x730-1.png',
       tags:['family','outdoor','dogs','local'] },
 
@@ -209,7 +209,7 @@ window.REGION = {
       name:'Trolley Barn Fermentory',
       short:'Historic brewery · food hall · skyline views',
       desc:'Set in an 1890s trolley maintenance barn, this stunning two-story brewery and food hall pours locally crafted beers and infused spirits alongside three distinct food stalls — with a rooftop patio overlooking the Charlotte skyline.',
-      meta:'2104 South Blvd · Atherton Mill · Sun–Thu 11am–10pm, Fri–Sat 11am–midnight · trolleybarn.legionbrewing.com',
+      meta:'2104 South Blvd · Atherton Mill · trolleybarn.legionbrewing.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/4f/d3/11/bar-and-bartender.jpg?w=900&h=500&s=1',
       price:'$$', tags:['date','scenic','local'] },
 
@@ -217,14 +217,14 @@ window.REGION = {
       name:'west elm',
       short:'Modern home design · furniture · décor',
       desc:'West Elm\'s stunning 11,000 sq ft flagship at Atherton Mill — beautifully curated modern furniture, home décor, and accessories, plus free in-store interior design services from their Design Crew.',
-      meta:'2140 South Blvd, Ste 1 · Atherton Mill · Mon–Sat 10am–8pm, Sun 11am–6pm · westelm.com',
+      meta:'2140 South Blvd · Atherton Mill · westelm.com',
       img:'https://img.ctykit.com/cdn/nc-charlotte-south-end/images/tr:w-1800/101055144_1332726980254950_2684389438516990661_n.jpg' },
 
     { lat:35.2142, lon:-80.8618, n:23, cat:'arts',
       name:'Savory Spice Shop',
       short:'Artisan spices · blends · sample before you buy',
       desc:'A fragrant treasure at Atherton Mill — hundreds of house-blended spices, salts, and seasonings you can smell and taste before buying. Perfect for home cooks and food lovers.',
-      meta:'2000 South Blvd, Ste 520 · Atherton Mill · Mon–Sat 10am–7pm, Sun 11am–5pm · savoryspiceshop.com',
+      meta:'2000 South Blvd · Atherton Mill · savoryspiceshop.com',
       img:'https://img.ctykit.com/cdn/nc-charlotte-south-end/images/tr:w-1800/242356372_561001281846730_3480298682239118650_n.jpg',
       tags:['local'] },
 
@@ -232,7 +232,7 @@ window.REGION = {
       name:'BOEM',
       short:'Women\'s boutique · curated fashion · South End',
       desc:'Effortlessly curated women\'s fashion with handpicked styles from contemporary brands — a South End staple for stylish, wearable pieces at 2028 South Blvd.',
-      meta:'2028 South Blvd, Ste 1B · South End · Mon–Sat 10am–6pm, Sun 12–5pm · shopboem.com',
+      meta:'2028 South Blvd · South End · shopboem.com',
       img:'https://www.shopboem.com/cdn/shop/files/boem_logo_-_holiday_25_2_410x.png?v=1767016584', logoOnly:true, logoScale:'70%',
       tags:['local'] },
 
@@ -240,7 +240,7 @@ window.REGION = {
       name:'Lilbelle',
       short:'Boutique · closet staples · statement pieces',
       desc:'Locally-owned women\'s fashion boutique tucked in the Heart Wall alley — cute, stylish, affordable pieces from closet staples to statement looks.',
-      meta:'1930 Camden Rd · South End · Mon–Sat 10am–6pm, Sun 12–5pm · lilbelle.com',
+      meta:'1930 Camden Rd · South End · lilbelle.com',
       img:'https://lilbelle.com/cdn/shop/files/lilbelle_logo_2_810b3a41-a47f-412c-be55-6943e62e33e2.jpg', logoOnly:true, logoScale:'75%',
       tags:['local'] },
 
@@ -248,7 +248,7 @@ window.REGION = {
       name:'Paper Skyscraper',
       short:'Indie gift shop · books · local goods · 35+ years',
       desc:'A beloved Charlotte institution for over 35 years — quirky gifts, books, stationery, home goods, and locally made products that perfectly capture the spirit of the city.',
-      meta:'330 East Blvd · Dilworth · Mon–Fri 10am–7pm, Sat 10am–6pm, Sun 12–5pm · paperskyscraper.com',
+      meta:'330 East Blvd · Dilworth · paperskyscraper.com',
       img:'https://clture.org/wp-content/uploads/2025/09/Photo-Sep-16-2025-12-28-45-PM-scaled.jpg', bgPosition:'center 50%',
       tags:['local'] },
 
