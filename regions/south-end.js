@@ -87,7 +87,7 @@ window.REGION = {
       name:"Mac's Speed Shop",
       short:'Low & slow BBQ · cold beer · live music',
       desc:'An iconic Charlotte institution — slow-smoked BBQ ribs and brisket, cold beer, and a motorcycle-themed patio that hosts live music on weekends. Classic Charlotte.',
-      meta:'2511 South Blvd · South End · Mon–Thu 11am–10pm, Fri–Sat 11am–11pm, Sun 11am–9pm · macsspeedshop.com',
+      meta:'2511 South Blvd · South End · Hours vary · macsspeedshop.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/04/5f/ca/beer-bikes-bbq.jpg?w=900&h=500&s=1',
       price:'$$', tags:['livemusic','outdoor','local'] },
 
@@ -95,7 +95,7 @@ window.REGION = {
       name:'Seoul Food Meat Co',
       short:'Korean bulgogi burgers · wings · milkbread',
       desc:'Charlotte\'s beloved Korean-fusion spot — now serving sizzling bulgogi burgers on house-made milkbread toast, Korean wings, tacos, and patty melts. Bold flavors, great vibe.',
-      meta:'1400 S Church St · South End · Mon–Thu 11am–10pm, Fri–Sat 11am–11pm, Sun 11am–9pm · seoulfoodmeatcoclt.com',
+      meta:'1400 S Church St · South End · Hours vary · seoulfoodmeatcoclt.com',
       img:'https://images.squarespace-cdn.com/content/v1/5e39e3b09dbf2e41c9a8d0e3/97652d9e-f8d5-4178-ae4c-05ec2d33855d/PXL_20250904_173006261.LONG_EXPOSURE-01.COVER.jpg',
       price:'$$', tags:['local'] },
 
@@ -103,7 +103,7 @@ window.REGION = {
       name:'The Goodyear House',
       short:'American brasserie · brunch · cocktails',
       desc:'Set in a beautifully converted warehouse, The Goodyear House serves elevated American brasserie fare — killer brunch, seasonal cocktails, and a stunning interior.',
-      meta:'2015 Hawkins St · South End · Tue–Thu 5–10pm, Fri 5–11pm, Sat 10am–11pm, Sun 10am–9pm · thegoodyearhouse.com',
+      meta:'2015 Hawkins St · South End · Hours vary · thegoodyearhouse.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/10/29/67/the-goodyear-house.jpg?w=900&h=500&s=1',
       price:'$$$', tags:['date','brunch','local'] },
 
@@ -111,7 +111,7 @@ window.REGION = {
       name:'Fern, Flavors from the Garden',
       short:'Plant-based · creative · upscale',
       desc:'One of Charlotte\'s most celebrated plant-based restaurants — imaginative, seasonally driven dishes that impress even dedicated carnivores. A South End standout.',
-      meta:'1415 S Tryon St · South End · Tue–Thu 5–9pm, Fri–Sat 5–10pm · eatfern.com',
+      meta:'1415 S Tryon St · South End · Hours vary · eatfern.com',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/93/19/33/from-left-to-right-bao.jpg?w=900&h=500&s=1',
       price:'$$$', tags:['date','local'] },
 
@@ -119,7 +119,7 @@ window.REGION = {
       name:"Lulu's Maryland Style Chicken",
       short:'Maryland fried chicken · Old Bay · casual',
       desc:'A South End cult favorite — crispy Maryland-style fried chicken dusted in Old Bay, served with house sauces in a cheerful, no-fuss spot. Always a line for good reason.',
-      meta:'1717 South Blvd · South End · Mon–Thu 11am–9pm, Fri–Sat 11am–10pm, Sun 11am–8pm · luluschicken.com',
+      meta:'1717 South Blvd · South End · Hours vary · luluschicken.com',
       img:'https://lh3.googleusercontent.com/p/AF1QipMtoaYcYo0MSUJiLHK0QQR-kCghp0w0IlsuT2Y8=w900-h500-p-no-v0',
       price:'$', tags:['local'] },
 
