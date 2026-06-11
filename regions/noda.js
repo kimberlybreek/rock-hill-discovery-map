@@ -47,7 +47,7 @@ window.REGION = {
       short:'NoDa\'s flagship craft brewery · taproom · patio',
       desc:'The brewery that put NoDa on the map — award-winning craft beers including the legendary Hop, Drop \'N Roll IPA, poured in a lively taproom with a massive outdoor patio and food trucks on weekends.',
       meta:'2921 N Tryon St · NoDa · nodabrewing.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/6c/8e/8d/noda-brewing-company.jpg?w=900&h=500&s=1',
+      img:'https://static.wixstatic.com/media/304557_d153a4b14edc4a299bb1574c591f7a78~mv2.jpg/v1/fill/w_900,h_600,al_c,q_85/IMG_8806.jpg',
       price:'$$', tags:['outdoor','dogs','local'] },
 
     { lat:35.2188, lon:-80.8108, n:2, cat:'brewery',
@@ -55,7 +55,7 @@ window.REGION = {
       short:'Creative craft ales · experimental · local',
       desc:'One of NoDa\'s most creative and adventurous craft breweries — constantly rotating small-batch experimental ales, sours, and lagers in a welcoming neighborhood taproom.',
       meta:'2320 N Davidson St · NoDa · freerangebrewing.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/d5/b6/e8/free-range-brewing.jpg?w=900&h=500&s=1',
+      img:'https://cdn.prod.website-files.com/67e6f311bb03f0a794f28da3/686af5e71036f1084e2d3c38_About%201.png',
       price:'$$', tags:['local','dogs'] },
 
     { lat:35.2155, lon:-80.8095, n:3, cat:'brewery',
@@ -63,7 +63,7 @@ window.REGION = {
       short:'Dog-friendly brewery · taproom · live music',
       desc:'A beloved NoDa institution — approachable, well-crafted ales and lagers in a dog-friendly taproom that regularly hosts live music. Birdsong is the heartbeat of the neighborhood.',
       meta:'1016 N Davidson St · NoDa · birdsongbrewing.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/a3/0e/5b/birdsong-brewing-co.jpg?w=900&h=500&s=1',
+      img:'https://cdn.spotapps.co/spothopper/image/fetch/f_auto,q_auto:best,c_fit,h_600/http://static.spotapps.co/spots/94/8c451b5aa44c948efa521c8eccb94e/:original',
       price:'$', tags:['outdoor','dogs','livemusic','local'] },
 
     { lat:35.2258, lon:-80.8093, n:4, cat:'brewery',
@@ -71,7 +71,7 @@ window.REGION = {
       short:'No-menu craft cocktails · intimate · artful',
       desc:'Charlotte\'s most talked-about bar — a no-menu craft cocktail experience where bartenders craft a bespoke drink based on your mood, preferences, and personality. No two visits are the same.',
       meta:'424 E 36th St · NoDa · idlewildbar.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/5b/9f/c4/caption.jpg?w=900&h=500&s=1',
+      img:'https://images.squarespace-cdn.com/content/v1/646276441234df04f4d52bbc/726c8ee0-430a-4e72-b925-8053e3e2d36d/backbar.jpg',
       price:'$$$', tags:['date','local'] },
 
     { lat:35.2292, lon:-80.8112, n:5, cat:'brewery',
@@ -79,7 +79,7 @@ window.REGION = {
       short:'Craft beer · wood-fired pizza · barrel-aged spirits',
       desc:'An ambitious NoDa stalwart — craft beers, house-distilled spirits, and wood-fired pizzas in a stunning industrial space. The barrel-aged program is among Charlotte\'s finest.',
       meta:'2909 N Davidson St · NoDa · heistbrewery.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/e3/b3/0e/heist-brewery.jpg?w=900&h=500&s=1',
+      img:'https://heistbrewery.com/wp-content/uploads/2025/06/beer-chronicle-houston-heist-brewery-and-barrel-arts-building-1024x550.jpg',
       price:'$$', tags:['date','local'] },
 
     { lat:35.2310, lon:-80.8113, n:6, cat:'brewery',
@@ -87,7 +87,7 @@ window.REGION = {
       short:'Craft beer · wood-fired pizza · neighborhood gem',
       desc:'A laid-back NoDa brewpub pouring house-crafted beers alongside killer wood-fired pizzas and tacos. The back patio is one of Charlotte\'s best-kept secrets for a warm evening.',
       meta:'3306 N Davidson St · NoDa · saludcerveceria.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/cf/68/4e/salud-beer-shop.jpg?w=900&h=500&s=1',
+      img:'https://cdn.spotapps.co/spothopper/image/fetch/f_auto,q_auto:best,c_fit,h_600/http://static.spotapps.co/spots/83/ab911a8e70449881411a826a93d023/:original',
       price:'$$', tags:['outdoor','local'] },
 
     /* ── EAT & DRINK ── */
@@ -96,7 +96,7 @@ window.REGION = {
       short:'Iconic since 1973 · best burger in NC · cash only',
       desc:'A NoDa legend since 1973 — simple, perfect cheeseburgers and hot dogs from a tiny walk-up window. Named "Best Burger in NC" by Reader\'s Digest. Cash only, line out the door, worth every minute.',
       meta:'2710 N Anderson St · NoDa · Cash only',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/87/ec/f7/brooks-sandwich-house.jpg?w=900&h=500&s=1',
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/4c/0c/e3/brooks-sandwich-house.jpg?w=900&h=500&s=1',
       price:'$', tags:['local'] },
 
     { lat:35.2340, lon:-80.8112, n:8, cat:'food',
@@ -104,7 +104,7 @@ window.REGION = {
       short:'Craft beer · comfort food · neighborhood hangout',
       desc:'A newer NoDa favorite combining inventive craft beers with thoughtfully prepared comfort food. The cozy taproom and welcoming staff make Divine Barrel a go-to for locals.',
       meta:'3701 N Davidson St · NoDa · divinebarrel.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/4d/2e/32/divine-barrel-brewing.jpg?w=900&h=500&s=1',
+      img:'https://divinebarrel.com/wp-content/uploads/2021/06/DBB_Taproom_Home.jpg',
       price:'$$', tags:['local'] },
 
     /* ── COFFEE & BAKERY ── */
@@ -113,7 +113,7 @@ window.REGION = {
       short:'NoDa\'s indie café · house roasts · live music',
       desc:'The soul of NoDa in coffee form — a beloved indie coffeehouse roasting their own beans and serving expertly crafted espresso drinks in a cozy, art-filled space. Live acoustic music most evenings.',
       meta:'514 E 36th St · NoDa · smellycatcoffee.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/c1/44/1f/smelly-cat-coffeehouse.jpg?w=900&h=500&s=1',
+      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/f5/b3/3a/exterior.jpg?w=900&h=500&s=1',
       price:'$', tags:['livemusic','local','dogs'] },
 
     { lat:35.2212, lon:-80.8109, n:10, cat:'coffee',
@@ -121,7 +121,7 @@ window.REGION = {
       short:'French pastries · macarons · 24 hours',
       desc:'Charlotte\'s favorite French bakery — impossibly good croissants, fresh macarons, soups, and sandwiches in an eclectic, art-filled space that never closes. A true NoDa institution.',
       meta:'2424 N Davidson St · NoDa · ameliesfrenchbakery.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/6e/c6/43/amelie-s-french-bakery.jpg?w=900&h=500&s=1',
+      img:'https://ameliesfrenchbakery.com/wp-content/uploads/2025/07/Banner-With-Shadow-Small-Image.jpg',
       price:'$', tags:['brunch','local'] },
 
     /* ── ARTS & CULTURE ── */
@@ -129,15 +129,15 @@ window.REGION = {
       name:'Charlotte Art League',
       short:'Gallery · studios · classes · art crawls',
       desc:'The creative hub of NoDa — a combined gallery and working studio complex hosting rotating exhibitions, artist residencies, and the famous NoDa Gallery Crawl held on the first and third Fridays of each month.',
-      meta:'315 E Tremont Ave · NoDa · charlotteartleague.org',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/d4/52/be/charlotte-art-league.jpg?w=900&h=500&s=1',
+      meta:'315 E Tremont Ave · NoDa · queencityart.org',
+      img:'https://images.squarespace-cdn.com/content/v1/62d572107b816d40b51c7e11/67af4b28-5f3e-4af2-aa54-9bbc0c7d5fc7/IMG_6009+2.jpeg',
       tags:['local'] },
 
     { lat:35.2430, lon:-80.8380, n:12, cat:'arts',
       name:'Camp North End',
       short:'Arts · food · music · historic site',
       desc:'Charlotte\'s most exciting adaptive reuse project — a sprawling former Ford assembly plant and Army depot transformed into a vibrant campus of art studios, restaurants, food halls, music venues, and creative spaces.',
-      meta:'1701 N Graham St · Camp North End · explorecne.com',
+      meta:'1701 N Graham St · Camp North End · camp.nc',
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/5d/6e/58/camp-north-end.jpg?w=900&h=500&s=1',
       tags:['family','outdoor','local'] },
 
@@ -146,7 +146,7 @@ window.REGION = {
       short:'Food hall · bars · shopping · creative hub',
       desc:'A buzzing converted textile mill housing Charlotte\'s most eclectic mix of restaurants, bars, boutiques, and studios. Whether you\'re coming for tacos, cocktails, or just to wander, Optimist Hall delivers.',
       meta:'1115 N Brevard St · NoDa · optimisthall.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/9e/4e/d0/optimist-hall.jpg?w=900&h=500&s=1',
+      img:'https://static.wixstatic.com/media/9d5315_5bc13554f63c48daadea448a7756857cf000.jpg',
       price:'$$', tags:['family','local'] },
 
     /* ── LIVE MUSIC ── */
@@ -155,7 +155,7 @@ window.REGION = {
       short:'Iconic live music venue · all genres · intimate',
       desc:'One of Charlotte\'s most beloved live music venues — an intimate 1,000-capacity former movie theater that has hosted everyone from indie darlings to platinum-selling artists. Every show feels special here.',
       meta:'511 E 36th St · NoDa · neighborhoodtheatre.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/5e/e8/e4/neighborhood-theatre.jpg?w=900&h=500&s=1',
+      img:'https://neighborhoodtheatre.com/wp-content/uploads/2026/06/fp_2048x1152.jpg',
       price:'$$', tags:['livemusic','local','date'] },
 
     { lat:35.2315, lon:-80.8109, n:15, cat:'music',
@@ -163,7 +163,7 @@ window.REGION = {
       short:'Intimate live music · original artists · legendary',
       desc:'Charlotte\'s most intimate and beloved live music room — a tiny, legendary venue on N Davidson St that has launched countless careers and remains the beating heart of Charlotte\'s original music scene.',
       meta:'3227 N Davidson St · NoDa · eveningmuse.com',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/52/9a/b4/the-evening-muse.jpg?w=900&h=500&s=1',
+      img:'https://static.spacecrafted.com/dcb786f3d04b4a8e807bd17c14946719/i/d95ac2758ad34c218617d7cdc0c17921/1/4SoifmQp45JMgBnHfDivx/evening-muse.jpg',
       price:'$', tags:['livemusic','local','date'] },
 
   ],
@@ -191,10 +191,10 @@ window.REGION = {
   printRails: {
     top: [
       { head: '🎶 Live Music', cls: 'fam', nums: [14, 15], lightText: true },
+      { head: '☕ Coffee &amp; Bakery', cls: 'coffee', nums: [9, 10] },
     ],
     left: [
       { head: '🎨 Arts &amp; Culture', cls: 'arts', nums: [11, 12, 13] },
-      { head: '☕ Coffee &amp; Bakery', cls: 'coffee', nums: [9, 10] },
     ],
     right: [
       { head: '🍺 Brew &amp; Bar', cls: 'coffee', nums: [1, 2, 3, 4, 5, 6] },
