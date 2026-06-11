@@ -124,6 +124,22 @@ window.REGION = {
       img:'https://ameliesfrenchbakery.com/wp-content/uploads/2025/07/Banner-With-Shadow-Small-Image.jpg',
       price:'$', tags:['brunch','local'] },
 
+    { lat:35.2148, lon:-80.8102, n:16, cat:'coffee',
+      name:'The Hobbyist',
+      short:'Coffee · craft beer · wine · bottle shop',
+      desc:'A beautifully designed neighborhood coffee and bottle shop — handcrafted espresso drinks by day, curated craft beer and natural wines by night. One of NoDa\'s most beloved hangouts.',
+      meta:'2100 N Davidson St · NoDa · thehobbyistclt.com',
+      img:'https://images.squarespace-cdn.com/content/v1/5b5cd922f93fd4d27a301b26/1573918178871-WGC4Q00PZNX67QPTBXL8/IMG_1280.jpg',
+      price:'$$', tags:['local','date'] },
+
+    { lat:35.2428, lon:-80.8382, n:17, cat:'coffee',
+      name:'HEX Coffee',
+      short:'Specialty coffee · natural wines · Camp North End',
+      desc:'A stunning specialty coffee bar and natural wine shop inside Camp North End — exceptional single-origin espresso and filter coffee, plus a thoughtful selection of natural and low-intervention wines.',
+      meta:'201 Camp Rd · Camp North End · hexclt.com',
+      img:'https://images.squarespace-cdn.com/content/v1/63a0b9ad75041d4263ce2f56/d87a13f4-1a9a-4204-b3e4-caa1dc850f34/DSC05517.jpg',
+      price:'$$', tags:['local','date'] },
+
     /* ── ARTS & CULTURE ── */
     { lat:35.2240, lon:-80.8118, n:11, cat:'arts',
       name:'Charlotte Art League',
@@ -191,17 +207,17 @@ window.REGION = {
   printRails: {
     top: [
       { head: '🎶 Live Music', cls: 'fam', nums: [14, 15], lightText: true },
-      { head: '☕ Coffee &amp; Bakery', cls: 'coffee', nums: [9, 10] },
+      { head: '☕ Coffee &amp; Bakery', cls: 'coffee', nums: [9, 10, 16, 17] },
     ],
     left: [
-      { head: '🎨 Arts &amp; Culture', cls: 'arts', nums: [11, 12, 13] },
+      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [7, 8] },
     ],
     right: [
-      { head: '🍺 Brew &amp; Bar', cls: 'coffee', nums: [1, 2, 3, 4, 5, 6] },
+      { head: '🎨 Arts &amp; Culture', cls: 'arts', nums: [11, 12, 13] },
     ],
     mapBelow: [],
     bottom: [
-      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [7, 8] },
+      { head: '🍺 Brew &amp; Bar', cls: 'coffee', nums: [1, 2, 3, 4, 5, 6] },
     ],
   },
 
