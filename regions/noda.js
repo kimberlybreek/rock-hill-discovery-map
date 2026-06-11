@@ -99,6 +99,14 @@ window.REGION = {
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/4c/0c/e3/brooks-sandwich-house.jpg?w=900&h=500&s=1',
       price:'$', tags:['local'] },
 
+    { lat:35.2460, lon:-80.8071, n:18, cat:'food',
+      name:'The Goodyear House',
+      short:'Elevated comfort food · garden patio · 1900s mill home',
+      desc:'One of NoDa\'s most beloved dinner spots — elevated comfort food with a Southern twist served in a charming 1900s mill home with a garden patio. The smoked cashew mac is legendary.',
+      meta:'3032 N Davidson St · NoDa · thegoodyearhouse.com',
+      img:'https://images.squarespace-cdn.com/content/v1/68377c16a5bc91693f69bf03/1750968229047-RP82GJ307Z9JRK2176XN/Street+shot.jpg',
+      price:'$$', tags:['date','local'] },
+
     { lat:35.2340, lon:-80.8112, n:8, cat:'food',
       name:'Divine Barrel Brewing',
       short:'Craft beer · comfort food · neighborhood hangout',
@@ -210,7 +218,7 @@ window.REGION = {
       { head: '☕ Coffee &amp; Bakery', cls: 'coffee', nums: [9, 10, 16, 17] },
     ],
     left: [
-      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [7, 8] },
+      { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [18, 7, 8] },
     ],
     right: [
       { head: '🎨 Arts &amp; Culture', cls: 'arts', nums: [11, 12, 13] },
