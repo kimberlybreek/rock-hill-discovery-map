@@ -165,6 +165,14 @@ window.REGION = {
       img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/5d/6e/58/camp-north-end.jpg?w=900&h=500&s=1',
       tags:['family','outdoor','local'] },
 
+    { lat:35.2480, lon:-80.8550, n:19, cat:'arts',
+      name:'Independent Picture House',
+      short:'Non-profit indie cinema · arthouse · community',
+      desc:'Charlotte\'s beloved non-profit arthouse cinema — four intimate auditoriums screening independent, foreign, and documentary films in a beautifully designed space. A true cultural gem near NoDa.',
+      meta:'4237 Raleigh St · NoDa · independentpicturehouse.org',
+      img:'https://clture.org/wp-content/uploads/2022/08/Main-Exterior-1-scaled.jpg',
+      tags:['local','date','family'] },
+
     { lat:35.2198, lon:-80.8105, n:13, cat:'arts',
       name:'Optimist Hall',
       short:'Food hall · bars · shopping · creative hub',
@@ -221,7 +229,7 @@ window.REGION = {
       { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [18, 7, 8] },
     ],
     right: [
-      { head: '🎨 Arts &amp; Culture', cls: 'arts', nums: [11, 12, 13] },
+      { head: '🎨 Arts &amp; Culture', cls: 'arts', nums: [11, 12, 13, 19] },
     ],
     mapBelow: [],
     bottom: [
