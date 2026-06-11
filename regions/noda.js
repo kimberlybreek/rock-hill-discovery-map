@@ -229,7 +229,7 @@ window.REGION = {
       { head: '🍽 Eat &amp; Drink', cls: 'eat', nums: [18, 7, 8] },
     ],
     right: [
-      { head: '🎨 Arts &amp; Culture', cls: 'arts', nums: [11, 12, 13, 19] },
+      { head: '🎨 Arts &amp; Culture', cls: 'arts', nums: [11, 12, 13] },
     ],
     mapBelow: [],
     bottom: [
