@@ -427,6 +427,7 @@
   .footer-tip strong { font-family: 'Yeseva One', serif; color: var(--accent, #800); font-size: 13px; }
 
   .footer-credit { font-family: 'Yeseva One', serif; font-size: 11px; color: var(--frame, #444); letter-spacing: 1px; text-align: right; border-left: 1.5px dashed var(--inner-border,#bbb); padding-left: 14px; flex-shrink: 0; }
+  .footer-promo { margin-top: 6px; font-family: 'DM Sans', sans-serif; font-size: 10px; color: var(--accent, #800); letter-spacing: 0.5px; }
 
   /* ── PRINT BAR ── */
   .print-bar { position: fixed; top: 12px; right: 12px; z-index: 9999; display: flex; gap: 8px; }
@@ -619,7 +620,7 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
         </div>
         <div class="footer-legend">${legendHtml}</div>
         <div class="footer-tip">Each number matches a card around the map.<br><strong>↔ 5 min walk</strong> ≈ 1 city block</div>
-        <div class="footer-credit">${R.credit}</div>
+        <div class="footer-credit">${R.credit}<div class="footer-promo">See our other maps at leisurelymaps.com</div></div>
       </div>
     </div></div>`;
 
