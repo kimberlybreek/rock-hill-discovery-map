@@ -162,7 +162,7 @@ window.REGION = {
       short:'Arts · food · music · historic site',
       desc:'Charlotte\'s most exciting adaptive reuse project — a sprawling former Ford assembly plant and Army depot transformed into a vibrant campus of art studios, restaurants, food halls, music venues, and creative spaces.',
       meta:'1701 N Graham St · Camp North End · camp.nc',
-      img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/5d/6e/58/camp-north-end.jpg?w=900&h=500&s=1',
+      img:'https://camp.nc/wp-content/uploads/2026/01/KCN425-6274-scaled-e1768337461929-1200x656.jpg',
       tags:['family','outdoor','local'] },
 
     { lat:35.2480, lon:-80.8550, n:19, cat:'arts',
@@ -178,7 +178,7 @@ window.REGION = {
       short:'Food hall · bars · shopping · creative hub',
       desc:'A buzzing converted textile mill housing Charlotte\'s most eclectic mix of restaurants, bars, boutiques, and studios. Whether you\'re coming for tacos, cocktails, or just to wander, Optimist Hall delivers.',
       meta:'1115 N Brevard St · NoDa · optimisthall.com',
-      img:'https://static.wixstatic.com/media/9d5315_5bc13554f63c48daadea448a7756857cf000.jpg',
+      img:'https://static.wixstatic.com/media/80d106_c7943455623a40a982b067a476bd2950~mv2.jpg',
       price:'$$', tags:['family','local'] },
 
     /* ── LIVE MUSIC ── */
