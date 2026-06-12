@@ -17,7 +17,7 @@ window.REGION = {
     '--navy':         '#4A2A7A',
     '--green':        '#2A6848',
     '--inner-border': '#C4A8E0',
-    '--tile-filter':  'saturate(1.1) brightness(1.05) contrast(0.92) hue-rotate(20deg)',
+    '--tile-filter':  'saturate(0.55) brightness(1.1) contrast(0.88) hue-rotate(220deg)',
     '--tile-blend':   'normal',
     '--tile-opa':     '1',
     '--cartouche-bg': 'repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(0,0,0,0.025) 28px, rgba(0,0,0,0.025) 29px), repeating-linear-gradient(90deg, transparent, transparent 28px, rgba(0,0,0,0.025) 28px, rgba(0,0,0,0.025) 29px), #F5F0FF',
