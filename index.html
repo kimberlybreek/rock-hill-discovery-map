@@ -301,6 +301,111 @@
     border-top: 1px solid var(--border-lt);
   }
 
+  /* ── PRICING ── */
+  .pricing-section {
+    background: var(--parch-dark);
+    padding: 80px 48px 88px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .pricing-header { text-align: center; margin-bottom: 52px; }
+  .pricing-eyebrow {
+    font-size: 11px; font-weight: 500; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--frame);
+    margin-bottom: 12px;
+  }
+  .pricing-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px; font-weight: 500; color: var(--ink);
+    margin-bottom: 12px; line-height: 1.2;
+  }
+  .pricing-sub {
+    font-size: 15px; color: var(--muted); max-width: 520px;
+    margin: 0 auto; line-height: 1.6;
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .pricing-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 36px 32px 32px;
+    display: flex; flex-direction: column;
+    position: relative;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .pricing-card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.10);
+    transform: translateY(-3px);
+  }
+  .pricing-card-featured {
+    border-color: var(--frame);
+    box-shadow: 0 8px 32px rgba(44,110,122,0.15);
+  }
+  .pricing-card-featured:hover {
+    box-shadow: 0 16px 48px rgba(44,110,122,0.22);
+  }
+  .pricing-badge {
+    position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+    background: var(--frame); color: var(--white);
+    font-family: 'Cinzel', serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 16px; border-radius: 20px;
+    white-space: nowrap;
+  }
+  .pricing-tier {
+    font-family: 'Cinzel', serif; font-size: 13px; font-weight: 600;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--frame); margin-bottom: 14px;
+  }
+  .pricing-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px; font-weight: 600; color: var(--ink);
+    line-height: 1; margin-bottom: 14px;
+  }
+  .pricing-price span {
+    font-size: 18px; font-weight: 400; color: var(--muted);
+  }
+  .pricing-desc {
+    font-size: 13px; color: var(--muted); line-height: 1.6;
+    margin-bottom: 24px; border-bottom: 1px solid var(--border-lt);
+    padding-bottom: 24px;
+  }
+  .pricing-features {
+    list-style: none; flex: 1;
+    display: flex; flex-direction: column; gap: 10px;
+    margin-bottom: 28px;
+  }
+  .pricing-features li {
+    font-size: 13px; color: var(--ink); line-height: 1.4;
+  }
+  .pricing-features li.muted { color: var(--muted); }
+  .pricing-btn {
+    display: block; text-align: center;
+    font-family: 'Cinzel', serif; font-size: 10px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 13px 24px; border-radius: 5px;
+    text-decoration: none; transition: all 0.15s;
+    cursor: pointer;
+  }
+  .pricing-btn-primary {
+    background: var(--frame); color: var(--white); border: 1.5px solid var(--frame);
+  }
+  .pricing-btn-primary:hover { background: var(--frame-deep); border-color: var(--frame-deep); }
+  .pricing-btn-outline {
+    background: transparent; color: var(--frame); border: 1.5px solid var(--frame);
+  }
+  .pricing-btn-outline:hover { background: var(--frame); color: var(--white); }
+  @media (max-width: 860px) {
+    .pricing-section { padding: 60px 20px 72px; }
+    .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
+  }
+
   /* ── FOOTER ── */
   footer {
     background: var(--frame);
@@ -368,6 +473,70 @@
   <div class="tagline-item"><span>🗺</span> Interactive & print-ready</div>
   <div class="tagline-item"><span>📍</span> Locally curated spots</div>
   <div class="tagline-item"><span>✨</span> New neighborhoods added regularly</div>
+</div>
+
+<!-- ── PRICING ── -->
+<div class="pricing-section" id="pricing">
+  <div class="pricing-header">
+    <div class="pricing-eyebrow">Simple, Transparent Pricing</div>
+    <h2 class="pricing-title">Your neighborhood, on the map.</h2>
+    <p class="pricing-sub">Custom discovery maps for neighborhoods, businesses, and tourism boards — interactive and print-ready.</p>
+  </div>
+  <div class="pricing-grid">
+
+    <!-- Tier 1 -->
+    <div class="pricing-card">
+      <div class="pricing-tier">Starter</div>
+      <div class="pricing-price">$299<span>/map</span></div>
+      <div class="pricing-desc">Perfect for a single neighborhood or business district looking to get on the map.</div>
+      <ul class="pricing-features">
+        <li>✓ 1 neighborhood map</li>
+        <li>✓ Up to 15 curated locations</li>
+        <li>✓ Interactive web map</li>
+        <li>✓ Print-ready PDF edition</li>
+        <li>✓ Standard color theme</li>
+        <li class="muted">✗ Custom branding</li>
+        <li class="muted">✗ Annual updates</li>
+      </ul>
+      <a class="pricing-btn pricing-btn-outline" href="#" onclick="document.querySelector('.modal-backdrop').classList.add('open'); return false;">Get Started</a>
+    </div>
+
+    <!-- Tier 2 — Featured -->
+    <div class="pricing-card pricing-card-featured">
+      <div class="pricing-badge">Most Popular</div>
+      <div class="pricing-tier">Local Guide</div>
+      <div class="pricing-price">$699<span>/map</span></div>
+      <div class="pricing-desc">For neighborhoods that want a fully branded, living guide their community will love.</div>
+      <ul class="pricing-features">
+        <li>✓ 1 neighborhood map</li>
+        <li>✓ Up to 30 curated locations</li>
+        <li>✓ Interactive web map</li>
+        <li>✓ Print-ready PDF edition</li>
+        <li>✓ Custom color theme & branding</li>
+        <li>✓ Annual content refresh</li>
+        <li class="muted">✗ Multi-map bundle</li>
+      </ul>
+      <a class="pricing-btn pricing-btn-primary" href="#" onclick="document.querySelector('.modal-backdrop').classList.add('open'); return false;">Get Started</a>
+    </div>
+
+    <!-- Tier 3 -->
+    <div class="pricing-card">
+      <div class="pricing-tier">Full Suite</div>
+      <div class="pricing-price">Custom<span> pricing</span></div>
+      <div class="pricing-desc">Ideal for cities, tourism boards, or multi-neighborhood development groups.</div>
+      <ul class="pricing-features">
+        <li>✓ Multiple neighborhood maps</li>
+        <li>✓ Unlimited curated locations</li>
+        <li>✓ Interactive web maps</li>
+        <li>✓ Print-ready PDF editions</li>
+        <li>✓ Full custom branding</li>
+        <li>✓ Annual content refresh</li>
+        <li>✓ Dedicated account support</li>
+      </ul>
+      <a class="pricing-btn pricing-btn-outline" href="#" onclick="document.querySelector('.modal-backdrop').classList.add('open'); return false;">Contact Us</a>
+    </div>
+
+  </div>
 </div>
 
 <div class="section" id="maps">
