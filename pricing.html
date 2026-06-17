@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pricing — Leisurely Maps</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Advertise your business on Leisurely Maps — beautiful neighborhood discovery maps for Charlotte, NC and beyond.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --frame:      #2C6E7A;
+    --frame-deep: #1E5260;
+    --accent:     #C4883A;
+    --accent-lt:  #DBA96A;
+    --parch:      #FFFFFF;
+    --parch-dark: #F4F0EA;
+    --white:      #FFFFFF;
+    --ink:        #1A2A34;
+    --muted:      #7A8E96;
+    --border:     #E2D9CC;
+    --border-lt:  #F0EBE3;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--parch);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(30,58,74,0.97);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(196,136,58,0.25);
+    padding: 0 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 17px; font-weight: 600; color: var(--white);
+    text-decoration: none; letter-spacing: 3px; text-transform: uppercase;
+  }
+  .nav-logo span { color: var(--accent-lt); }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a {
+    font-size: 11px; font-weight: 500; letter-spacing: 1.5px;
+    text-transform: uppercase; color: rgba(255,255,255,0.6);
+    text-decoration: none; transition: color 0.15s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--white); }
+  .btn-contact {
+    font-family: 'Cinzel', serif;
+    font-size: 10px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--frame); background: var(--accent-lt);
+    border: none; padding: 9px 22px; border-radius: 4px;
+    cursor: pointer; transition: background 0.15s;
+  }
+  .btn-contact:hover { background: var(--accent); color: var(--white); }
+
+  /* ── CONTACT MODAL ── */
+  .modal-backdrop {
+    display: none; position: fixed; inset: 0; z-index: 999;
+    background: rgba(20,36,46,0.6); backdrop-filter: blur(6px);
+    align-items: center; justify-content: center;
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal {
+    background: var(--parch); border-radius: 8px;
+    padding: 40px 44px; max-width: 380px; width: 90%;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+    border: 1px solid var(--border);
+    position: relative;
+  }
+  .modal h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px; font-weight: 500; color: var(--ink); margin-bottom: 6px;
+  }
+  .modal .modal-sub {
+    font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 28px;
+  }
+  .modal-row {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 18px;
+  }
+  .modal-icon {
+    width: 40px; height: 40px; border-radius: 6px;
+    background: var(--parch-dark); display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0; font-size: 17px;
+  }
+  .modal-row a {
+    font-size: 15px; font-weight: 500; color: var(--frame);
+    text-decoration: none;
+  }
+  .modal-row a:hover { color: var(--accent); }
+  .modal-close {
+    position: absolute; top: 14px; right: 16px;
+    background: none; border: none; font-size: 20px;
+    color: var(--muted); cursor: pointer; line-height: 1;
+    padding: 4px 8px; border-radius: 4px;
+  }
+  .modal-close:hover { background: var(--parch-dark); color: var(--ink); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    background: linear-gradient(160deg, #3A8A98 0%, #2C6E7A 55%, #1E5260 100%);
+    padding: 72px 48px 80px;
+    text-align: center;
+    border-bottom: 1px solid rgba(196,136,58,0.2);
+  }
+  .page-hero-eyebrow {
+    font-size: 11px; font-weight: 500; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--accent-lt);
+    margin-bottom: 14px;
+  }
+  .page-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px; font-weight: 400; color: var(--white);
+    line-height: 1.15; margin-bottom: 16px;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--accent-lt); font-weight: 300; }
+  .page-hero p {
+    font-size: 16px; color: rgba(255,255,255,0.75);
+    max-width: 520px; margin: 0 auto; line-height: 1.7;
+  }
+
+  /* ── PRICING ── */
+  .pricing-section {
+    padding: 80px 48px 100px;
+    background: var(--parch-dark);
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .pricing-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 36px 32px 32px;
+    display: flex; flex-direction: column;
+    position: relative;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .pricing-card:hover {
+    box-shadow: 0 12px 40px rgba(0,0,0,0.10);
+    transform: translateY(-3px);
+  }
+  .pricing-card-featured {
+    border-color: var(--frame);
+    box-shadow: 0 8px 32px rgba(44,110,122,0.15);
+  }
+  .pricing-card-featured:hover {
+    box-shadow: 0 16px 48px rgba(44,110,122,0.22);
+  }
+  .pricing-badge {
+    position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+    background: var(--frame); color: var(--white);
+    font-family: 'Cinzel', serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 16px; border-radius: 20px;
+    white-space: nowrap;
+  }
+  .pricing-tier {
+    font-family: 'Cinzel', serif; font-size: 13px; font-weight: 600;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--frame); margin-bottom: 14px;
+  }
+  .pricing-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px; font-weight: 600; color: var(--ink);
+    line-height: 1; margin-bottom: 14px;
+  }
+  .pricing-price span {
+    font-size: 18px; font-weight: 400; color: var(--muted);
+  }
+  .pricing-desc {
+    font-size: 13px; color: var(--muted); line-height: 1.6;
+    margin-bottom: 24px; border-bottom: 1px solid var(--border-lt);
+    padding-bottom: 24px;
+  }
+  .pricing-features {
+    list-style: none; flex: 1;
+    display: flex; flex-direction: column; gap: 10px;
+    margin-bottom: 28px;
+  }
+  .pricing-features li {
+    font-size: 13px; color: var(--ink); line-height: 1.4;
+  }
+  .pricing-features li.muted { color: var(--muted); }
+  .pricing-btn {
+    display: block; text-align: center;
+    font-family: 'Cinzel', serif; font-size: 10px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 13px 24px; border-radius: 5px;
+    text-decoration: none; transition: all 0.15s;
+    cursor: pointer;
+  }
+  .pricing-btn-primary {
+    background: var(--frame); color: var(--white); border: 1.5px solid var(--frame);
+  }
+  .pricing-btn-primary:hover { background: var(--frame-deep); border-color: var(--frame-deep); }
+  .pricing-btn-outline {
+    background: transparent; color: var(--frame); border: 1.5px solid var(--frame);
+  }
+  .pricing-btn-outline:hover { background: var(--frame); color: var(--white); }
+
+  /* ── FAQ ── */
+  .faq-section {
+    padding: 72px 48px 88px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .faq-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px; font-weight: 500; color: var(--ink);
+    margin-bottom: 40px; text-align: center;
+  }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+  .faq-item:first-of-type { border-top: 1px solid var(--border); }
+  .faq-q {
+    font-size: 15px; font-weight: 600; color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .faq-a { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--frame);
+    padding: 48px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(196,136,58,0.2);
+  }
+  footer .footer-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 16px; font-weight: 600; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--white);
+    display: block; margin-bottom: 12px;
+  }
+  footer p { font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.5px; }
+  footer a { color: var(--accent-lt); text-decoration: none; }
+  footer a:hover { color: var(--white); }
+
+  @media (max-width: 860px) {
+    .pricing-section { padding: 60px 20px 72px; }
+    .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
+    .page-hero { padding: 56px 24px 64px; }
+    .page-hero h1 { font-size: 40px; }
+    .faq-section { padding: 56px 24px 72px; }
+  }
+  @media (max-width: 600px) {
+    nav { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Leisurely<span> Maps</span></a>
+  <div class="nav-links">
+    <a href="/#maps">Maps</a>
+    <a href="pricing.html" class="active">Pricing</a>
+    <button class="btn-contact" onclick="document.getElementById('contactModal').classList.add('open')">Contact</button>
+  </div>
+</nav>
+
+<!-- Contact Modal -->
+<div class="modal-backdrop" id="contactModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('contactModal').classList.remove('open')">✕</button>
+    <h2>Get in Touch</h2>
+    <p class="modal-sub">We'd love to hear from you.</p>
+    <div class="modal-row">
+      <div class="modal-icon">📞</div>
+      <a href="tel:+17049426638">(704) 942-6638</a>
+    </div>
+  </div>
+</div>
+
+<!-- Hero -->
+<div class="page-hero">
+  <div class="page-hero-eyebrow">Advertise With Us</div>
+  <h1>Get your business<br><em>on the map.</em></h1>
+  <p>Feature your business on our locally curated discovery maps — seen by residents, visitors, and explorers discovering your neighborhood.</p>
+</div>
+
+<!-- Pricing Grid -->
+<div class="pricing-section">
+  <div class="pricing-grid">
+
+    <!-- Tier 1 -->
+    <div class="pricing-card">
+      <div class="pricing-tier">Single Map</div>
+      <div class="pricing-price">$149<span>/yr</span></div>
+      <div class="pricing-desc">Get discovered on one neighborhood map — great for businesses with a single local focus.</div>
+      <ul class="pricing-features">
+        <li>✓ Featured on 1 neighborhood map</li>
+        <li>✓ Interactive map pin & popup card</li>
+        <li>✓ Photo, description & category tag</li>
+        <li>✓ Link to your website</li>
+        <li>✓ Listed on print map edition</li>
+        <li class="muted">✗ Multi-map placement</li>
+        <li class="muted">✗ Priority positioning</li>
+      </ul>
+      <a class="pricing-btn pricing-btn-outline" href="#" onclick="document.getElementById('contactModal').classList.add('open'); return false;">Get Listed</a>
+    </div>
+
+    <!-- Tier 2 — Featured -->
+    <div class="pricing-card pricing-card-featured">
+      <div class="pricing-badge">Most Popular</div>
+      <div class="pricing-tier">Multi-Map</div>
+      <div class="pricing-price">$349<span>/yr</span></div>
+      <div class="pricing-desc">Reach more explorers by appearing on up to 3 neighborhood maps across the area.</div>
+      <ul class="pricing-features">
+        <li>✓ Featured on up to 3 maps</li>
+        <li>✓ Interactive map pin & popup card</li>
+        <li>✓ Photo, description & category tag</li>
+        <li>✓ Link to your website</li>
+        <li>✓ Listed on all print map editions</li>
+        <li>✓ Priority category positioning</li>
+        <li class="muted">✗ Network-wide placement</li>
+      </ul>
+      <a class="pricing-btn pricing-btn-primary" href="#" onclick="document.getElementById('contactModal').classList.add('open'); return false;">Get Listed</a>
+    </div>
+
+    <!-- Tier 3 -->
+    <div class="pricing-card">
+      <div class="pricing-tier">All Maps</div>
+      <div class="pricing-price">$599<span>/yr</span></div>
+      <div class="pricing-desc">Maximum visibility — featured across every Leisurely Maps neighborhood guide, now and as new maps launch.</div>
+      <ul class="pricing-features">
+        <li>✓ Featured on every map</li>
+        <li>✓ Interactive map pin & popup card</li>
+        <li>✓ Photo, description & category tag</li>
+        <li>✓ Link to your website</li>
+        <li>✓ Listed on all print map editions</li>
+        <li>✓ Priority category positioning</li>
+        <li>✓ Included on all future maps</li>
+      </ul>
+      <a class="pricing-btn pricing-btn-outline" href="#" onclick="document.getElementById('contactModal').classList.add('open'); return false;">Get Listed</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section">
+  <h2 class="faq-title">Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <div class="faq-q">How do I get my business listed?</div>
+    <div class="faq-a">Simply choose a plan and contact us — we'll handle the rest, including adding your photo, description, and map pin.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I choose which maps I appear on?</div>
+    <div class="faq-a">Yes! For the Single Map and Multi-Map tiers, you pick the specific neighborhood maps that best match your business location and audience.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What does "priority positioning" mean?</div>
+    <div class="faq-a">Multi-Map and All Maps listings appear at the top of their category section on both the interactive and print maps, giving them maximum visibility.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Is there a contract or can I cancel anytime?</div>
+    <div class="faq-a">Listings are billed annually with no long-term contract. You can cancel before your renewal date and your listing will remain through the end of your paid period.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How many maps are currently available?</div>
+    <div class="faq-a">We currently cover neighborhoods across Charlotte, NC and Fort Mill, SC — with new areas added regularly. All Maps subscribers are automatically included on every new map at no extra cost.</div>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">Leisurely Maps</span>
+  <p>© 2026 Leisurely Maps · <a href="/">Browse Maps</a></p>
+</footer>
+
+</body>
+</html>
