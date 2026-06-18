@@ -237,9 +237,6 @@ window.REGION = {
     ],
   },
 
-  tileUrl: 'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}.png?api_key=30c01ea6-0e8d-430d-a6ef-863306b083bf',
-  tileAttrib: '© Stadia Maps · © Stamen Design · © OpenStreetMap contributors',
-
   zoom: 15,
   printZoom: 14.8,
 };
