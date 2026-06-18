@@ -17,7 +17,7 @@ window.REGION = {
     '--accent':       '#E63975',
     '--navy':         '#1A1A2E',
     '--inner-border': '#BBBBCC',
-    '--tile-filter':  'saturate(1.4) contrast(1.08) brightness(1.0) hue-rotate(-10deg)',
+    '--tile-filter':  'saturate(1.1) contrast(1.0) brightness(1.02)',
     '--tile-blend':   'normal',
     '--tile-opa':     '1',
     '--cartouche-bg': 'repeating-linear-gradient(-45deg, transparent, transparent 6px, rgba(0,0,0,0.03) 6px, rgba(0,0,0,0.03) 7px), #F8F5F0',
@@ -236,6 +236,9 @@ window.REGION = {
       { head: '🍺 Brew &amp; Bar', cls: 'coffee', nums: [1, 2, 3, 4, 5, 6] },
     ],
   },
+
+  tileUrl: 'https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg?api_key=30c01ea6-0e8d-430d-a6ef-863306b083bf',
+  tileAttrib: '© Stadia Maps · © Stamen Design · © OpenStreetMap contributors',
 
   zoom: 15,
   printZoom: 14.8,

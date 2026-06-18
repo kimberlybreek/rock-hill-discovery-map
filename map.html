@@ -476,9 +476,11 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
     minZoom: 12, maxZoom: 18,
   }).setView(R.center, R.zoom);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+  const _tileUrl = R.tileUrl || 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
+  const _tileAttrib = R.tileAttrib || '© OpenStreetMap contributors © CARTO · Map ✦ ' + R.credit;
+  L.tileLayer(_tileUrl, {
     maxZoom: 19,
-    attribution: '© OpenStreetMap contributors © CARTO · Map ✦ ' + R.credit,
+    attribution: _tileAttrib,
   }).addTo(map);
 
   /* Markers */
