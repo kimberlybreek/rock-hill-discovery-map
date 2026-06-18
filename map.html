@@ -482,6 +482,9 @@ document.write('<script src="regions/' + regionId + '.js"><\/script>');
     maxZoom: 19,
     attribution: _tileAttrib,
   }).addTo(map);
+  if (R.labelsUrl) {
+    L.tileLayer(R.labelsUrl, { maxZoom: 19, opacity: R.labelsOpacity || 1 }).addTo(map);
+  }
 
   /* Markers */
   const markerMap = {}; // keyed by place n

@@ -239,6 +239,8 @@ window.REGION = {
 
   tileUrl: 'https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg?api_key=30c01ea6-0e8d-430d-a6ef-863306b083bf',
   tileAttrib: '© Stadia Maps · © Stamen Design · © OpenStreetMap contributors',
+  labelsUrl: 'https://tiles.stadiamaps.com/tiles/stamen_toner_labels/{z}/{x}/{y}.png?api_key=30c01ea6-0e8d-430d-a6ef-863306b083bf',
+  labelsOpacity: 0.6,
 
   zoom: 15,
   printZoom: 14.8,
